@@ -11,37 +11,23 @@
 *,*::before,*::after{box-sizing:border-box}
 *{margin:0;padding:0}
 :root{
-  /* Base quente */
-  --paper:#fef9f3;
-  --paper-2:#fdf3e7;
-  --paper-3:#f7ead9;
-  --surface:#ffffff;
-  --ink:#1a1a1a;
-  --ink-2:#4a4a4a;
-  --ink-3:#7a7a7a;
-  --line:#f0e4d4;
-  --line-2:#e6d4bc;
-
-  /* Cores vivas */
-  --red:#dc2626;      --red-2:#b91c1c;   --red-soft:#fef2f2;
-  --orange:#ea580c;   --orange-soft:#fff7ed;
-  --amber:#f59e0b;    --amber-2:#d97706; --amber-soft:#fffbeb;
-  --green:#059669;    --green-2:#047857; --green-soft:#ecfdf5;
-  --teal:#0d9488;     --teal-soft:#f0fdfa;
-  --cyan:#0891b2;     --cyan-soft:#ecfeff;
-  --blue:#2563eb;     --blue-soft:#eff6ff;
-  --indigo:#4f46e5;   --indigo-soft:#eef2ff;
-  --purple:#7c3aed;   --purple-soft:#f5f3ff;
-  --pink:#db2777;     --pink-soft:#fdf2f8;
-
-  --accent:#dc2626;
-  --accent-2:#b91c1c;
-  --accent-soft:#fef2f2;
-
+  --paper:#fef9f3; --paper-2:#fdf3e7; --paper-3:#f7ead9;
+  --surface:#ffffff; --ink:#1a1a1a; --ink-2:#4a4a4a; --ink-3:#7a7a7a;
+  --line:#f0e4d4; --line-2:#e6d4bc;
+  --red:#dc2626; --red-2:#b91c1c; --red-soft:#fef2f2;
+  --orange:#ea580c; --orange-soft:#fff7ed;
+  --amber:#f59e0b; --amber-2:#d97706; --amber-soft:#fffbeb;
+  --green:#059669; --green-2:#047857; --green-soft:#ecfdf5;
+  --teal:#0d9488; --teal-soft:#f0fdfa;
+  --cyan:#0891b2; --cyan-soft:#ecfeff;
+  --blue:#2563eb; --blue-soft:#eff6ff;
+  --indigo:#4f46e5; --indigo-soft:#eef2ff;
+  --purple:#7c3aed; --purple-soft:#f5f3ff;
+  --pink:#db2777; --pink-soft:#fdf2f8;
+  --accent:#dc2626; --accent-2:#b91c1c; --accent-soft:#fef2f2;
   --grad-hero:linear-gradient(135deg,#dc2626 0%,#ea580c 55%,#f59e0b 100%);
   --grad-progress:linear-gradient(90deg,#dc2626 0%,#ea580c 50%,#f59e0b 100%);
   --grad-success:linear-gradient(135deg,#059669 0%,#10b981 100%);
-
   --fd:'Instrument Serif',Georgia,serif;
   --fb:'Inter',system-ui,-apple-system,sans-serif;
   --fm:'JetBrains Mono',ui-monospace,monospace;
@@ -51,7 +37,6 @@ html{-webkit-text-size-adjust:100%}
 body{font-family:var(--fb);font-size:15px;line-height:1.55;color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
 .container{max-width:760px;margin:0 auto;padding:0 24px;width:100%}
 main{flex:1;padding:28px 0 64px}
-
 .display{font-family:var(--fd);font-weight:400;letter-spacing:-0.02em;line-height:1.05;color:var(--ink)}
 .display-xl{font-size:clamp(38px,6vw,56px)}
 .display-lg{font-size:clamp(26px,4vw,36px)}
@@ -63,10 +48,7 @@ main{flex:1;padding:28px 0 64px}
 .muted{color:var(--ink-3)}
 .small{font-size:13px}
 .tiny{font-size:12px}
-
 .rule{height:1px;background:var(--line);border:0;margin:0}
-
-/* ===== HEADER ===== */
 .site-header{border-bottom:1px solid var(--line);background:rgba(255,255,255,0.85);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);position:sticky;top:0;z-index:30}
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:16px}
 .brand{display:flex;align-items:center;gap:12px;min-width:0}
@@ -78,8 +60,6 @@ main{flex:1;padding:28px 0 64px}
 .header-user .user-greeting{font-family:var(--fd);font-size:15px;line-height:1.1;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:160px}
 .header-score{display:flex;align-items:center;gap:6px;padding:6px 12px;background:linear-gradient(135deg,#fef3c7,#fed7aa);border-radius:999px;font-family:var(--fm);font-size:13px;font-weight:500;color:#92400e;box-shadow:inset 0 0 0 1px rgba(234,88,12,0.15)}
 .header-score .star{color:#f59e0b}
-
-/* ===== HERO ===== */
 .hero{background:var(--grad-hero);color:#fff;padding:44px 36px;border-radius:16px;position:relative;overflow:hidden;box-shadow:0 12px 40px -12px rgba(220,38,38,0.35)}
 .hero::before{content:'';position:absolute;top:-60px;right:-60px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.25),transparent 70%);pointer-events:none}
 .hero::after{content:'';position:absolute;bottom:-80px;left:-40px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.15),transparent 70%);pointer-events:none}
@@ -89,8 +69,6 @@ main{flex:1;padding:28px 0 64px}
 .hero .lead{color:rgba(255,255,255,0.9)}
 .hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
 .hero-badge{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 12px;background:rgba(255,255,255,0.18);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.25);border-radius:999px;font-family:var(--fm);font-size:11.5px;font-weight:500;color:#fff}
-
-/* ===== BUTTONS ===== */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:42px;padding:0 20px;font-family:var(--fb);font-size:13.5px;font-weight:600;letter-spacing:-0.005em;border-radius:8px;border:1px solid transparent;cursor:pointer;transition:transform .12s,box-shadow .15s,background .15s,border-color .15s;white-space:nowrap;text-decoration:none;background:transparent;color:inherit;text-align:center}
 .btn:active:not(:disabled){transform:scale(0.97)}
 .btn:disabled{opacity:.5;cursor:not-allowed;filter:grayscale(0.4)}
@@ -106,29 +84,20 @@ main{flex:1;padding:28px 0 64px}
 .btn-danger:hover:not(:disabled){background:var(--red-soft)}
 .btn-sm{height:32px;padding:0 12px;font-size:12px}
 .btn-lg{height:50px;padding:0 26px;font-size:14.5px;border-radius:10px}
-
-/* ===== INPUTS ===== */
 .input,.select{width:100%;font-family:var(--fb);font-size:14.5px;color:var(--ink);background:var(--surface);border:1.5px solid var(--line-2);border-radius:8px;padding:11px 14px;transition:border-color .15s,box-shadow .15s}
 .input:focus,.select:focus{outline:0;border-color:var(--orange);box-shadow:0 0 0 4px rgba(234,88,12,0.12)}
 .input-lg{height:52px;font-size:16px;padding:0 16px;font-weight:500}
 .select{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='none' stroke='%237a7a7a' stroke-width='1.8' d='M3 4.5l3 3 3-3'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px}
-
 .field{display:flex;flex-direction:column;gap:6px}
 .field-label{font-family:var(--fm);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-3)}
 .field-label .req{color:var(--red);font-weight:700}
-
-/* ===== CARDS ===== */
 .card{background:var(--surface);border:1px solid var(--line);border-radius:12px}
 .card-pad{padding:24px}
-
-/* ===== NAME CARD ===== */
 .name-card{background:linear-gradient(135deg,#fff7ed 0%,#fef3c7 100%);border:1.5px solid #fed7aa;border-radius:14px;padding:22px;position:relative;overflow:hidden}
 .name-card::before{content:'';position:absolute;top:-30px;right:-30px;width:120px;height:120px;border-radius:50%;background:radial-gradient(circle,rgba(234,88,12,0.08),transparent 70%)}
 .name-card-inner{position:relative;z-index:1}
 .name-card-title{font-family:var(--fd);font-size:22px;color:#7c2d12;letter-spacing:-0.01em;display:flex;align-items:center;gap:8px}
 .name-card-sub{font-size:13px;color:#9a3412;margin-top:4px}
-
-/* ===== OPTION (MC) ===== */
 .option{display:flex;align-items:flex-start;gap:14px;width:100%;padding:15px 18px;font-family:var(--fb);font-size:15px;line-height:1.5;text-align:left;color:var(--ink);background:var(--surface);border:1.5px solid var(--line-2);border-radius:10px;cursor:pointer;transition:border-color .12s,background .12s,transform .1s,box-shadow .15s;margin-bottom:10px;position:relative}
 .option:hover:not(:disabled){border-color:var(--amber-2);background:linear-gradient(135deg,#fffbeb,#fef3c7);transform:translateX(2px)}
 .option:active:not(:disabled){transform:scale(0.995)}
@@ -144,15 +113,11 @@ main{flex:1;padding:28px 0 64px}
 .option-tag{font-family:var(--fm);font-size:11px;font-weight:600;letter-spacing:0.04em;text-transform:uppercase;margin-left:auto;padding:3px 8px;border-radius:4px;flex-shrink:0;align-self:flex-start}
 .option-tag.ok{background:var(--green);color:#fff}
 .option-tag.bad{background:var(--red);color:#fff}
-
-/* ===== TOPIC CHIPS ===== */
 .chip{display:inline-flex;align-items:center;gap:8px;height:38px;padding:0 14px;font-family:var(--fb);font-size:12.5px;font-weight:500;color:var(--ink-2);background:var(--surface);border:1.5px solid var(--line-2);border-radius:999px;cursor:pointer;transition:all .15s;white-space:nowrap}
 .chip:hover{border-color:var(--ink-3);color:var(--ink);transform:translateY(-1px)}
 .chip[data-selected="true"]{background:var(--ink);color:#fff;border-color:var(--ink);box-shadow:0 4px 12px -4px rgba(0,0,0,0.3)}
 .chip .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;box-shadow:0 0 0 2px rgba(255,255,255,0.6)}
 .chip[data-selected="true"] .dot{box-shadow:0 0 0 2px rgba(255,255,255,0.25)}
-
-/* ===== BADGE ===== */
 .badge{display:inline-flex;align-items:center;gap:6px;height:22px;padding:0 9px;font-family:var(--fm);font-size:10.5px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;border-radius:5px;background:var(--paper-3);color:var(--ink-2)}
 .badge-ok{background:var(--green-soft);color:var(--green-2)}
 .badge-accent{background:var(--orange-soft);color:var(--orange)}
@@ -161,12 +126,8 @@ main{flex:1;padding:28px 0 64px}
 .badge-diff-ini{background:var(--green-soft);color:var(--green-2)}
 .badge-diff-int{background:var(--amber-soft);color:var(--amber-2)}
 .badge-diff-ava{background:var(--red-soft);color:var(--red-2)}
-
-/* ===== PROGRESS ===== */
 .progress{height:6px;background:var(--line);border-radius:999px;overflow:hidden;box-shadow:inset 0 1px 2px rgba(0,0,0,0.06)}
 .progress>span{display:block;height:100%;background:var(--grad-progress);border-radius:999px;transition:width .35s ease;box-shadow:0 0 8px rgba(234,88,12,0.4)}
-
-/* ===== STAT GRID ===== */
 .stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
 .stat{padding:18px;border-radius:12px;border:1.5px solid;position:relative;overflow:hidden}
 .stat-red{background:linear-gradient(135deg,#fef2f2,#fee2e2);border-color:#fecaca}
@@ -177,17 +138,11 @@ main{flex:1;padding:28px 0 64px}
 .stat-red .stat-value{color:#991b1b}
 .stat-amber .stat-value{color:#92400e}
 .stat-teal .stat-value{color:#115e59}
-
-/* ===== FEEDBACK ===== */
 .feedback{padding:14px 16px;border-radius:10px;font-size:13.5px;border:1.5px solid;line-height:1.5;font-weight:500;display:flex;align-items:center;gap:10px}
 .feedback-ok{background:linear-gradient(135deg,#ecfdf5,#d1fae5);border-color:#6ee7b7;color:var(--green-2)}
 .feedback-err{background:linear-gradient(135deg,#fef2f2,#fee2e2);border-color:#fca5a5;color:var(--red-2)}
 .feedback-icon{font-size:18px;flex-shrink:0}
-
-/* ===== NAME PILL (during quiz) ===== */
 .name-pill{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;background:linear-gradient(135deg,#fef3c7,#fed7aa);border-radius:999px;font-family:var(--fm);font-size:11px;font-weight:500;color:#92400e;text-transform:uppercase;letter-spacing:0.06em}
-
-/* ===== UTILITY ===== */
 .stack{display:flex;flex-direction:column}
 .stack-2{gap:8px}.stack-3{gap:12px}.stack-4{gap:16px}.stack-5{gap:24px}.stack-6{gap:32px}
 .row{display:flex;align-items:center}
@@ -198,19 +153,52 @@ main{flex:1;padding:28px 0 64px}
 .hidden{display:none!important}
 .text-c{text-align:center}
 .mt-1{margin-top:4px}.mt-2{margin-top:8px}.mt-3{margin-top:12px}.mt-4{margin-top:16px}.mt-5{margin-top:24px}.mt-6{margin-top:32px}
-
 @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 .anim{animation:fadeUp .3s ease}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
 .pulse-warn{animation:pulse 1.2s infinite}
 @keyframes bump{0%{transform:scale(1)}50%{transform:scale(1.22);color:var(--green)}100%{transform:scale(1)}}
 .score-bump{animation:bump .5s ease;display:inline-block}
-@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
-
-/* ===== FOOTER ===== */
 .site-footer{border-top:1px solid var(--line);padding:24px 0;background:var(--paper-2)}
 .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-
+/* Tabs de navegação */
+.tabs{display:flex;gap:4px;background:var(--paper-3);padding:4px;border-radius:10px;margin-bottom:20px;overflow-x:auto}
+.tab{flex:1;min-width:120px;display:flex;align-items:center;justify-content:center;gap:6px;height:38px;padding:0 14px;font-family:var(--fb);font-size:12.5px;font-weight:600;color:var(--ink-2);background:transparent;border:0;border-radius:8px;cursor:pointer;transition:all .15s;white-space:nowrap}
+.tab:hover{color:var(--ink);background:rgba(255,255,255,0.5)}
+.tab[data-active="true"]{background:var(--surface);color:var(--ink);box-shadow:0 2px 8px -2px rgba(0,0,0,0.12)}
+.tab .tab-count{font-family:var(--fm);font-size:10px;padding:2px 6px;border-radius:999px;background:var(--paper-3);color:var(--ink-3)}
+.tab[data-active="true"] .tab-count{background:var(--orange-soft);color:var(--orange)}
+/* Acordeão de matéria */
+.acc-item{border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden;margin-bottom:10px}
+.acc-head{display:flex;align-items:center;gap:12px;width:100%;padding:16px 18px;background:transparent;border:0;cursor:pointer;text-align:left;font-family:var(--fb);transition:background .15s}
+.acc-head:hover{background:var(--paper-2)}
+.acc-icon{width:28px;height:28px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:var(--fm);font-size:12px;font-weight:600;color:#fff;flex-shrink:0}
+.acc-title{flex:1;font-size:14px;font-weight:600;color:var(--ink)}
+.acc-chevron{color:var(--ink-3);transition:transform .2s;font-size:12px}
+.acc-item[data-open="true"] .acc-chevron{transform:rotate(90deg)}
+.acc-body{padding:0 18px 18px;font-size:13.5px;color:var(--ink-2);line-height:1.6}
+.acc-body h4{font-family:var(--fm);font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-3);margin:14px 0 6px}
+.acc-body ul{margin:0 0 8px 18px}
+.acc-body li{margin-bottom:4px}
+.acc-body .term{font-weight:600;color:var(--ink)}
+.acc-body .def{color:var(--ink-2)}
+.acc-body table{width:100%;border-collapse:collapse;margin:8px 0;font-size:12.5px}
+.acc-body th,.acc-body td{padding:6px 8px;text-align:left;border-bottom:1px solid var(--line)}
+.acc-body th{font-family:var(--fm);font-size:10px;text-transform:uppercase;letter-spacing:0.06em;color:var(--ink-3)}
+.acc-body code{font-family:var(--fm);font-size:12px;background:var(--paper-3);padding:1px 5px;border-radius:3px}
+/* Utilitário de pergunta em cartão */
+.q-num{font-family:var(--fm);font-size:11px;font-weight:600;color:var(--ink-3);letter-spacing:0.06em}
+.q-text{font-size:16px;font-weight:500;line-height:1.5;color:var(--ink);margin:6px 0 16px}
+.expl{font-size:12.5px;color:var(--ink-3);margin-top:12px;padding-top:12px;border-top:1px dashed var(--line-2);line-height:1.5}
+/* Extensões */
+.ext-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.ext-card{padding:12px 14px;border:1px solid var(--line);border-radius:9px;background:var(--surface)}
+.ext-card .ext{font-family:var(--fm);font-size:13px;font-weight:600;color:var(--orange);margin-bottom:2px}
+.ext-card .ext-name{font-size:12px;color:var(--ink);font-weight:500}
+.ext-card .ext-use{font-size:11.5px;color:var(--ink-3);margin-top:2px}
+.ext-cat-title{font-family:var(--fd);font-size:20px;color:var(--ink);margin:24px 0 12px;letter-spacing:-0.01em}
+.alert-box{background:linear-gradient(135deg,#fffbeb,#fef3c7);border:1.5px solid #fde68a;border-radius:10px;padding:14px 16px;font-size:13px;color:#92400e;line-height:1.55}
+.alert-box strong{color:#78350f}
 @media (max-width:640px){
   .container{padding:0 16px}
   main{padding:20px 0 48px}
@@ -225,6 +213,8 @@ main{flex:1;padding:28px 0 64px}
   .brand-name{font-size:15px}
   .btn{padding:0 16px;font-size:13px}
   .btn-lg{height:46px;padding:0 20px;font-size:13.5px}
+  .tabs{overflow-x:auto;flex-wrap:nowrap}
+  .tab{min-width:100px;font-size:11.5px}
 }
 </style>
 </head>
@@ -266,7 +256,7 @@ main{flex:1;padding:28px 0 64px}
 
 <script>
 /* =========================================================
-   TÓPICOS (com cor viva por tópico)
+   TÓPICOS
    ========================================================= */
 const TOPICS = [
   { id:'adm_publica', name:'Administração Pública', icon:'§', color:'#2563eb' },
@@ -278,7 +268,14 @@ const TOPICS = [
   { id:'divisao',     name:'Divisão Político-Administrativa', icon:'▤', color:'#0891b2' },
   { id:'cultura',     name:'Cultura Geral',         icon:'●', color:'#d97706' },
   { id:'numerico',    name:'Raciocínio Numérico',   icon:'#', color:'#059669' },
-  { id:'portugues',   name:'Língua Portuguesa',     icon:'¶', color:'#4f46e5' }
+  { id:'portugues',   name:'Língua Portuguesa',     icon:'¶', color:'#4f46e5' },
+  /* Novos tópicos do JSON de Informática */
+  { id:'info_intro',  name:'Introdução à Informática', icon:'⚙', color:'#0d9488' },
+  { id:'info_redes',  name:'Protocolos e Endereçamento IP', icon:'⇄', color:'#2563eb' },
+  { id:'info_hardware_rede', name:'Elementos de Rede Activos', icon:'⌘', color:'#0891b2' },
+  { id:'info_dados',  name:'Conceitos de Informação e Dados', icon:'▤', color:'#7c3aed' },
+  { id:'info_si',     name:'Sistemas de Informação', icon:'◫', color:'#ea580c' },
+  { id:'info_ficheiros', name:'Ficheiros e Extensões', icon:'▦', color:'#db2777' }
 ];
 function topicColor(id){return TOPICS.find(t=>t.id===id)?.color||'#7a7a7a'}
 function topicName(id){return TOPICS.find(t=>t.id===id)?.name||''}
@@ -290,1201 +287,861 @@ const DIFFICULTY_BADGE = { ini:'badge-diff-ini', int:'badge-diff-int', ava:'badg
 const LETTERS = ['A','B','C','D'];
 
 /* =========================================================
-   BANCO DE PERGUNTAS
+   BANCO DE PERGUNTAS — Informática (JSON 67–170 + ficheiros)
    ========================================================= */
-const QUESTIONS = [
-  /* ===== ADMINISTRAÇÃO PÚBLICA ===== */
-  { id:'ap1', t:'adm_publica', d:'ini', q:'O que é a Administração Pública?', a:'É o conjunto de órgãos, entidades e agentes públicos responsáveis por executar as políticas do Estado e prestar serviços públicos à população.' },
-  { id:'ap2', t:'adm_publica', d:'ini', q:'Qual é a principal finalidade da Administração Pública?', a:'Satisfazer o interesse público e promover o bem-estar da sociedade.' },
-  { id:'ap3', t:'adm_publica', d:'ini', q:'Quais são as funções da Administração Pública?', a:'Planejar, organizar, dirigir, executar e controlar as atividades e os serviços públicos.' },
-  { id:'ap4', t:'adm_publica', d:'ini', q:'O que é um órgão público?', a:'É uma unidade administrativa criada para exercer funções específicas do Estado, sem personalidade jurídica própria.' },
-  { id:'ap5', t:'adm_publica', d:'ini', q:'O que é uma entidade pública?', a:'É uma organização dotada de personalidade jurídica criada para desempenhar atividades de interesse público.' },
-  { id:'ap6', t:'adm_publica', d:'ini', q:'Quem são os agentes públicos?', a:'São todas as pessoas que exercem funções públicas, de forma permanente ou temporária.' },
-  { id:'ap7', t:'adm_publica', d:'ini', q:'O que significa interesse público?', a:'É o conjunto de necessidades e benefícios que atendem à coletividade.' },
-  { id:'ap8', t:'adm_publica', d:'ini', q:'O que é serviço público?', a:'É toda atividade prestada pelo Estado ou por quem o represente para atender às necessidades da população.' },
-  { id:'ap9', t:'adm_publica', d:'int', q:'O que é a Administração Pública Direta?', a:'É a administração exercida diretamente pelos órgãos do Estado, como ministérios, governos provinciais e administrações municipais.' },
-  { id:'ap10', t:'adm_publica', d:'int', q:'O que é a Administração Pública Indireta?', a:'É composta por entidades criadas pelo Estado com personalidade jurídica própria para executar determinadas atividades públicas.' },
-  { id:'ap11', t:'adm_publica', d:'int', q:'Qual é a diferença entre Administração Direta e Indireta?', a:'A Direta é formada pelos órgãos do Estado; a Indireta é formada por entidades com personalidade jurídica própria.' },
-  { id:'ap12', t:'adm_publica', d:'int', q:'Quais são os princípios fundamentais da Administração Pública?', a:'Legalidade, imparcialidade, moralidade, transparência, eficiência, responsabilidade e prossecução do interesse público.' },
-  { id:'ap13', t:'adm_publica', d:'int', q:'O que significa o princípio da legalidade?', a:'Significa que a Administração Pública só pode agir conforme a lei.' },
-  { id:'ap14', t:'adm_publica', d:'int', q:'O que significa o princípio da imparcialidade?', a:'Significa tratar todos os cidadãos com igualdade, sem favorecimentos.' },
-  { id:'ap15', t:'adm_publica', d:'int', q:'O que é o princípio da transparência?', a:'É o dever de divulgar informações e permitir o controlo das ações da Administração Pública.' },
-  { id:'ap16', t:'adm_publica', d:'int', q:'O que significa eficiência na Administração Pública?', a:'É realizar os serviços públicos com qualidade, rapidez e economia de recursos.' },
-  { id:'ap17', t:'adm_publica', d:'ava', q:'O que é descentralização administrativa?', a:'É a transferência de determinadas competências para outras entidades públicas.' },
-  { id:'ap18', t:'adm_publica', d:'ava', q:'O que é desconcentração administrativa?', a:'É a distribuição de competências entre órgãos da mesma pessoa coletiva pública.' },
-  { id:'ap19', t:'adm_publica', d:'int', q:'O que é hierarquia administrativa?', a:'É a relação de subordinação entre superiores e subordinados na Administração Pública.' },
-  { id:'ap20', t:'adm_publica', d:'ava', q:'O que é tutela administrativa?', a:'É o controlo exercido pelo Estado sobre determinadas entidades públicas nos casos previstos na lei.' },
-  { id:'ap21', t:'adm_publica', d:'ini', q:'Qual é o papel dos ministérios?', a:'Elaborar, coordenar e executar políticas públicas nos respetivos setores.' },
-  { id:'ap22', t:'adm_publica', d:'ini', q:'Qual é a função dos governos provinciais?', a:'Implementar as políticas públicas e coordenar a administração ao nível da província.' },
-  { id:'ap23', t:'adm_publica', d:'ini', q:'Qual é a função das administrações municipais?', a:'Gerir os assuntos locais e prestar serviços públicos diretamente aos cidadãos.' },
-  { id:'ap24', t:'adm_publica', d:'ava', q:'O que é competência administrativa?', a:'É o poder legal atribuído a um órgão ou agente para praticar determinados atos.' },
-  { id:'ap25', t:'adm_publica', d:'int', q:'O que é um ato administrativo?', a:'É uma decisão tomada por uma autoridade administrativa no exercício das suas funções.' },
-  { id:'ap26', t:'adm_publica', d:'int', q:'O que é o controlo da Administração Pública?', a:'É o conjunto de mecanismos destinados a verificar a legalidade, eficiência e regularidade da atuação administrativa.' },
-  { id:'ap27', t:'adm_publica', d:'int', q:'Quais são os tipos de controlo da Administração Pública?', a:'Controlo interno, externo, administrativo, judicial e social.' },
-  { id:'ap28', t:'adm_publica', d:'int', q:'O que é responsabilidade administrativa?', a:'É a obrigação do agente público responder pelos atos praticados no exercício das suas funções.' },
-  { id:'ap29', t:'adm_publica', d:'int', q:'Qual é a importância da ética na Administração Pública?', a:'Garante honestidade, integridade, respeito à lei e confiança dos cidadãos.' },
-  { id:'ap30', t:'adm_publica', d:'int', q:'Por que é importante conhecer a organização da Administração Pública?', a:'Porque permite compreender o funcionamento do Estado e os direitos e deveres dos cidadãos e dos servidores públicos.' },
+const INFORMATICA_QUESTIONS = [
+  { id:'i67', t:'info_dados', d:'ini', q:'Qual das seguintes opções representa uma entidade num sistema de gestão escolar?', opts:['Data de matrícula','Estudante','Aprovação numa disciplina','Pagamento de propina'], ans:'B', expl:'Estudante é o objecto sobre o qual o sistema guarda dados.' },
+  { id:'i68', t:'info_dados', d:'ini', q:'Num sistema hospitalar, a realização de uma consulta representa:', opts:['Um atributo','Um evento','Um sistema operativo','Uma unidade de armazenamento'], ans:'B', expl:'A consulta é uma ocorrência registada.' },
+  { id:'i69', t:'info_dados', d:'ini', q:'O nome, a idade e o endereço de um funcionário representam:', opts:['Entidades','Atributos','Eventos','Protocolos'], ans:'B' },
+  { id:'i70', t:'info_dados', d:'int', q:'Qual é a diferença entre entidade e atributo?', opts:['A entidade representa o objecto; o atributo descreve uma propriedade desse objecto','A entidade representa um evento e o atributo representa uma rede','Ambos representam exclusivamente ficheiros','Não existe diferença'], ans:'A' },
+  { id:'i71', t:'info_dados', d:'int', q:'Num sistema de vendas, a realização de uma venda pode ser considerada:', opts:['Uma entidade exclusivamente','Um evento que envolve entidades como cliente e produto','Um atributo de uma impressora','Um sistema operativo'], ans:'B' },
+  { id:'i72', t:'info_dados', d:'int', q:'Qual é a principal função de um SGBD?', opts:['Criar exclusivamente apresentações','Gerir o armazenamento, consulta, actualização e administração de bases de dados','Substituir o sistema operativo','Controlar apenas dispositivos de rede'], ans:'B' },
+  { id:'i73', t:'info_dados', d:'ini', q:'Numa base de dados relacional, uma linha representa:', opts:['Um campo','Um registo','Uma tabela','Uma relação obrigatoriamente entre duas tabelas'], ans:'B' },
+  { id:'i74', t:'info_dados', d:'ini', q:'A chave primária de uma tabela deve:', opts:['Identificar exclusivamente cada registo','Permitir valores duplicados','Ser obrigatoriamente um texto','Conter sempre valores nulos'], ans:'A' },
+  { id:'i75', t:'info_dados', d:'int', q:'Qual é a finalidade de uma chave estrangeira?', opts:['Encriptar os dados','Estabelecer uma relação entre tabelas através de uma referência a uma chave','Eliminar registos automaticamente','Substituir todas as chaves primárias'], ans:'B' },
+  { id:'i76', t:'info_dados', d:'ini', q:'Qual comando SQL permite consultar dados?', opts:['INSERT','UPDATE','SELECT','DROP'], ans:'C' },
+  { id:'i77', t:'info_dados', d:'ini', q:'Qual comando SQL permite inserir novos registos?', opts:['INSERT','SELECT','DROP','GRANT'], ans:'A' },
+  { id:'i78', t:'info_dados', d:'ini', q:'Qual comando SQL elimina registos de uma tabela?', opts:['CREATE','DELETE','SELECT','ALTER'], ans:'B' },
+  { id:'i79', t:'info_dados', d:'int', q:'Qual propriedade ACID garante que uma transacção seja executada integralmente ou não seja aplicada?', opts:['Consistência','Isolamento','Atomicidade','Durabilidade'], ans:'C' },
+  { id:'i80', t:'info_dados', d:'ini', q:'Qual das seguintes opções é um SGBD relacional?', opts:['PostgreSQL','JPEG','HTML','HTTP'], ans:'A' },
+  { id:'i81', t:'info_dados', d:'int', q:'O MongoDB é normalmente classificado como:', opts:['SGBD relacional tradicional','SGBD documental NoSQL','Sistema operativo','Protocolo de rede'], ans:'B' },
+  { id:'i82', t:'info_dados', d:'int', q:'A normalização de bases de dados procura principalmente:', opts:['Aumentar a duplicação de dados','Reduzir redundâncias e anomalias de inserção, actualização e eliminação','Eliminar todas as relações entre tabelas','Substituir o SQL por HTML'], ans:'B' },
+  { id:'i83', t:'info_dados', d:'int', q:'Uma base de dados contém o nome de um cliente repetido em 100 facturas. Uma das vantagens de um modelo relacional bem concebido é:', opts:['Eliminar a necessidade de clientes','Armazenar os dados do cliente numa tabela própria e referenciá-lo através de uma chave','Duplicar todos os dados em cada consulta','Impedir a criação de facturas'], ans:'B' },
+  { id:'i84', t:'info_dados', d:'ini', q:'Qual é o principal objectivo da confidencialidade?', opts:['Garantir que todos os dados sejam públicos','Impedir o acesso à informação por pessoas não autorizadas','Eliminar automaticamente os dados antigos','Garantir exclusivamente a velocidade do sistema'], ans:'B' },
+  { id:'i85', t:'info_dados', d:'int', q:'Uma pessoa altera sem autorização o saldo de uma conta bancária. Que princípio foi violado?', opts:['Disponibilidade','Integridade','Portabilidade','Compatibilidade'], ans:'B' },
+  { id:'i86', t:'info_dados', d:'int', q:'Um sistema deixa de estar acessível aos funcionários durante várias horas. Qual princípio foi afectado?', opts:['Confidencialidade','Integridade','Disponibilidade','Autenticidade exclusivamente'], ans:'C' },
+  { id:'i87', t:'info_dados', d:'int', q:'Qual é a diferença entre autenticação e autorização?', opts:['Autenticação verifica a identidade; autorização define as permissões','Ambas significam exactamente o mesmo','Autorização verifica a identidade e autenticação define permissões','Ambas servem apenas para encriptar dados'], ans:'A' },
+  { id:'i88', t:'info_dados', d:'ini', q:'Qual das seguintes práticas aumenta a segurança de uma conta?', opts:['Utilizar a mesma palavra-passe em todos os serviços','Partilhar a palavra-passe com colegas','Utilizar autenticação multifactor','Desactivar todas as actualizações'], ans:'C' },
+  { id:'i89', t:'info_dados', d:'ini', q:'O que é uma cópia de segurança?', opts:['Uma cópia de dados destinada a permitir a sua recuperação','Um vírus informático','Um mecanismo de compressão exclusivamente','Uma ligação à Internet'], ans:'A' },
+  { id:'i90', t:'info_dados', d:'int', q:'Qual é a principal finalidade da encriptação?', opts:['Tornar os dados legíveis por qualquer utilizador','Proteger a informação, tornando-a ilegível sem a chave ou mecanismo de descodificação apropriado','Eliminar todos os dados','Aumentar obrigatoriamente a capacidade do disco'], ans:'B' },
+  { id:'i91', t:'info_dados', d:'int', q:'Qual é a principal diferença entre informação e conhecimento?', opts:['Informação é sempre mais complexa que conhecimento','Conhecimento implica compreensão, interpretação e capacidade de aplicação da informação','Conhecimento é apenas um conjunto de números','Informação não pode ser utilizada na tomada de decisões'], ans:'B' },
+  { id:'i92', t:'info_dados', d:'int', q:'Uma organização analisa relatórios de vendas, identifica padrões de consumo e utiliza esses padrões para definir estratégias. Está a transformar:', opts:['Hardware em software','Informação em conhecimento aplicável à decisão','Protocolos em ficheiros','Memória RAM em ROM'], ans:'B' },
+  { id:'i93', t:'info_si', d:'ini', q:'Um sistema é definido como:', opts:['Um conjunto de elementos independentes sem objectivos','Um conjunto de componentes inter-relacionados que trabalham para um objectivo','Um único equipamento electrónico','Um conjunto de ficheiros sem organização'], ans:'B' },
+  { id:'i94', t:'info_si', d:'int', q:'Qual é a função do feedback num sistema?', opts:['Eliminar todas as entradas','Fornecer informação sobre os resultados para permitir ajustes e controlo','Substituir todos os componentes','Impedir a saída de informação'], ans:'B' },
+  { id:'i95', t:'info_si', d:'int', q:'Uma organização que troca informação, recursos e serviços com o ambiente externo representa um:', opts:['Sistema fechado','Sistema aberto','Sistema isolado','Sistema exclusivamente físico'], ans:'B' },
+  { id:'i96', t:'info_si', d:'int', q:'Qual sistema é mais adequado para registar diariamente as vendas de uma empresa?', opts:['TPS','ESS','DSS','Sistema exclusivamente gráfico'], ans:'A' },
+  { id:'i97', t:'info_si', d:'int', q:'Qual sistema fornece relatórios periódicos para apoiar os gestores intermédios?', opts:['MIS/SIG','Hub','BIOS','DNS'], ans:'A' },
+  { id:'i98', t:'info_si', d:'int', q:'Qual é a principal finalidade de um DSS/SAD?', opts:['Processar exclusivamente salários','Apoiar decisões através da análise de dados e cenários','Substituir a rede informática','Criar ficheiros de texto'], ans:'B' },
+  { id:'i99', t:'info_si', d:'int', q:'Qual sistema integra diferentes áreas funcionais de uma organização?', opts:['ERP','Hub','DNS','BIOS'], ans:'A' },
+  { id:'i100', t:'info_si', d:'int', q:'Qual sistema é orientado para a gestão do relacionamento com clientes?', opts:['ERP','CRM','DNS','DHCP'], ans:'B' },
+  { id:'i101', t:'info_si', d:'int', q:'Qual é a principal função de um sistema SCM?', opts:['Gerir a cadeia de abastecimento','Gerir exclusivamente palavras-passe','Processar imagens','Controlar apenas os sistemas operativos'], ans:'A' },
+  { id:'i102', t:'info_si', d:'int', q:'As decisões estratégicas são normalmente tomadas:', opts:['Apenas pelos operadores de caixa','Pela gestão de topo','Exclusivamente pelos técnicos de informática','Apenas pelos clientes'], ans:'B' },
+  { id:'i103', t:'info_si', d:'int', q:'Qual é a finalidade do levantamento de requisitos?', opts:['Definir as necessidades e funcionalidades que o sistema deve satisfazer','Eliminar a necessidade de testes','Instalar imediatamente o sistema','Substituir a manutenção'], ans:'A' },
+  { id:'i104', t:'info_si', d:'int', q:'Em que fase são definidas a arquitectura e a estrutura do sistema?', opts:['Desenho','Manutenção','Utilização','Encerramento'], ans:'A' },
+  { id:'i105', t:'info_si', d:'ini', q:'Qual é o objectivo dos testes unitários?', opts:['Testar exclusivamente o sistema completo','Verificar o funcionamento de unidades ou componentes individuais','Testar apenas a ligação à Internet','Avaliar exclusivamente a satisfação dos clientes'], ans:'B' },
+  { id:'i106', t:'info_si', d:'int', q:'Os testes de integração verificam:', opts:['A comunicação e funcionamento conjunto dos componentes','Apenas a aparência do sistema','Apenas a velocidade da Internet','A substituição dos requisitos'], ans:'A' },
+  { id:'i107', t:'info_si', d:'ini', q:'Qual é a principal característica da metodologia Cascata?', opts:['Desenvolvimento sequencial por fases','Ausência de planeamento','Entregas contínuas sem qualquer organização','Eliminação dos testes'], ans:'A' },
+  { id:'i108', t:'info_si', d:'int', q:'No Scrum, um Sprint é:', opts:['Um período de trabalho com duração fixa para produzir um incremento do produto','Uma linguagem de programação','Um tipo de base de dados','Um dispositivo de rede'], ans:'A' },
+  { id:'i109', t:'info_si', d:'int', q:'A manutenção correctiva de um sistema consiste em:', opts:['Corrigir erros identificados após a implementação','Criar obrigatoriamente um novo sistema','Eliminar todas as funcionalidades','Impedir futuras actualizações'], ans:'A' },
+  { id:'i110', t:'info_si', d:'int', q:'Qual é a finalidade da análise de viabilidade?', opts:['Avaliar se o projecto pode ser realizado e se faz sentido técnica, económica e operacionalmente','Escolher exclusivamente a cor da interface','Eliminar a participação dos utilizadores','Substituir a documentação'], ans:'A' },
+  { id:'i111', t:'info_si', d:'ini', q:'Qual malware tem como característica principal exigir um resgate para devolver o acesso aos dados?', opts:['Spyware','Ransomware','Adware','Driver'], ans:'B' },
+  { id:'i112', t:'info_si', d:'ini', q:'Um programa malicioso que se apresenta como software legítimo é normalmente classificado como:', opts:['Trojan','Firewall','Sistema operativo','Repetidor'], ans:'A' },
+  { id:'i113', t:'info_si', d:'int', q:'Qual é a diferença fundamental entre vírus e worm?', opts:['O worm pode propagar-se autonomamente, enquanto o vírus normalmente depende de um ficheiro ou programa hospedeiro','O vírus só afecta redes e o worm só afecta discos','Ambos são equipamentos físicos','Não existe qualquer diferença'], ans:'A' },
+  { id:'i114', t:'info_si', d:'int', q:'Um ataque DDoS procura principalmente:', opts:['Melhorar a disponibilidade do serviço','Tornar um serviço indisponível através de tráfego distribuído','Aumentar a capacidade da memória','Corrigir erros de programação'], ans:'B' },
+  { id:'i115', t:'info_dados', d:'int', q:'Qual é o princípio do menor privilégio?', opts:['Todos os utilizadores devem ter privilégios de administrador','Cada utilizador deve possuir apenas as permissões necessárias para executar as suas funções','As permissões devem ser sempre públicas','Nenhum utilizador deve ter acesso aos dados'], ans:'B' },
+  { id:'i116', t:'info_si', d:'int', q:'O que é engenharia social?', opts:['Manipulação de pessoas para obter informações ou induzir acções prejudiciais','Desenvolvimento de circuitos electrónicos','Construção de bases de dados','Instalação de sistemas operativos'], ans:'A' },
+  { id:'i117', t:'info_si', d:'int', q:'Qual é a principal finalidade de um firewall?', opts:['Controlar o tráfego de rede segundo regras de segurança','Substituir a memória RAM','Eliminar automaticamente qualquer vírus existente','Criar documentos'], ans:'A' },
+  { id:'i118', t:'info_si', d:'int', q:'Qual medida é mais adequada para recuperar dados após um ataque de ransomware?', opts:['Pagar sempre o resgate','Recuperar a partir de cópias de segurança íntegras e isoladas, após conter o incidente','Desactivar permanentemente o antivírus','Partilhar os ficheiros cifrados'], ans:'B' },
+  { id:'i119', t:'info_si', d:'ini', q:'Um algoritmo deve possuir como característica fundamental:', opts:['Ser infinito','Ter passos definidos e terminar após um número finito de operações','Não produzir resultados','Depender obrigatoriamente da Internet'], ans:'B' },
+  { id:'i120', t:'info_si', d:'ini', q:'Qual estrutura permite executar instruções mediante uma condição?', opts:['Sequencial','Condicional','Declaração','Comentário'], ans:'B' },
+  { id:'i121', t:'info_si', d:'ini', q:'Qual é o resultado de 17 MOD 5?', opts:['2','3','4','5'], ans:'A' },
+  { id:'i122', t:'info_si', d:'ini', q:'Qual é o resultado de 17 DIV 5, considerando divisão inteira?', opts:['2','3','3,4','4'], ans:'B' },
+  { id:'i123', t:'info_si', d:'ini', q:'Qual é o resultado lógico de VERDADEIRO AND FALSO?', opts:['Verdadeiro','Falso','Indeterminado','Nulo'], ans:'B' },
+  { id:'i124', t:'info_si', d:'ini', q:'Qual é o resultado de VERDADEIRO OR FALSO?', opts:['Verdadeiro','Falso','Nulo','Erro'], ans:'A' },
+  { id:'i125', t:'info_si', d:'ini', q:'O operador NOT serve para:', opts:['Somar valores','Inverter um valor lógico','Multiplicar números','Repetir instruções'], ans:'B' },
+  { id:'i126', t:'info_si', d:'int', q:'Qual estrutura garante que as instruções sejam executadas pelo menos uma vez?', opts:['WHILE','FOR','REPEAT/UNTIL','IF'], ans:'C' },
+  { id:'i127', t:'info_si', d:'ini', q:'Qual é a função de uma variável?', opts:['Armazenar temporariamente um valor que pode ser utilizado e alterado durante a execução do programa','Substituir a CPU','Ligar computadores em rede','Eliminar todos os erros de programação'], ans:'A' },
+  { id:'i128', t:'info_si', d:'ini', q:'Qual é a saída do pseudocódigo a=5; b=3; c=a*b+2; escrever c?', opts:['13','15','17','25'], ans:'C' },
+  { id:'i129', t:'info_si', d:'ini', q:'Se x=10 e a condição x>10 for testada, qual ramo será executado?', opts:['Maior','Menor ou igual','10','Erro'], ans:'B' },
+  { id:'i130', t:'info_si', d:'ini', q:'Qual estrutura é mais adequada para percorrer uma lista de 1 a 100 elementos?', opts:['FOR','IF','SWITCH exclusivamente','RETURN'], ans:'A' },
+  { id:'i131', t:'info_si', d:'int', q:'Uma estrutura de repetição que nunca termina, devido a uma condição que permanece verdadeira, é denominada:', opts:['Ciclo infinito','Função recursiva obrigatoriamente correcta','Estrutura sequencial','Variável constante'], ans:'A' },
+  { id:'i132', t:'info_si', d:'int', q:'Qual é a finalidade de uma função num programa?', opts:['Organizar e reutilizar um bloco de código que realiza uma tarefa','Substituir todos os algoritmos','Impedir a passagem de parâmetros','Eliminar as variáveis'], ans:'A' },
+  { id:'i133', t:'info_si', d:'int', q:'Qual é o principal objectivo de um SIG?', opts:['Apoiar a gestão através da produção de informação útil e organizada','Substituir todos os gestores','Impedir a realização de operações','Controlar exclusivamente os dispositivos electrónicos'], ans:'A' },
+  { id:'i134', t:'info_si', d:'int', q:'Um relatório mensal de vendas por departamento é um exemplo de:', opts:['Informação de gestão','Hardware','Protocolo','Sistema operativo'], ans:'A' },
+  { id:'i135', t:'info_si', d:'int', q:'Qual indicador permite avaliar a relação entre o resultado obtido e os recursos utilizados?', opts:['Produtividade','Endereço IP','Número de portas','Capacidade de RAM'], ans:'A' },
+  { id:'i136', t:'info_si', d:'int', q:'Qual é a principal vantagem de um SIG para a direcção de uma organização?', opts:['Tomar decisões com base em informação organizada e relevante','Eliminar a necessidade de planeamento','Impedir a produção de relatórios','Substituir a contabilidade'], ans:'A' },
+  { id:'i137', t:'info_si', d:'int', q:'Qual é o objectivo da gestão de dados?', opts:['Garantir que os dados sejam geridos durante todo o seu ciclo de vida','Eliminar todos os registos antigos imediatamente','Impedir a consulta de dados','Substituir os sistemas operativos'], ans:'A' },
+  { id:'i138', t:'info_si', d:'int', q:'Qual das opções representa uma característica de dados de qualidade?', opts:['Duplicação permanente','Inconsistência','Exactidão','Desactualização'], ans:'C' },
+  { id:'i139', t:'info_si', d:'int', q:'O processo ETL significa:', opts:['Extract, Transform, Load','Execute, Transfer, Link','Enter, Test, Launch','Export, Translate, Login'], ans:'A' },
+  { id:'i140', t:'info_si', d:'int', q:'A governação de dados procura:', opts:['Definir políticas, responsabilidades e regras para gerir os dados','Eliminar a segurança dos sistemas','Impedir o acesso de todos os utilizadores','Substituir as bases de dados'], ans:'A' },
+  { id:'i141', t:'info_si', d:'int', q:'Uma base de dados contém três registos para o mesmo cliente, quando deveria existir apenas um. Que problema está presente?', opts:['Duplicação de dados','Disponibilidade','Encriptação','Autenticação'], ans:'A' },
+  { id:'i142', t:'info_si', d:'ini', q:'Qual é a equação fundamental da contabilidade?', opts:['Activo = Passivo + Capital Próprio','Activo = Passivo − Capital Próprio','Passivo = Activo + Capital Próprio','Capital Próprio = Activo + Passivo'], ans:'A' },
+  { id:'i143', t:'info_si', d:'ini', q:'Uma empresa possui activos de 1 000 000 Kz e passivos de 400 000 Kz. Qual é o seu capital próprio?', opts:['400 000 Kz','500 000 Kz','600 000 Kz','1 400 000 Kz'], ans:'C' },
+  { id:'i144', t:'info_si', d:'int', q:'Qual demonstração financeira apresenta a posição financeira da entidade numa determinada data?', opts:['Demonstração de resultados','Balanço','Demonstração de fluxos de caixa','Relatório de vendas'], ans:'B' },
+  { id:'i145', t:'info_si', d:'int', q:'Qual demonstração financeira evidencia os rendimentos, gastos e resultados de um período?', opts:['Balanço','Demonstração de resultados','Inventário físico exclusivamente','Relatório de rede'], ans:'B' },
+  { id:'i146', t:'info_si', d:'int', q:'Na contabilidade por partidas dobradas:', opts:['O total de débitos deve ser igual ao total de créditos','Os créditos são sempre superiores aos débitos','Os débitos não precisam de corresponder aos créditos','Cada operação só pode ter um registo'], ans:'A' },
+  { id:'i147', t:'info_si', d:'int', q:'Qual é a principal finalidade de um sistema informático de facturação?', opts:['Apoiar a emissão, registo e gestão de documentos de facturação','Substituir o sistema operativo','Criar endereços IP','Gerir exclusivamente os funcionários'], ans:'A' },
+  { id:'i148', t:'info_si', d:'int', q:'Uma empresa utiliza um sistema para acompanhar entradas, saídas e níveis de produtos no armazém. Está a utilizar um sistema de:', opts:['Gestão de stock','Gestão de DNS','Processamento gráfico','Autenticação biométrica exclusivamente'], ans:'A' },
+  { id:'i149', t:'info_si', d:'int', q:'Qual é a vantagem de integrar a contabilidade num ERP?', opts:['Eliminar a necessidade de dados','Permitir a integração de informação financeira com outras áreas da organização','Impedir a comunicação entre departamentos','Duplicar obrigatoriamente todas as operações'], ans:'B' },
+  { id:'i150', t:'info_si', d:'int', q:'O Excel é especialmente útil na gestão porque permite:', opts:['Realizar cálculos, organizar dados, analisar informação e produzir relatórios','Substituir todos os sistemas de bases de dados','Criar redes físicas','Executar exclusivamente sistemas operativos'], ans:'A' },
+  { id:'i151', t:'info_hardware_rede', d:'ini', q:'Qual equipamento desempenha a função principal de encaminhamento entre redes?', opts:['Hub','Switch de camada 2','Router','Repetidor'], ans:'C' },
+  { id:'i152', t:'info_si', d:'ini', q:'Uma mensagem imita a página de acesso do banco e solicita credenciais. Trata-se de:', opts:['Ransomware','Phishing','Defragmentação','Backup'], ans:'B' },
+  { id:'i153', t:'info_dados', d:'int', q:'Para armazenar dados relacionados de funcionários, departamentos e salários, qual solução é mais adequada?', opts:['Pasta com imagens','Base de dados relacional','Hub','Repetidor'], ans:'B' },
+  { id:'i154', t:'info_dados', d:'int', q:'Qual propriedade ACID garante que uma transferência seja integralmente concluída ou não aplicada?', opts:['Disponibilidade','Atomicidade','Confidencialidade','Redundância'], ans:'B' },
+  { id:'i155', t:'info_si', d:'int', q:'Qual sistema é adequado para analisar vendas e comparar cenários de investimento?', opts:['Sistema de apoio à decisão','Hub','Sistema operativo','Repetidor'], ans:'A' },
+  { id:'i156', t:'info_redes', d:'int', q:'Um computador tem o endereço 192.168.1.100/24. Qual é o endereço de rede?', opts:['192.168.1.0','192.168.1.100','192.168.1.255','192.168.0.0'], ans:'A' },
+  { id:'i157', t:'info_dados', d:'int', q:'Permitir que cada funcionário aceda apenas aos dados necessários aplica o princípio de:', opts:['Privilégio máximo','Menor privilégio','Acesso público','Redundância'], ans:'B' },
+  { id:'i158', t:'info_dados', d:'int', q:'Num sistema escolar, estudante e inscrição representam, respectivamente:', opts:['Evento e atributo','Entidade e evento','Atributo e entidade','Protocolo e ficheiro'], ans:'B' },
+  { id:'i159', t:'info_intro', d:'ini', q:'Qual componente deve ser analisado quando falta memória temporária para executar vários programas?', opts:['RAM','Impressora','Router','Monitor'], ans:'A' },
+  { id:'i160', t:'info_si', d:'int', q:'Um sistema transforma dados de vendas em relatórios e indicadores para gestores. Isto representa:', opts:['Apenas transmissão de dados','Processamento de dados para produzir informação de gestão','Apenas armazenamento físico','Exclusivamente autenticação'], ans:'B' },
+  { id:'i161', t:'info_dados', d:'int', q:'Impedir que utilizadores não autorizados consultem dados de pacientes protege principalmente:', opts:['Disponibilidade','Confidencialidade','Escalabilidade','Portabilidade'], ans:'B' },
+  { id:'i162', t:'info_redes', d:'ava', q:'Uma rede 192.168.10.0/24 dividida em quatro sub-redes de igual dimensão passa a usar qual prefixo?', opts:['/25','/26','/27','/28'], ans:'B' },
+  { id:'i163', t:'info_si', d:'ini', q:'Qual é a sequência correcta de ETL?', opts:['Transformar, eliminar, transferir','Extrair, transformar e carregar','Executar, testar e ligar','Entrar, transmitir e listar'], ans:'B' },
+  { id:'i164', t:'info_si', d:'int', q:'Qual sistema integra informação financeira, recursos humanos, compras e stocks?', opts:['ERP','CRM exclusivamente','Hub','DNS'], ans:'A' },
+  { id:'i165', t:'info_si', d:'int', q:'Executar instruções enquanto uma variável for inferior a 10 utiliza uma estrutura de:', opts:['Condicional exclusivamente','Repetição','Declaração de constante','Estrutura de ficheiros'], ans:'B' },
+  { id:'i166', t:'info_si', d:'int', q:'Um serviço recebe tráfego anormal proveniente de muitos dispositivos e deixa de responder. Qual ataque é provável?', opts:['DDoS','Phishing','SQL SELECT','Backup'], ans:'A' },
+  { id:'i167', t:'info_dados', d:'int', q:'Um utilizador autentica-se correctamente, mas não tem permissão para consultar salários. Qual afirmação é correcta?', opts:['A autenticação falhou necessariamente','A autenticação ocorreu, mas a autorização negou o acesso','A confidencialidade deixou de existir em toda a organização','Necessita obrigatoriamente de novo sistema operativo'], ans:'B' },
+  { id:'i168', t:'info_redes', d:'int', q:'Qual endereço é normalmente utilizado para encaminhar quadros dentro de uma LAN Ethernet?', opts:['Endereço MAC','Endereço de e-mail','Nome de domínio','Número de série do monitor'], ans:'A' },
+  { id:'i169', t:'info_dados', d:'int', q:'Qual situação representa uma falha de integridade?', opts:['Um sistema fica temporariamente indisponível','Um utilizador não autorizado altera o registo de uma factura','Um utilizador autorizado consulta um relatório','Um computador é desligado correctamente'], ans:'B' },
+  { id:'i170', t:'info_si', d:'ini', q:'Qual equação deve manter-se no balanço contabilístico?', opts:['Activo = Passivo + Capital Próprio','Activo = Rendimentos + Gastos','Passivo = Activo + Capital Próprio','Capital Próprio = Activo + Passivo'], ans:'A' },
+  /* Perguntas sobre ficheiros e extensões */
+  { id:'if1', t:'info_ficheiros', d:'ini', q:'Qual extensão é normalmente associada a um documento PDF?', opts:['.docx','.pdf','.xlsx','.pptx'], ans:'B', expl:'PDF significa Portable Document Format.' },
+  { id:'if2', t:'info_ficheiros', d:'ini', q:'Qual extensão identifica normalmente um ficheiro de folha de cálculo moderno do Excel?', opts:['.xlsx','.pptx','.docx','.mp3'], ans:'A' },
+  { id:'if3', t:'info_ficheiros', d:'ini', q:'Qual extensão é normalmente utilizada para imagens com suporte de transparência e compressão sem perdas?', opts:['.mp3','.png','.exe','.csv'], ans:'B' },
+  { id:'if4', t:'info_ficheiros', d:'ini', q:'Qual extensão corresponde a um ficheiro de texto simples?', opts:['.txt','.dll','.mp4','.zip'], ans:'A' },
+  { id:'if5', t:'info_ficheiros', d:'ini', q:'Qual extensão é normalmente usada para ficheiros comprimidos no formato ZIP?', opts:['.jpg','.zip','.html','.sql'], ans:'B' },
+  { id:'if6', t:'info_ficheiros', d:'ini', q:'Qual extensão é associada a um ficheiro executável comum do Windows?', opts:['.exe','.pdf','.png','.csv'], ans:'A' },
+  { id:'if7', t:'info_ficheiros', d:'ini', q:'Qual extensão representa frequentemente um ficheiro de dados estruturados em JavaScript Object Notation?', opts:['.json','.wav','.bmp','.sys'], ans:'A' },
+  { id:'if8', t:'info_ficheiros', d:'ini', q:'Qual extensão é normalmente associada a uma página Web estruturada em HTML?', opts:['.html','.xlsx','.rar','.dll'], ans:'A' },
+  { id:'if9', t:'info_ficheiros', d:'ini', q:'Qual extensão é normalmente usada para código-fonte Python?', opts:['.py','.ppt','.tiff','.apk'], ans:'A' },
+  { id:'if10', t:'info_ficheiros', d:'ini', q:'Qual extensão é normalmente usada para uma base de dados SQLite?', opts:['.sqlite3','.mp3','.css','.gif'], ans:'A' }
+];
 
-  /* ===== PAUTA DEONTOLÓGICA ===== */
-  { id:'d1', t:'deontologia', d:'ini', q:'O que é a deontologia?', a:'É o conjunto de deveres, princípios e normas éticas que orientam o exercício de uma profissão.' },
-  { id:'d2', t:'deontologia', d:'ini', q:'O que é a Pauta Deontológica da Função Pública?', a:'É o conjunto de princípios éticos e profissionais que orienta a conduta dos funcionários públicos.' },
-  { id:'d3', t:'deontologia', d:'int', q:'Qual é o principal objetivo da Pauta Deontológica?', a:'Garantir uma atuação ética, honesta, responsável e voltada ao interesse público.' },
-  { id:'d4', t:'deontologia', d:'int', q:'O que a pauta deontológica procura promover?', a:'Uma Administração Pública ética.' },
-  { id:'d5', t:'deontologia', d:'ini', q:'Qual documento deve ser respeitado pelos funcionários públicos?', a:'A Constituição e as leis.' },
-  { id:'d6', t:'deontologia', d:'ini', q:'Um dos objetivos da pauta deontológica é combater o quê?', a:'A corrupção.' },
-  { id:'d7', t:'deontologia', d:'int', q:'O que significa promover transparência na Administração Pública?', a:'Tornar os atos administrativos claros e acessíveis, quando permitido por lei.' },
-  { id:'d8', t:'deontologia', d:'ini', q:'A pauta deontológica protege os direitos de quem?', a:'Dos cidadãos.' },
-  { id:'d9', t:'deontologia', d:'int', q:'O cumprimento da ética fortalece a confiança de quem?', a:'Da sociedade nas instituições públicas.' },
-  { id:'d10', t:'deontologia', d:'int', q:'O que significa o princípio da legalidade na função pública?', a:'Agir sempre de acordo com a lei.' },
-  { id:'d11', t:'deontologia', d:'int', q:'O que significa imparcialidade?', a:'Tratar todos os cidadãos de forma igual, sem favoritismos.' },
-  { id:'d12', t:'deontologia', d:'int', q:'O que representa o princípio da integridade?', a:'Agir com honestidade e retidão.' },
-  { id:'d13', t:'deontologia', d:'int', q:'O que significa responsabilidade na Função Pública?', a:'Responder pelos próprios atos e decisões.' },
-  { id:'d14', t:'deontologia', d:'int', q:'O que significa eficiência?', a:'Utilizar os recursos públicos de forma racional e produtiva.' },
-  { id:'d15', t:'deontologia', d:'int', q:'O que é lealdade institucional?', a:'Respeitar e defender a instituição onde se trabalha.' },
-  { id:'d16', t:'deontologia', d:'int', q:'O que significa boa-fé?', a:'Agir com sinceridade, honestidade e respeito.' },
-  { id:'d17', t:'deontologia', d:'int', q:'Cite quatro princípios fundamentais da Função Pública.', a:'Legalidade, imparcialidade, integridade e responsabilidade.' },
-  { id:'d18', t:'deontologia', d:'ini', q:'O funcionário público deve cumprir quais normas?', a:'A Constituição e as leis.' },
-  { id:'d19', t:'deontologia', d:'ini', q:'Como o servidor deve exercer as suas funções?', a:'Com zelo e dedicação.' },
-  { id:'d20', t:'deontologia', d:'ini', q:'O funcionário deve ser como em relação ao horário?', a:'Pontual e assíduo.' },
-  { id:'d21', t:'deontologia', d:'ini', q:'Como deve tratar os cidadãos?', a:'Com respeito e educação.' },
-  { id:'d22', t:'deontologia', d:'int', q:'O que é sigilo profissional?', a:'É o dever de proteger informações confidenciais.' },
-  { id:'d23', t:'deontologia', d:'ini', q:'O funcionário deve proteger o quê?', a:'O património público.' },
-  { id:'d24', t:'deontologia', d:'int', q:'O servidor deve evitar o quê?', a:'Conflitos de interesses.' },
-  { id:'d25', t:'deontologia', d:'int', q:'Como deve agir politicamente durante o exercício das funções?', a:'Com neutralidade política.' },
-  { id:'d26', t:'deontologia', d:'ini', q:'O funcionário deve cooperar com quem?', a:'Com os colegas.' },
-  { id:'d27', t:'deontologia', d:'int', q:'O servidor deve cumprir as ordens de quem?', a:'Dos superiores, desde que sejam legais.' },
-  { id:'d28', t:'deontologia', d:'ini', q:'Cite um direito do funcionário público.', a:'Remuneração.' },
-  { id:'d29', t:'deontologia', d:'ini', q:'O funcionário tem direito à formação profissional?', a:'Sim.' },
-  { id:'d30', t:'deontologia', d:'int', q:'O que é progressão na carreira?', a:'O avanço profissional conforme a lei.' },
-  { id:'d31', t:'deontologia', d:'ini', q:'O funcionário público tem direito a férias?', a:'Sim.' },
-  { id:'d32', t:'deontologia', d:'ini', q:'O servidor tem direito ao descanso semanal?', a:'Sim.' },
-  { id:'d33', t:'deontologia', d:'ini', q:'O funcionário tem direito à proteção social?', a:'Sim.' },
-  { id:'d34', t:'deontologia', d:'ini', q:'O funcionário tem direito de defesa em processo disciplinar?', a:'Sim.' },
-  { id:'d35', t:'deontologia', d:'ini', q:'É permitido receber subornos?', a:'Não.' },
-  { id:'d36', t:'deontologia', d:'ini', q:'A corrupção é permitida na Função Pública?', a:'Não.' },
-  { id:'d37', t:'deontologia', d:'ini', q:'O funcionário pode utilizar bens públicos para fins pessoais?', a:'Não.' },
-  { id:'d38', t:'deontologia', d:'ini', q:'É permitido divulgar informações sigilosas?', a:'Não.' },
-  { id:'d39', t:'deontologia', d:'ini', q:'O funcionário pode favorecer familiares ou amigos?', a:'Não.' },
-  { id:'d40', t:'deontologia', d:'ini', q:'É permitido faltar injustificadamente ao serviço?', a:'Não.' },
-  { id:'d41', t:'deontologia', d:'ini', q:'É permitido praticar assédio moral ou sexual?', a:'Não.' },
-  { id:'d42', t:'deontologia', d:'int', q:'O que é conflito de interesses?', a:'É quando interesses pessoais influenciam decisões profissionais.' },
-  { id:'d43', t:'deontologia', d:'int', q:'O dever de sigilo termina quando o funcionário deixa o cargo?', a:'Não, quando a lei assim determinar.' },
-  { id:'d44', t:'deontologia', d:'int', q:'Como deve ser o atendimento ao público?', a:'Educado e respeitoso.' },
-  { id:'d45', t:'deontologia', d:'ini', q:'O servidor pode discriminar cidadãos?', a:'Não.' },
-  { id:'d46', t:'deontologia', d:'int', q:'Que tipo de informações o funcionário deve prestar?', a:'Informações corretas.' },
-  { id:'d47', t:'deontologia', d:'int', q:'O que significa prestação de contas?', a:'Demonstrar e justificar a utilização dos recursos e decisões públicas.' },
-  { id:'d48', t:'deontologia', d:'int', q:'A transparência administrativa contribui para o quê?', a:'O combate à corrupção.' },
-  { id:'d49', t:'deontologia', d:'int', q:'Cite uma sanção disciplinar.', a:'Advertência.' },
-  { id:'d50', t:'deontologia', d:'int', q:'Cite outra sanção disciplinar.', a:'Repreensão.' },
-  { id:'d51', t:'deontologia', d:'int', q:'A multa pode ser uma sanção disciplinar?', a:'Sim.' },
-  { id:'d52', t:'deontologia', d:'int', q:'A suspensão é uma penalidade disciplinar?', a:'Sim.' },
-  { id:'d53', t:'deontologia', d:'int', q:'A demissão pode resultar de infrações graves?', a:'Sim.' },
-  { id:'d54', t:'deontologia', d:'int', q:'A ética melhora o quê na Administração Pública?', a:'A qualidade dos serviços públicos.' },
-  { id:'d55', t:'deontologia', d:'int', q:'A ética reduz quais práticas?', a:'As práticas de corrupção.' },
-  { id:'d56', t:'deontologia', d:'int', q:'A ética fortalece a confiança de quem?', a:'Dos cidadãos.' },
-  { id:'d57', t:'deontologia', d:'int', q:'A ética promove quais valores?', a:'Justiça e igualdade.' },
-  { id:'d58', t:'deontologia', d:'ava', q:'O interesse de quem deve prevalecer?', a:'O interesse público.' },
-  { id:'d59', t:'deontologia', d:'int', q:'Quais são os princípios fundamentais mais importantes para memorizar?', a:'Honestidade, legalidade, imparcialidade e responsabilidade.' },
-  { id:'d60', t:'deontologia', d:'int', q:'Quais práticas são expressamente proibidas?', a:'Corrupção, nepotismo e favorecimento.' },
-  { id:'d61', t:'deontologia', d:'int', q:'Como o servidor público deve representar o Estado?', a:'Com dignidade, profissionalismo, respeito pela lei e compromisso com o interesse público.' },
+const ALL_QUESTIONS = INFORMATICA_QUESTIONS;
 
-  /* ===== IIMS ===== */
-  { id:'i1', t:'iims', d:'ini', q:'O que significa a sigla IIMS?', a:'Inquérito de Indicadores Múltiplos e de Saúde.' },
-  { id:'i2', t:'iims', d:'ini', q:'Em que período foi realizado o IIMS referido no guia?', a:'Entre 2023 e 2024.' },
-  { id:'i3', t:'iims', d:'ini', q:'Qual é a principal finalidade do IIMS?', a:'Recolher informações sobre saúde, demografia e condições de vida da população.' },
-  { id:'i4', t:'iims', d:'ini', q:'Qual instituição realizou o IIMS?', a:'O Instituto Nacional de Estatística (INE).' },
-  { id:'i5', t:'iims', d:'ini', q:'Em parceria com que instituição o INE realizou o IIMS?', a:'Com o Ministério da Saúde (MINSA).' },
-  { id:'i6', t:'iims', d:'int', q:'O IIMS fornece informações sobre que áreas?', a:'Saúde, nutrição, fecundidade, mortalidade, vacinação e qualidade de vida.' },
-  { id:'i7', t:'iims', d:'ini', q:'Qual é o objectivo geral do IIMS?', a:'Fornecer informações actualizadas para apoiar as políticas públicas de saúde.' },
-  { id:'i8', t:'iims', d:'int', q:'O IIMS ajuda na formulação de quê?', a:'Das políticas públicas.' },
-  { id:'i9', t:'iims', d:'int', q:'O IIMS permite avaliar o quê?', a:'As políticas públicas de saúde.' },
-  { id:'i10', t:'iims', d:'int', q:'Um dos objectivos específicos do IIMS é medir o quê?', a:'Os níveis de fecundidade e mortalidade.' },
-  { id:'i11', t:'iims', d:'int', q:'O IIMS avalia a saúde de quais grupos?', a:'Das mães e das crianças.' },
-  { id:'i12', t:'iims', d:'ini', q:'O IIMS recolhe dados sobre quê?', a:'Sobre a vacinação das crianças.' },
-  { id:'i13', t:'iims', d:'int', q:'O IIMS avalia o estado de quê?', a:'O estado nutricional da população.' },
-  { id:'i14', t:'iims', d:'int', q:'Que doenças são avaliadas pelo IIMS?', a:'Malária e anemia.' },
-  { id:'i15', t:'iims', d:'int', q:'O IIMS produz indicadores para monitorizar o quê?', a:'Os Objectivos de Desenvolvimento Sustentável (ODS).' },
-  { id:'i16', t:'iims', d:'int', q:'O IIMS apoia qual plano nacional?', a:'O Plano Nacional de Desenvolvimento Sanitário.' },
-  { id:'i17', t:'iims', d:'int', q:'O que são indicadores de saúde?', a:'Medidas estatísticas utilizadas para avaliar a situação de saúde de uma população.' },
-  { id:'i18', t:'iims', d:'int', q:'O que são consultas pré-natais?', a:'Consultas realizadas durante a gravidez para acompanhar a saúde da mãe e do bebé.' },
-  { id:'i19', t:'iims', d:'int', q:'Onde devem ser realizados os partos, segundo os indicadores do IIMS?', a:'Em unidades de saúde.' },
-  { id:'i20', t:'iims', d:'int', q:'O que acontece após o parto segundo os indicadores do IIMS?', a:'Devem ser realizadas consultas pós-parto.' },
-  { id:'i21', t:'iims', d:'int', q:'O IIMS avalia o planeamento de quê?', a:'O planeamento familiar.' },
-  { id:'i22', t:'iims', d:'int', q:'O IIMS acompanha a utilização de quê?', a:'De métodos contraceptivos.' },
-  { id:'i23', t:'iims', d:'int', q:'Um indicador importante da saúde infantil é qual?', a:'O peso ao nascer.' },
-  { id:'i24', t:'iims', d:'int', q:'O que é aleitamento materno exclusivo?', a:'Alimentação do bebé apenas com leite materno nos primeiros meses de vida.' },
-  { id:'i25', t:'iims', d:'int', q:'O IIMS acompanha o quê em relação ao crescimento?', a:'O crescimento infantil.' },
-  { id:'i26', t:'iims', d:'int', q:'O IIMS analisa quais doenças?', a:'As doenças comuns na infância.' },
-  { id:'i27', t:'iims', d:'int', q:'O IIMS analisa o acesso a quê?', a:'Aos serviços de saúde.' },
-  { id:'i28', t:'iims', d:'int', q:'O que é desnutrição crónica?', a:'Défice prolongado de nutrição que compromete o crescimento.' },
-  { id:'i29', t:'iims', d:'int', q:'O que é desnutrição aguda?', a:'Défice grave e recente de nutrição.' },
-  { id:'i30', t:'iims', d:'int', q:'Como é avaliado o estado nutricional?', a:'Por meio de medições de peso e altura.' },
-  { id:'i31', t:'iims', d:'ini', q:'O que é vacinação?', a:'Administração de vacinas para prevenir doenças.' },
-  { id:'i32', t:'iims', d:'int', q:'O IIMS acompanha a cobertura de quê?', a:'Das principais vacinas do calendário nacional.' },
-  { id:'i33', t:'iims', d:'int', q:'O IIMS identifica grupos com menor acesso a quê?', a:'À imunização.' },
-  { id:'i34', t:'iims', d:'int', q:'O IIMS orienta quais campanhas?', a:'Campanhas de vacinação.' },
-  { id:'i35', t:'iims', d:'int', q:'O que é mortalidade neonatal?', a:'Morte de recém-nascidos nos primeiros dias de vida.' },
-  { id:'i36', t:'iims', d:'int', q:'O que é mortalidade infantil?', a:'Número de óbitos de crianças com menos de um ano.' },
-  { id:'i37', t:'iims', d:'int', q:'O que é mortalidade materna?', a:'Morte de uma mulher durante a gravidez, parto ou pós-parto por causas relacionadas com a gestação.' },
-  { id:'i38', t:'iims', d:'int', q:'Para que servem os resultados do IIMS?', a:'Para orientar o planeamento sanitário.' },
-  { id:'i39', t:'iims', d:'int', q:'O IIMS ajuda a planear o quê?', a:'Programas nacionais de saúde.' },
-  { id:'i40', t:'iims', d:'int', q:'O IIMS contribui para melhorar quais serviços?', a:'Os serviços materno-infantis.' },
-  { id:'i41', t:'iims', d:'int', q:'O IIMS auxilia na definição de quê?', a:'Das prioridades de investimento.' },
-  { id:'i42', t:'iims', d:'int', q:'O IIMS apoia o combate a quê?', a:'À desnutrição.' },
-  { id:'i43', t:'iims', d:'int', q:'O IIMS monitoriza quais objectivos?', a:'Os Objectivos de Desenvolvimento Sustentável (ODS).' },
-  { id:'i44', t:'iims', d:'int', q:'O IIMS contribui para distribuir melhor o quê?', a:'Os recursos humanos e materiais.' },
-  { id:'i45', t:'iims', d:'int', q:'Quem utiliza os dados do IIMS para tomar decisões?', a:'O Governo, o MINSA e parceiros internacionais.' },
-  { id:'i46', t:'iims', d:'int', q:'O que significa planeamento sanitário?', a:'Organização das políticas e serviços de saúde com base em dados.' },
-  { id:'i47', t:'iims', d:'int', q:'O IIMS é uma operação estatística de que área?', a:'Da saúde e da demografia.' },
-  { id:'i48', t:'iims', d:'int', q:'Qual é a importância da fecundidade no IIMS?', a:'Avaliar os níveis de natalidade da população.' },
-  { id:'i49', t:'iims', d:'int', q:'Por que motivo a vacinação é importante?', a:'Porque previne doenças.' },
-  { id:'i50', t:'iims', d:'int', q:'Qual é a importância da nutrição?', a:'Influencia o crescimento e a saúde.' },
-  { id:'i51', t:'iims', d:'int', q:'Qual é a importância dos indicadores de saúde?', a:'Avaliar a situação de saúde da população.' },
-  { id:'i52', t:'iims', d:'int', q:'O estado nutricional é avaliado por quais medições?', a:'Peso e altura.' },
-  { id:'i53', t:'iims', d:'int', q:'O planeamento familiar faz parte de qual área?', a:'Da saúde materna.' },
-  { id:'i54', t:'iims', d:'ini', q:'Qual é a principal instituição estatística de Angola responsável pelo IIMS?', a:'O Instituto Nacional de Estatística (INE).' },
-  { id:'i55', t:'iims', d:'ini', q:'Qual ministério participou na realização do IIMS?', a:'O Ministério da Saúde (MINSA).' },
-  { id:'i56', t:'iims', d:'int', q:'O IIMS fornece informações actualizadas para quê?', a:'Apoiar a formulação, implementação e avaliação de políticas públicas.' },
-
-  /* ===== INTELIGÊNCIA ARTIFICIAL ===== */
-  { id:'ia1', t:'ia', d:'ini', q:'O que é Inteligência Artificial (IA)?', a:'É um ramo da Ciência da Computação que desenvolve sistemas capazes de simular a inteligência humana.' },
-  { id:'ia2', t:'ia', d:'int', q:'O que a IA permite às máquinas fazer?', a:'Aprender, raciocinar, resolver problemas, compreender a linguagem, reconhecer imagens e tomar decisões.' },
-  { id:'ia3', t:'ia', d:'ini', q:'Em termos simples, o que é IA?', a:'É a capacidade de máquinas aprenderem com dados e executarem tarefas de forma inteligente.' },
-  { id:'ia4', t:'ia', d:'ini', q:'A IA pertence a que área do conhecimento?', a:'À Ciência da Computação.' },
-  { id:'ia5', t:'ia', d:'ini', q:'Cite um assistente virtual baseado em IA.', a:'ChatGPT.' },
-  { id:'ia6', t:'ia', d:'ini', q:'Cite outro assistente virtual baseado em IA.', a:'Siri.' },
-  { id:'ia7', t:'ia', d:'ini', q:'Cite mais um assistente virtual baseado em IA.', a:'Alexa.' },
-  { id:'ia8', t:'ia', d:'ini', q:'Que outro assistente virtual é mencionado no guia?', a:'Google Assistant.' },
-  { id:'ia9', t:'ia', d:'int', q:'Qual tecnologia permite identificar pessoas através do rosto?', a:'Reconhecimento facial.' },
-  { id:'ia10', t:'ia', d:'int', q:'Em que tipo de veículos a IA é utilizada?', a:'Veículos autónomos.' },
-  { id:'ia11', t:'ia', d:'int', q:'Como a IA ajuda os bancos?', a:'Detectando fraudes.' },
-  { id:'ia12', t:'ia', d:'int', q:'Qual é uma das principais aplicações da IA na saúde?', a:'Diagnóstico de doenças.' },
-  { id:'ia13', t:'ia', d:'int', q:'Cite uma doença que pode ser identificada com apoio da IA.', a:'Cancro.' },
-  { id:'ia14', t:'ia', d:'int', q:'Cite outra doença identificada pela IA.', a:'Tuberculose.' },
-  { id:'ia15', t:'ia', d:'int', q:'Cite mais uma doença identificada pela IA.', a:'Pneumonia.' },
-  { id:'ia16', t:'ia', d:'int', q:'Como a IA auxilia os médicos?', a:'Sugerindo tratamentos e apoiando decisões clínicas.' },
-  { id:'ia17', t:'ia', d:'int', q:'O que as empresas farmacêuticas utilizam a IA para acelerar?', a:'A pesquisa e o desenvolvimento de novos medicamentos.' },
-  { id:'ia18', t:'ia', d:'int', q:'Quem controla os robôs nas cirurgias assistidas?', a:'Os médicos.' },
-  { id:'ia19', t:'ia', d:'int', q:'Qual é a principal vantagem das cirurgias assistidas por robôs?', a:'Maior precisão.' },
-  { id:'ia20', t:'ia', d:'int', q:'O que os relógios inteligentes podem monitorizar?', a:'A frequência cardíaca.' },
-  { id:'ia21', t:'ia', d:'int', q:'Que outro dado de saúde os dispositivos inteligentes monitorizam?', a:'A pressão arterial.' },
-  { id:'ia22', t:'ia', d:'int', q:'O que fazem os chatbots na saúde?', a:'Respondem dúvidas, fazem triagens e orientam pacientes.' },
-  { id:'ia23', t:'ia', d:'int', q:'Cite um benefício da IA na saúde.', a:'Diagnósticos mais rápidos.' },
-  { id:'ia24', t:'ia', d:'int', q:'Qual benefício está relacionado com menos falhas médicas?', a:'Redução de erros médicos.' },
-  { id:'ia25', t:'ia', d:'int', q:'Como a IA contribui para os hospitais?', a:'Melhorando a gestão hospitalar.' },
-  { id:'ia26', t:'ia', d:'int', q:'Em que sector a IA melhora os serviços aos cidadãos?', a:'No sector público.' },
-  { id:'ia27', t:'ia', d:'int', q:'Cite um serviço público que pode ser melhorado pela IA.', a:'Emissão de documentos.' },
-  { id:'ia28', t:'ia', d:'int', q:'Como a IA combate a fraude?', a:'Identificando actividades suspeitas.' },
-  { id:'ia29', t:'ia', d:'int', q:'Em que processo administrativo a IA pode detectar irregularidades?', a:'Concursos públicos.' },
-  { id:'ia30', t:'ia', d:'int', q:'Em que áreas o planeamento governamental pode ser apoiado pela IA?', a:'Saúde, educação, segurança e transportes.' },
-  { id:'ia31', t:'ia', d:'int', q:'O que significa automatização no sector público?', a:'Redução de tarefas repetitivas.' },
-  { id:'ia32', t:'ia', d:'int', q:'O que é desemprego tecnológico?', a:'A substituição de algumas funções por sistemas automatizados.' },
-  { id:'ia33', t:'ia', d:'int', q:'O que pode acontecer com o uso inadequado de dados pessoais?', a:'Violação da privacidade.' },
-  { id:'ia34', t:'ia', d:'ava', q:'O que é discriminação algorítmica?', a:'Quando a IA toma decisões injustas devido a dados tendenciosos.' },
-  { id:'ia35', t:'ia', d:'int', q:'O que significa dependência tecnológica?', a:'Dependência excessiva da tecnologia, causando problemas quando os sistemas falham.' },
-  { id:'ia36', t:'ia', d:'int', q:'O que é ética na Inteligência Artificial?', a:'O conjunto de princípios que orienta o uso responsável da IA.' },
-  { id:'ia37', t:'ia', d:'int', q:'O que a IA deve respeitar sempre?', a:'A dignidade humana.' },
-  { id:'ia38', t:'ia', d:'int', q:'Que direitos a IA deve respeitar?', a:'Os direitos fundamentais.' },
-  { id:'ia39', t:'ia', d:'int', q:'Que princípio garante tratamento igual para todos?', a:'Igualdade.' },
-  { id:'ia40', t:'ia', d:'int', q:'Que valor assegura decisões imparciais?', a:'Justiça.' },
-  { id:'ia41', t:'ia', d:'int', q:'O que significa transparência na IA?', a:'As decisões da IA devem ser compreensíveis.' },
-  { id:'ia42', t:'ia', d:'int', q:'Quem continua responsável pelas decisões apoiadas pela IA?', a:'Os seres humanos.' },
-  { id:'ia43', t:'ia', d:'int', q:'O que significa privacidade?', a:'Os dados pessoais devem ser tratados de forma segura.' },
-  { id:'ia44', t:'ia', d:'int', q:'O que é protecção de dados?', a:'É o conjunto de medidas que garante a utilização segura e legal dos dados pessoais.' },
-  { id:'ia45', t:'ia', d:'int', q:'O que são dados pessoais?', a:'Informações que identificam uma pessoa.' },
-  { id:'ia46', t:'ia', d:'int', q:'Cite um exemplo de dado pessoal.', a:'Nome.' },
-  { id:'ia47', t:'ia', d:'int', q:'Cite um dado biométrico.', a:'Impressões digitais.' },
-  { id:'ia48', t:'ia', d:'int', q:'Como proteger os dados pessoais?', a:'Utilizando palavras-passe fortes.' },
-  { id:'ia49', t:'ia', d:'int', q:'Que prática ajuda a manter os sistemas seguros?', a:'Actualizar os sistemas informáticos.' },
-  { id:'ia50', t:'ia', d:'int', q:'Que tipo de ligação à Internet deve ser utilizada?', a:'Redes seguras.' },
-  { id:'ia51', t:'ia', d:'int', q:'A IA substitui totalmente o ser humano?', a:'Não. A IA é uma ferramenta de apoio; a responsabilidade pelas decisões continua a ser das pessoas.' },
-
-  /* ===== CENSO 2024 ===== */
-  { id:'c1', t:'censo', d:'ini', q:'Qual é a população total de Angola segundo o Censo de 2024?', a:'36,6 milhões de habitantes.' },
-  { id:'c2', t:'censo', d:'ini', q:'Quantas províncias abrangeu o Censo de 2024?', a:'21 províncias.' },
-  { id:'c3', t:'censo', d:'int', q:'Como está a distribuição por sexo em Angola segundo o Censo 2024?', a:'Cerca de 51,2% são mulheres e 48,8% são homens.' },
-  { id:'c4', t:'censo', d:'int', q:'Qual é a percentagem de população urbana segundo o Censo 2024?', a:'Aproximadamente 65,5% da população vive em áreas urbanas.' },
-  { id:'c5', t:'censo', d:'int', q:'Qual é a percentagem da população com menos de 15 anos?', a:'Cerca de 40,6% dos habitantes têm menos de 15 anos.' },
-  { id:'c6', t:'censo', d:'ini', q:'Qual foi a data de referência do Censo 2024?', a:'19 de setembro de 2024.' },
-  { id:'c7', t:'censo', d:'int', q:'Qual foi o período de recolha dos dados do Censo 2024?', a:'A operação censitária foi prolongada até 20 de dezembro de 2024.' },
-  { id:'c8', t:'censo', d:'int', q:'Qual é a finalidade do Censo?', a:'Servir de base para o planeamento de políticas públicas, distribuição de recursos, construção de escolas e hospitais e desenvolvimento económico.' },
-  { id:'c9', t:'censo', d:'ini', q:'Qual é a instituição responsável pela recolha dos dados do Censo?', a:'O Instituto Nacional de Estatística (INE), no âmbito do RGPH.' },
-  { id:'c10', t:'censo', d:'int', q:'O que é o Censo Geral da População e Habitação?', a:'É a maior operação estatística realizada em Angola para contar a população, as famílias e as habitações.' },
-  { id:'c11', t:'censo', d:'ini', q:'Em que ano foi realizado o Censo referido no guia?', a:'Em 2024.' },
-  { id:'c12', t:'censo', d:'ini', q:'Qual é o principal objectivo do Censo?', a:'Contar toda a população residente em Angola.' },
-  { id:'c13', t:'censo', d:'int', q:'Além da população, o que mais é contado no Censo?', a:'As habitações e as famílias.' },
-  { id:'c14', t:'censo', d:'int', q:'O Censo permite conhecer a distribuição da população em que níveis?', a:'Província, município e comuna.' },
-  { id:'c15', t:'censo', d:'int', q:'Que informações pessoais são recolhidas pelo Censo?', a:'Idade, sexo, escolaridade, profissão e condições de vida.' },
-  { id:'c16', t:'censo', d:'int', q:'O Censo produz que tipo de estatísticas?', a:'Estatísticas oficiais.' },
-  { id:'c17', t:'censo', d:'int', q:'O Censo fornece dados para que tipo de planeamento?', a:'Planeamento económico e social.' },
-  { id:'c18', t:'censo', d:'int', q:'Qual é a importância do Censo?', a:'Permite ao Governo tomar decisões com base em dados reais e actualizados.' },
-  { id:'c19', t:'censo', d:'int', q:'O que são indicadores demográficos?', a:'São dados que ajudam a compreender as características da população.' },
-  { id:'c20', t:'censo', d:'int', q:'O que mede a taxa de natalidade?', a:'O número de nascimentos por cada mil habitantes.' },
-  { id:'c21', t:'censo', d:'int', q:'O que mede a taxa de mortalidade?', a:'O número de óbitos por cada mil habitantes.' },
-  { id:'c22', t:'censo', d:'int', q:'O que é a esperança de vida?', a:'O número médio de anos que uma pessoa poderá viver.' },
-  { id:'c23', t:'censo', d:'int', q:'O que é densidade populacional?', a:'É a relação entre o número de habitantes e a área do território.' },
-  { id:'c24', t:'censo', d:'int', q:'Qual é a fórmula da densidade populacional?', a:'Densidade Populacional = População ÷ Área.' },
-  { id:'c25', t:'censo', d:'int', q:'O que é a estrutura etária?', a:'É a distribuição da população por grupos de idade.' },
-  { id:'c26', t:'censo', d:'int', q:'Quais são os grupos da estrutura etária?', a:'Crianças, jovens, adultos e idosos.' },
-  { id:'c27', t:'censo', d:'int', q:'O que é migração?', a:'É o movimento de pessoas entre diferentes regiões ou países.' },
-  { id:'c28', t:'censo', d:'int', q:'O Censo ajuda a construir o quê?', a:'Hospitais e centros de saúde onde são mais necessários.' },
-  { id:'c29', t:'censo', d:'int', q:'O Censo auxilia na distribuição de quais profissionais?', a:'Médicos e enfermeiros.' },
-  { id:'c30', t:'censo', d:'int', q:'O Censo permite planear que tipo de campanhas?', a:'Campanhas de vacinação.' },
-  { id:'c31', t:'censo', d:'int', q:'O Censo contribui para reduzir que tipos de mortalidade?', a:'Mortalidade infantil e materna.' },
-  { id:'c32', t:'censo', d:'int', q:'O que é crescimento populacional?', a:'É o aumento do número de habitantes ao longo do tempo.' },
-  { id:'c33', t:'censo', d:'int', q:'Cite uma causa do crescimento populacional.', a:'Elevada natalidade.' },
-  { id:'c34', t:'censo', d:'int', q:'Qual é um efeito positivo do crescimento populacional?', a:'Aumento da força de trabalho.' },
-  { id:'c35', t:'censo', d:'int', q:'Cite um efeito negativo do crescimento populacional.', a:'Pressão sobre escolas e hospitais.' },
-  { id:'c36', t:'censo', d:'int', q:'O que é distribuição geográfica da população?', a:'É a forma como a população está distribuída pelo território nacional.' },
-  { id:'c37', t:'censo', d:'int', q:'Onde se concentra o maior número de habitantes?', a:'Nas zonas urbanas.' },
-  { id:'c38', t:'censo', d:'int', q:'Cite um factor que influencia a distribuição da população.', a:'Oportunidades de emprego.' },
-  { id:'c39', t:'censo', d:'int', q:'O Censo contribui para que tipo de desenvolvimento?', a:'Desenvolvimento sustentável.' },
-  { id:'c40', t:'censo', d:'int', q:'O Censo promove uma gestão eficiente de quê?', a:'Dos recursos públicos.' },
-  { id:'c41', t:'censo', d:'int', q:'Por que razão o Governo precisa dos dados do Censo?', a:'Para planear melhor os serviços públicos e os investimentos.' },
-  { id:'c42', t:'censo', d:'int', q:'Qual é a importância geral do Censo Populacional de Angola 2024?', a:'Conhecer a realidade da população para apoiar decisões, promover o desenvolvimento sustentável e melhorar a qualidade dos serviços públicos.' },
-
-  /* ===== COVID-19 ===== */
-  { id:'cv1', t:'covid', d:'ini', q:'O que é a COVID-19?', a:'É uma doença infecciosa causada pelo coronavírus SARS-CoV-2, identificada pela primeira vez em 2019.' },
-  { id:'cv2', t:'covid', d:'ini', q:'O que significa a sigla COVID-19?', a:'"Coronavirus Disease 2019" (Doença do Coronavírus de 2019).' },
-  { id:'cv3', t:'covid', d:'ini', q:'Qual é o agente causador da COVID-19?', a:'O vírus SARS-CoV-2.' },
-  { id:'cv4', t:'covid', d:'ini', q:'Em que ano surgiu a COVID-19?', a:'Em 2019.' },
-  { id:'cv5', t:'covid', d:'int', q:'Como ocorre a transmissão da COVID-19?', a:'Principalmente por gotículas e aerossóis respiratórios expelidos ao falar, tossir, espirrar ou respirar.' },
-  { id:'cv6', t:'covid', d:'ini', q:'Quem pode contrair a COVID-19?', a:'Todas as pessoas, independentemente da idade.' },
-  { id:'cv7', t:'covid', d:'ini', q:'A COVID-19 é uma doença contagiosa?', a:'Sim, possui elevada capacidade de transmissão.' },
-  { id:'cv8', t:'covid', d:'int', q:'Qual é a principal porta de entrada do vírus?', a:'As vias respiratórias.' },
-  { id:'cv9', t:'covid', d:'int', q:'A COVID-19 pode ser prevenida?', a:'Sim, por meio da vacinação, higiene das mãos e ventilação dos ambientes.' },
-  { id:'cv10', t:'covid', d:'int', q:'Qual sistema do organismo é mais afetado?', a:'O sistema respiratório.' },
-  { id:'cv11', t:'covid', d:'int', q:'Qual é o nome científico do vírus da COVID-19?', a:'SARS-CoV-2.' },
-  { id:'cv12', t:'covid', d:'int', q:'A que família pertence o SARS-CoV-2?', a:'À família Coronaviridae.' },
-  { id:'cv13', t:'covid', d:'int', q:'O SARS-CoV-2 é um vírus de DNA ou RNA?', a:'É um vírus de RNA.' },
-  { id:'cv14', t:'covid', d:'ava', q:'Como o vírus invade as células humanas?', a:'Ligando-se aos receptores ACE2 das células.' },
-  { id:'cv15', t:'covid', d:'int', q:'Quais órgãos podem ser afetados pelo vírus?', a:'Pulmões, coração, rins e cérebro.' },
-  { id:'cv16', t:'covid', d:'int', q:'O período de incubação costuma variar entre quantos dias?', a:'Geralmente entre 2 e 14 dias.' },
-  { id:'cv17', t:'covid', d:'int', q:'Pessoas sem sintomas podem transmitir o vírus?', a:'Sim.' },
-  { id:'cv18', t:'covid', d:'int', q:'O vírus sofre mutações?', a:'Sim, podendo originar novas variantes.' },
-  { id:'cv19', t:'covid', d:'int', q:'A vacinação elimina completamente o risco de infeção?', a:'Não, mas reduz significativamente o risco de doença grave.' },
-  { id:'cv20', t:'covid', d:'ini', q:'Qual é o sintoma mais frequente da COVID-19?', a:'Febre.' },
-  { id:'cv21', t:'covid', d:'ini', q:'Qual outro sintoma muito comum?', a:'Tosse.' },
-  { id:'cv22', t:'covid', d:'int', q:'A perda do olfato pode ser um sintoma?', a:'Sim.' },
-  { id:'cv23', t:'covid', d:'int', q:'A perda do paladar pode ocorrer?', a:'Sim.' },
-  { id:'cv24', t:'covid', d:'int', q:'Em casos graves, qual o principal comprometimento?', a:'Insuficiência respiratória.' },
-  { id:'cv25', t:'covid', d:'int', q:'Como pode ser classificada a COVID-19?', a:'Assintomática, leve, moderada, grave e crítica.' },
-  { id:'cv26', t:'covid', d:'int', q:'O que caracteriza um caso assintomático?', a:'Presença do vírus sem sintomas.' },
-  { id:'cv27', t:'covid', d:'int', q:'O que caracteriza um caso leve?', a:'Sintomas leves sem pneumonia grave.' },
-  { id:'cv28', t:'covid', d:'int', q:'O que caracteriza um caso moderado?', a:'Presença de pneumonia sem insuficiência respiratória grave.' },
-  { id:'cv29', t:'covid', d:'int', q:'O que caracteriza um caso grave?', a:'Dificuldade respiratória importante e baixa oxigenação.' },
-  { id:'cv30', t:'covid', d:'int', q:'O que caracteriza um caso crítico?', a:'Insuficiência respiratória, choque ou falência de múltiplos órgãos.' },
-  { id:'cv31', t:'covid', d:'int', q:'Qual grupo apresenta maior risco de evolução grave?', a:'Idosos e pessoas com doenças crónicas.' },
-  { id:'cv32', t:'covid', d:'int', q:'Como é feito o diagnóstico da COVID-19?', a:'Pela avaliação clínica, epidemiológica e exames laboratoriais.' },
-  { id:'cv33', t:'covid', d:'int', q:'Qual é o exame padrão para confirmar a infeção?', a:'O teste RT-PCR.' },
-  { id:'cv34', t:'covid', d:'int', q:'A oximetria é útil na avaliação?', a:'Sim, mede a saturação de oxigénio.' },
-  { id:'cv35', t:'covid', d:'int', q:'Qual é a complicação respiratória mais grave?', a:'Síndrome da dificuldade respiratória aguda (SDRA).' },
-  { id:'cv36', t:'covid', d:'int', q:'Qual é a primeira medida diante de um caso suspeito?', a:'Procurar avaliação médica e evitar contacto com outras pessoas.' },
-  { id:'cv37', t:'covid', d:'int', q:'Casos leves podem ser tratados em casa?', a:'Sim, sob orientação médica.' },
-  { id:'cv38', t:'covid', d:'int', q:'A maioria das pessoas recupera-se da COVID-19?', a:'Sim.' },
-  { id:'cv39', t:'covid', d:'int', q:'Quais fatores pioram o prognóstico?', a:'Idade avançada, doenças crónicas e imunossupressão.' },
-  { id:'cv40', t:'covid', d:'int', q:'O acompanhamento médico reduz o risco de complicações?', a:'Sim, pois permite identificar precocemente sinais de agravamento.' },
-
-  /* ===== DIVISÃO POLÍTICO-ADMINISTRATIVA ===== */
-  { id:'dv1', t:'divisao', d:'ini', q:'O que é a divisão político-administrativa de Angola?', a:'É a organização do território nacional em províncias, municípios e comunas para facilitar a administração do Estado.' },
-  { id:'dv2', t:'divisao', d:'ava', q:'Qual lei aprovou a nova Divisão Político-Administrativa?', a:'Lei nº 14/24, de 5 de setembro.' },
-  { id:'dv3', t:'divisao', d:'ava', q:'Em que data entrou em vigor a nova divisão político-administrativa?', a:'1 de janeiro de 2025.' },
-  { id:'dv4', t:'divisao', d:'ini', q:'Quantas províncias possui Angola após a reforma de 2024?', a:'21 províncias.' },
-  { id:'dv5', t:'divisao', d:'ava', q:'Quantos municípios e comunas existem em Angola após a reforma?', a:'326 municípios e 378 comunas.' },
-  { id:'dv6', t:'divisao', d:'ini', q:'O que é uma província?', a:'É a maior unidade administrativa do país, dirigida por um governador provincial.' },
-  { id:'dv7', t:'divisao', d:'ini', q:'O que é um município?', a:'É uma divisão administrativa da província responsável pela gestão local dos serviços públicos.' },
-  { id:'dv8', t:'divisao', d:'ini', q:'O que é uma comuna?', a:'É a menor divisão administrativa, subordinada ao município.' },
-  { id:'dv9', t:'divisao', d:'ini', q:'Qual é a capital da República de Angola?', a:'Luanda.' },
-  { id:'dv10', t:'divisao', d:'int', q:'Qual é a finalidade da criação de novos municípios?', a:'Melhorar a administração pública e aproximar os serviços da população.' },
-  { id:'dv11', t:'divisao', d:'int', q:'Por que foram criadas novas províncias?', a:'Para melhorar a organização territorial e promover o desenvolvimento regional.' },
-  { id:'dv12', t:'divisao', d:'int', q:'Qual é a importância das comunas na administração pública?', a:'Aproximam a administração das comunidades locais.' },
-  { id:'dv13', t:'divisao', d:'int', q:'Como a nova divisão beneficia os serviços de saúde?', a:'Facilita a construção e gestão de unidades sanitárias e melhora o acesso da população aos cuidados de saúde.' },
-  { id:'dv14', t:'divisao', d:'int', q:'Qual é o impacto da divisão administrativa no planeamento da saúde?', a:'Permite distribuir melhor os recursos humanos, financeiros e materiais.' },
-  { id:'dv15', t:'divisao', d:'ini', q:'Quem administra uma província?', a:'O governador provincial.' },
-  { id:'dv16', t:'divisao', d:'ini', q:'Quem administra um município?', a:'O administrador municipal.' },
-  { id:'dv17', t:'divisao', d:'ini', q:'Quem dirige uma comuna?', a:'O administrador comunal.' },
-  { id:'dv18', t:'divisao', d:'int', q:'A nova divisão administrativa favorece a descentralização?', a:'Sim. Fortalece a administração local e aproxima a tomada de decisões das populações.' },
-
-  /* ===== CULTURA GERAL ===== */
-  { id:'cg1', t:'cultura', d:'ini', q:'Qual é o nome oficial de Angola?', a:'República de Angola.' },
-  { id:'cg2', t:'cultura', d:'ini', q:'Qual é a capital de Angola?', a:'Luanda.' },
-  { id:'cg3', t:'cultura', d:'ini', q:'Em que data Angola conquistou a Independência Nacional?', a:'11 de novembro de 1975.' },
-  { id:'cg4', t:'cultura', d:'ini', q:'De qual país Angola se tornou independente?', a:'Portugal.' },
-  { id:'cg5', t:'cultura', d:'ini', q:'Quem proclamou a Independência de Angola?', a:'António Agostinho Neto.' },
-  { id:'cg6', t:'cultura', d:'ini', q:'Qual foi o primeiro Presidente de Angola?', a:'Agostinho Neto.' },
-  { id:'cg7', t:'cultura', d:'ini', q:'Qual é a moeda oficial de Angola?', a:'Kwanza.' },
-  { id:'cg8', t:'cultura', d:'ini', q:'Qual é a língua oficial de Angola?', a:'Português.' },
-  { id:'cg9', t:'cultura', d:'ini', q:'Quais são algumas línguas nacionais de Angola?', a:'Umbundu, Kimbundu, Kikongo e Tchokwe.' },
-  { id:'cg10', t:'cultura', d:'int', q:'Quem chegou ao Reino do Kongo em 1482?', a:'Diogo Cão.' },
-  { id:'cg11', t:'cultura', d:'int', q:'Qual era a capital do antigo Reino do Kongo?', a:'Mbanza Kongo.' },
-  { id:'cg12', t:'cultura', d:'int', q:'Qual rainha angolana ficou conhecida pela resistência contra os portugueses?', a:'Rainha Njinga Mbande.' },
-  { id:'cg13', t:'cultura', d:'int', q:'Em que ano iniciou a luta armada de libertação nacional em Angola?', a:'1961.' },
-  { id:'cg14', t:'cultura', d:'int', q:'O que aconteceu em 4 de fevereiro de 1961?', a:'O ataque às cadeias de Luanda, marco inicial da luta armada.' },
-  { id:'cg15', t:'cultura', d:'int', q:'Quais foram os principais movimentos de libertação de Angola?', a:'MPLA, FNLA e UNITA.' },
-  { id:'cg16', t:'cultura', d:'int', q:'O que significa MPLA?', a:'Movimento Popular de Libertação de Angola.' },
-  { id:'cg17', t:'cultura', d:'int', q:'O que significa FNLA?', a:'Frente Nacional de Libertação de Angola.' },
-  { id:'cg18', t:'cultura', d:'int', q:'O que significa UNITA?', a:'União Nacional para a Independência Total de Angola.' },
-  { id:'cg19', t:'cultura', d:'int', q:'Quando terminou oficialmente a guerra civil angolana?', a:'4 de abril de 2002.' },
-  { id:'cg20', t:'cultura', d:'int', q:'Em que região de África está localizada Angola?', a:'África Austral.' },
-  { id:'cg21', t:'cultura', d:'int', q:'Qual oceano banha Angola?', a:'Oceano Atlântico.' },
-  { id:'cg22', t:'cultura', d:'int', q:'Quais países fazem fronteira com Angola?', a:'República Democrática do Congo, Zâmbia e Namíbia.' },
-  { id:'cg23', t:'cultura', d:'int', q:'Qual é o maior rio totalmente angolano?', a:'Rio Kwanza.' },
-  { id:'cg24', t:'cultura', d:'int', q:'Qual é o ponto mais alto de Angola?', a:'Morro do Moco.' },
-  { id:'cg25', t:'cultura', d:'int', q:'Em que província está localizado o Morro do Moco?', a:'Huambo.' },
-  { id:'cg26', t:'cultura', d:'int', q:'Qual é o principal recurso económico de Angola?', a:'Petróleo.' },
-  { id:'cg27', t:'cultura', d:'int', q:'Qual outro recurso mineral importante em Angola?', a:'Diamantes.' },
-  { id:'cg28', t:'cultura', d:'int', q:'Qual é o maior deserto que influencia o sul de Angola?', a:'Deserto do Namibe.' },
-  { id:'cg29', t:'cultura', d:'int', q:'Qual cidade é considerada Património Mundial da UNESCO em Angola?', a:'Mbanza Kongo.' },
-  { id:'cg30', t:'cultura', d:'int', q:'Quantos países existem aproximadamente em África?', a:'54 países.' },
-  { id:'cg31', t:'cultura', d:'int', q:'Qual é o maior país africano em território?', a:'Argélia.' },
-  { id:'cg32', t:'cultura', d:'int', q:'Qual é o país mais populoso de África?', a:'Nigéria.' },
-  { id:'cg33', t:'cultura', d:'int', q:'Qual é o maior deserto de África?', a:'Deserto do Saara.' },
-  { id:'cg34', t:'cultura', d:'int', q:'Qual é o maior rio de África?', a:'Rio Nilo.' },
-  { id:'cg35', t:'cultura', d:'int', q:'Qual é a montanha mais alta de África?', a:'Monte Kilimanjaro.' },
-  { id:'cg36', t:'cultura', d:'int', q:'Em que país fica o Monte Kilimanjaro?', a:'Tanzânia.' },
-  { id:'cg37', t:'cultura', d:'int', q:'Qual antigo império africano ficou famoso pelo comércio de ouro e sal?', a:'Império do Mali.' },
-  { id:'cg38', t:'cultura', d:'int', q:'Quem foi Mansa Musa?', a:'Um dos mais famosos imperadores do Mali.' },
-  { id:'cg39', t:'cultura', d:'int', q:'Qual país africano foi o primeiro da África Subsaariana a conquistar independência?', a:'Gana.' },
-  { id:'cg40', t:'cultura', d:'int', q:'Quem foi Nelson Mandela?', a:'Líder da luta contra o apartheid e primeiro Presidente negro da África do Sul.' },
-  { id:'cg41', t:'cultura', d:'int', q:'O que foi o apartheid?', a:'Um regime de segregação racial na África do Sul.' },
-  { id:'cg42', t:'cultura', d:'int', q:'Quem foi Kwame Nkrumah?', a:'Líder da independência do Gana.' },
-  { id:'cg43', t:'cultura', d:'int', q:'Quem foi Patrice Lumumba?', a:'Primeiro Primeiro-Ministro da República Democrática do Congo.' },
-  { id:'cg44', t:'cultura', d:'int', q:'Quem foi Julius Nyerere?', a:'Primeiro Presidente da Tanzânia.' },
-  { id:'cg45', t:'cultura', d:'int', q:'O que significa UA?', a:'União Africana.' },
-  { id:'cg46', t:'cultura', d:'int', q:'Em que ano foi criada a União Africana?', a:'2002.' },
-  { id:'cg47', t:'cultura', d:'int', q:'Qual organização africana existia antes da União Africana?', a:'Organização da Unidade Africana (OUA).' },
-  { id:'cg48', t:'cultura', d:'int', q:'O que significa SADC?', a:'Comunidade de Desenvolvimento da África Austral.' },
-  { id:'cg49', t:'cultura', d:'int', q:'Angola pertence à SADC?', a:'Sim.' },
-  { id:'cg50', t:'cultura', d:'int', q:'Em que período ocorreu a Primeira Guerra Mundial?', a:'1914 a 1918.' },
-  { id:'cg51', t:'cultura', d:'int', q:'Em que período ocorreu a Segunda Guerra Mundial?', a:'1939 a 1945.' },
-  { id:'cg52', t:'cultura', d:'int', q:'Qual organização foi criada após a Segunda Guerra Mundial?', a:'Organização das Nações Unidas (ONU).' },
-  { id:'cg53', t:'cultura', d:'int', q:'Em que ano foi criada a ONU?', a:'1945.' },
-  { id:'cg54', t:'cultura', d:'int', q:'Qual é a sede principal da ONU?', a:'Nova Iorque.' },
-  { id:'cg55', t:'cultura', d:'int', q:'Quem foi o primeiro homem a pisar na Lua?', a:'Neil Armstrong.' },
-  { id:'cg56', t:'cultura', d:'int', q:'Em que ano ocorreu a chegada do homem à Lua?', a:'1969.' },
-  { id:'cg57', t:'cultura', d:'int', q:'Qual foi a antiga civilização que construiu as pirâmides de Gizé?', a:'Egito Antigo.' },
-  { id:'cg58', t:'cultura', d:'int', q:'Qual revolução iniciou grandes mudanças políticas e sociais em França?', a:'Revolução Francesa.' },
-  { id:'cg59', t:'cultura', d:'int', q:'Em que ano ocorreu a Revolução Francesa?', a:'1789.' },
-  { id:'cg60', t:'cultura', d:'int', q:'O que significa CPLP?', a:'Comunidade dos Países de Língua Portuguesa.' },
-  { id:'cg61', t:'cultura', d:'int', q:'Quando foi criada a CPLP?', a:'1996.' },
-  { id:'cg62', t:'cultura', d:'int', q:'O que significa PIB?', a:'Produto Interno Bruto.' },
-  { id:'cg63', t:'cultura', d:'int', q:'O que mede o PIB?', a:'A produção económica de um país.' },
-  { id:'cg64', t:'cultura', d:'int', q:'O que é inflação?', a:'Aumento generalizado dos preços.' },
-  { id:'cg65', t:'cultura', d:'int', q:'O que é globalização?', a:'Processo de integração económica, social e tecnológica entre países.' },
-  { id:'cg66', t:'cultura', d:'int', q:'O que é a Internet?', a:'Rede mundial de computadores.' },
-  { id:'cg67', t:'cultura', d:'int', q:'Quem desenvolveu a teoria da relatividade?', a:'Albert Einstein.' },
-  { id:'cg68', t:'cultura', d:'int', q:'Quem descobriu a penicilina?', a:'Alexander Fleming.' },
-  { id:'cg69', t:'cultura', d:'int', q:'Qual planeta é conhecido como Planeta Vermelho?', a:'Marte.' },
-  { id:'cg70', t:'cultura', d:'int', q:'Qual é o maior continente do mundo?', a:'Ásia.' },
-  { id:'cg71', t:'cultura', d:'int', q:'Qual é o maior oceano do mundo?', a:'Oceano Pacífico.' },
-  { id:'cg72', t:'cultura', d:'int', q:'Qual é a capital de França?', a:'Paris.' },
-  { id:'cg73', t:'cultura', d:'int', q:'Qual é a capital do Brasil?', a:'Brasília.' },
-  { id:'cg74', t:'cultura', d:'int', q:'O que significa democracia?', a:'Sistema político baseado na participação dos cidadãos.' },
-  { id:'cg75', t:'cultura', d:'int', q:'O que são direitos humanos?', a:'Direitos fundamentais de todas as pessoas.' },
-  { id:'cg76', t:'cultura', d:'int', q:'O que significa sustentabilidade?', a:'Desenvolvimento que atende às necessidades atuais sem comprometer o futuro.' },
-  { id:'cg77', t:'cultura', d:'int', q:'O que é mudança climática?', a:'Alteração prolongada dos padrões climáticos da Terra.' },
-  { id:'cg78', t:'cultura', d:'int', q:'Qual é a principal causa do aquecimento global?', a:'Emissão de gases de efeito estufa.' },
-  { id:'cg79', t:'cultura', d:'int', q:'Qual é o símbolo máximo da soberania nacional de Angola?', a:'A Constituição da República.' },
-  { id:'cg80', t:'cultura', d:'int', q:'Qual é o órgão legislativo de Angola?', a:'Assembleia Nacional.' },
-  { id:'cg81', t:'cultura', d:'int', q:'Quem exerce o Poder Executivo em Angola?', a:'Presidente da República.' },
-  { id:'cg82', t:'cultura', d:'int', q:'Qual continente possui maior número de países?', a:'África.' },
-  { id:'cg83', t:'cultura', d:'int', q:'Qual é o maior país do mundo em território?', a:'Rússia.' },
-  { id:'cg84', t:'cultura', d:'int', q:'Qual é o dia da Independência Nacional de Angola?', a:'11 de novembro.' },
-  { id:'cg85', t:'cultura', d:'int', q:'Qual é o dia da Paz e Reconciliação Nacional em Angola?', a:'4 de abril.' },
-  { id:'cg86', t:'cultura', d:'int', q:'Qual é o lema do hino nacional de Angola?', a:'Angola Avante.' },
-
-  /* ===== RACIOCÍNIO NUMÉRICO ===== */
-  { id:'n1', t:'numerico', d:'ini', q:'Complete a sequência: 2, 4, 8, 16, 32, ?', a:'64' },
-  { id:'n2', t:'numerico', d:'ini', q:'Complete a sequência: 5, 10, 15, 20, 25, ?', a:'30' },
-  { id:'n3', t:'numerico', d:'ini', q:'Complete a sequência: 3, 6, 12, 24, 48, ?', a:'96' },
-  { id:'n4', t:'numerico', d:'ini', q:'Complete a sequência: 100, 90, 80, 70, 60, ?', a:'50' },
-  { id:'n5', t:'numerico', d:'ini', q:'Qual é o número que falta? 4, 9, 14, 19, ?, 29', a:'24' },
-  { id:'n6', t:'numerico', d:'ini', q:'Quanto é 15% de 200?', a:'30' },
-  { id:'n7', t:'numerico', d:'int', q:'Um produto custa 10.000 Kz e sofre um desconto de 20%. Qual será o novo preço?', a:'8.000 Kz' },
-  { id:'n8', t:'numerico', d:'int', q:'Um trabalhador recebe 80.000 Kz por mês. Se receber um aumento de 10%, quanto passará a receber?', a:'88.000 Kz' },
-  { id:'n9', t:'numerico', d:'ava', q:'Se 5 trabalhadores realizam uma tarefa em 12 dias, quantos trabalhadores seriam necessários para a mesma tarefa em 4 dias?', a:'15' },
-  { id:'n10', t:'numerico', d:'int', q:'Qual é a média dos números 10, 20, 30, 40 e 50?', a:'30' },
-  { id:'n11', t:'numerico', d:'int', q:'Se 3 canetas custam 900 Kz, quanto custarão 7 canetas?', a:'2.100 Kz' },
-  { id:'n12', t:'numerico', d:'ini', q:'Complete: 81, 27, 9, 3, ?', a:'1' },
-  { id:'n13', t:'numerico', d:'int', q:'Um automóvel percorre 240 km em 4 horas. Qual é a sua velocidade média?', a:'60 km/h' },
-  { id:'n14', t:'numerico', d:'int', q:'Qual é o próximo número? 1, 4, 9, 16, 25, ?', a:'36' },
-  { id:'n15', t:'numerico', d:'ini', q:'Quanto é 35 + 47?', a:'82' },
-  { id:'n16', t:'numerico', d:'ini', q:'Quanto é 120 − 48?', a:'72' },
-  { id:'n17', t:'numerico', d:'ini', q:'Quanto é 18 × 6?', a:'108' },
-  { id:'n18', t:'numerico', d:'ini', q:'Quanto é 144 ÷ 12?', a:'12' },
-
-  /* ===== LÍNGUA PORTUGUESA ===== */
-  { id:'p1', t:'portugues', d:'ini', q:'O que é um substantivo?', a:'É a palavra que nomeia pessoas, animais, objetos, lugares, sentimentos ou ideias.' },
-  { id:'p2', t:'portugues', d:'ini', q:'O que é um verbo?', a:'É a palavra que indica ação, estado ou fenómeno da natureza.' },
-  { id:'p3', t:'portugues', d:'ini', q:'O que é um adjetivo?', a:'Palavra que caracteriza o substantivo/nome.' },
-  { id:'p4', t:'portugues', d:'ini', q:'O que é um pronome?', a:'Palavra que substitui ou acompanha o substantivo.' },
-  { id:'p5', t:'portugues', d:'ini', q:'O que é um artigo?', a:'Palavra que acompanha o substantivo.' },
-  { id:'p6', t:'portugues', d:'ini', q:'O que é um advérbio?', a:'Palavra que modifica o verbo, o adjetivo ou outro advérbio.' },
-  { id:'p7', t:'portugues', d:'ini', q:'O que é uma preposição?', a:'Palavra que liga termos da oração.' },
-  { id:'p8', t:'portugues', d:'ini', q:'O que é uma conjunção?', a:'Palavra que liga orações ou palavras.' },
-  { id:'p9', t:'portugues', d:'ini', q:'O que é uma interjeição?', a:'Palavra que expressa emoção.' },
-  { id:'p10', t:'portugues', d:'ini', q:'O que é uma frase?', a:'Todo enunciado com sentido completo.' },
-  { id:'p11', t:'portugues', d:'ini', q:'Classifique: Casa.', a:'Substantivo.' },
-  { id:'p12', t:'portugues', d:'ini', q:'Classifique: Bonito.', a:'Adjectivo.' },
-  { id:'p13', t:'portugues', d:'ini', q:'Classifique: Correr.', a:'Verbo.' },
-  { id:'p14', t:'portugues', d:'ini', q:'Qual é o plural de "flor"?', a:'Flores.' },
-  { id:'p15', t:'portugues', d:'ini', q:'Qual é o feminino de "actor"?', a:'Actriz.' },
-  { id:'p16', t:'portugues', d:'ini', q:'Complete: Eu ____ feliz.', a:'sou' },
-  { id:'p17', t:'portugues', d:'ini', q:'Complete: Nós ____ estudar.', a:'vamos' },
-  { id:'p18', t:'portugues', d:'ini', q:'Separe as sílabas de "escola".', a:'es-co-la' },
-  { id:'p19', t:'portugues', d:'ini', q:'Quantas sílabas tem "computador"?', a:'Cinco.' },
-  { id:'p20', t:'portugues', d:'ini', q:'Qual é a sílaba tônica de "janela"?', a:'ne' },
-  { id:'p21', t:'portugues', d:'ini', q:'Qual é o antónimo de "alto"?', a:'baixo' },
-  { id:'p22', t:'portugues', d:'ini', q:'Qual é o sinónimo de "alegre"?', a:'feliz' },
-  { id:'p23', t:'portugues', d:'ini', q:'Complete corretamente: ca__a (s/z).', a:'casa' },
-  { id:'p24', t:'portugues', d:'ini', q:'Complete corretamente: pa__aro (ss/s).', a:'pássaro' },
-  { id:'p25', t:'portugues', d:'ini', q:'Complete corretamente: be__o (ij/ij).', a:'beijo' },
-  { id:'p26', t:'portugues', d:'ini', q:'Escreva corretamente: Excessão.', a:'Exceção' },
-  { id:'p27', t:'portugues', d:'ini', q:'Escreva corretamente: Corajem.', a:'Coragem' },
-  { id:'p28', t:'portugues', d:'ini', q:'Escreva corretamente: Bissicleta.', a:'Bicicleta' },
-  { id:'p29', t:'portugues', d:'ini', q:'Escreva corretamente: Excola.', a:'Escola' },
-  { id:'p30', t:'portugues', d:'ini', q:'Escreva corretamente: Felissidade.', a:'Felicidade' },
-  { id:'p31', t:'portugues', d:'ini', q:'Escreva corretamente: Conhessimento.', a:'Conhecimento' },
-  { id:'p32', t:'portugues', d:'ini', q:'Coloque no gerúndio: Amar.', a:'Amando' },
-  { id:'p33', t:'portugues', d:'ini', q:'Coloque no gerúndio: Beber.', a:'Bebendo' },
-  { id:'p34', t:'portugues', d:'ini', q:'Coloque no gerúndio: Partir.', a:'Partindo' },
-  { id:'p35', t:'portugues', d:'ini', q:'Corrija: "As menina brinca."', a:'As meninas brincam.' },
-  { id:'p36', t:'portugues', d:'ini', q:'Complete: Nós ____ felizes.', a:'somos' },
-  { id:'p37', t:'portugues', d:'int', q:'Qual é a classe gramatical da palavra "hospital"?', a:'Substantivo' },
-  { id:'p38', t:'portugues', d:'int', q:'O plural de "cidadão" é:', a:'Cidadãos' },
-  { id:'p39', t:'portugues', d:'int', q:'Qual frase está correta?', a:'Os pacientes chegaram.' },
-  { id:'p40', t:'portugues', d:'int', q:'O antónimo de "eficiente" é:', a:'Ineficiente' },
-  { id:'p41', t:'portugues', d:'int', q:'A palavra "rapidamente" é um:', a:'Advérbio' },
-  { id:'p42', t:'portugues', d:'int', q:'Identifique o substantivo em: "O menino brinca no parque."', a:'menino, parque' },
-  { id:'p43', t:'portugues', d:'int', q:'Identifique o verbo em: "Maria estudou muito."', a:'estudou' },
-  { id:'p44', t:'portugues', d:'int', q:'Identifique o adjetivo em: "O carro vermelho passou."', a:'vermelho' },
-  { id:'p45', t:'portugues', d:'int', q:'Identifique o pronome em: "Ela chegou cedo."', a:'Ela' },
-  { id:'p46', t:'portugues', d:'int', q:'Identifique o advérbio em: "João chegou rapidamente."', a:'rapidamente' },
-  { id:'p47', t:'portugues', d:'int', q:'Identifique a preposição em: "Vou para a escola."', a:'para' },
-  { id:'p48', t:'portugues', d:'int', q:'Identifique a conjunção em: "Estudei, mas não passei."', a:'mas' },
-  { id:'p49', t:'portugues', d:'int', q:'Identifique a interjeição em: "Ah! Que surpresa!"', a:'Ah!' }
+/* =========================================================
+   MATÉRIA — estruturada a partir do JSON
+   ========================================================= */
+const MATERIA = [
+  {
+    id:'info_intro', title:'1. Introdução à Informática', color:'#0d9488',
+    sections:[
+      { h:'Conceitos Básicos', type:'list', items:[
+        ['Informática','Área que estuda o tratamento automático da informação através de sistemas computacionais.'],
+        ['Dados','Representações de factos, valores ou observações que podem ser processados.'],
+        ['Informação','Dados organizados e contextualizados, com significado e utilidade.'],
+        ['Hardware','Componentes físicos de um sistema informático.'],
+        ['Software','Conjunto de programas e instruções que orientam o funcionamento do computador.'],
+        ['Firmware','Software de baixo nível, normalmente armazenado em memória não volátil, que controla funções específicas de um equipamento.'],
+        ['CPU','Unidade Central de Processamento; executa instruções e coordena operações.'],
+        ['ALU/ULA','Unidade Aritmética e Lógica; executa operações aritméticas e lógicas.'],
+        ['RAM','Memória principal, volátil, usada temporariamente durante a execução de programas.'],
+        ['ROM','Memória não volátil usada para guardar firmware e instruções persistentes.'],
+        ['Motherboard','Placa principal que interliga os componentes do computador.'],
+        ['HDD','Dispositivo de armazenamento magnético.'],
+        ['SSD','Dispositivo de armazenamento baseado em memória flash, sem partes móveis.'],
+        ['Sistema Operativo','Software de sistema que gere hardware, memória, processos, ficheiros, dispositivos e fornece serviços às aplicações.'],
+        ['Kernel','Núcleo do sistema operativo, responsável pela gestão central dos recursos do sistema.'],
+        ['Shell','Interface que permite ao utilizador interagir com os serviços do sistema operativo, por linha de comandos ou ambiente gráfico.']
+      ]},
+      { h:'Unidades de Medida', type:'table', headers:['Unidade','Significado'], rows:[
+        ['bit','Menor unidade binária de informação; pode assumir 0 ou 1.'],
+        ['Byte (B)','Conjunto de 8 bits.'],
+        ['Kilobyte (KB)','Em convenção decimal, 1 000 bytes; em convenção binária, 1 KiB = 1 024 bytes.'],
+        ['Megabyte (MB)','Em convenção decimal, 1 000 000 bytes; 1 MiB = 1 024 KiB.'],
+        ['Gigabyte (GB)','Em convenção decimal, 1 000 000 000 bytes; 1 GiB = 1 024 MiB.'],
+        ['Terabyte (TB)','Em convenção decimal, 1 000 000 000 000 bytes; 1 TiB = 1 024 GiB.'],
+        ['bps','Bits por segundo, unidade de velocidade de transmissão.'],
+        ['B/s','Bytes por segundo; 1 byte/s equivale a 8 bits/s.']
+      ]},
+      { h:'Sistemas de Numeração', type:'table', headers:['Sistema','Base','Dígitos'], rows:[
+        ['Binário','2','0 e 1'],
+        ['Octal','8','0 a 7'],
+        ['Decimal','10','0 a 9'],
+        ['Hexadecimal','16','0 a 9 e A a F']
+      ]},
+      { h:'Classificações de Software', type:'table', headers:['Tipo','Descrição'], rows:[
+        ['Software de sistema','Gere o funcionamento do computador; exemplo: sistema operativo e drivers.'],
+        ['Software de aplicação','Executa tarefas do utilizador; exemplo: processador de texto, folha de cálculo e navegador.'],
+        ['Software de programação','Ferramentas para desenvolver programas; exemplo: compiladores, interpretadores e IDE.']
+      ]}
+    ]
+  },
+  {
+    id:'info_redes', title:'2. Protocolos de Comunicação e Endereçamento IP', color:'#2563eb',
+    sections:[
+      { h:'Protocolos', type:'list', items:[
+        ['Protocolo','Conjunto de regras que permite a comunicação entre dispositivos, definindo formato, ordem, endereçamento e tratamento de mensagens.'],
+        ['TCP','Protocolo de transporte orientado à ligação, com mecanismos de fiabilidade, controlo de fluxo e ordenação.'],
+        ['UDP','Protocolo de transporte sem ligação, com menor sobrecarga e sem garantia inerente de entrega ou ordenação.'],
+        ['IP','Protocolo da camada de rede que permite endereçar e encaminhar pacotes entre redes.'],
+        ['DNS','Sistema que traduz nomes de domínio em endereços IP e também suporta outros registos.'],
+        ['DHCP','Protocolo que atribui automaticamente endereços IP e outros parâmetros de rede.'],
+        ['HTTP','Protocolo de aplicação usado na comunicação Web.'],
+        ['HTTPS','HTTP protegido por TLS, oferecendo confidencialidade e integridade no canal.'],
+        ['SMTP','Protocolo usado para envio e encaminhamento de correio electrónico.'],
+        ['FTP','Protocolo tradicional de transferência de ficheiros.'],
+        ['SSH','Protocolo seguro para acesso remoto e execução de comandos.']
+      ]},
+      { h:'Portas Comuns', type:'table', headers:['Protocolo','Porta','Nota'], rows:[
+        ['HTTP','80','Porta padrão.'],
+        ['HTTPS','443','Porta padrão.'],
+        ['FTP','20 e 21','FTP tradicional; modo activo usa normalmente 20 para dados e 21 para controlo.'],
+        ['SSH','22','Porta padrão.'],
+        ['DNS','53','UDP e TCP, conforme a operação.'],
+        ['DHCP','67/68','Servidor UDP 67 e cliente UDP 68.'],
+        ['SMTP','25','Envio/relay tradicional; submissão também pode usar 587 ou 465.'],
+        ['POP3','110','Acesso a correio electrónico; POP3S usa normalmente 995.'],
+        ['IMAP','143','Acesso e sincronização de correio; IMAPS usa normalmente 993.']
+      ]},
+      { h:'Endereçamento IP', type:'kv', items:[
+        ['IPv4','32 bits — Quatro octetos decimais separados por pontos.'],
+        ['IPv6','128 bits — Grupos hexadecimais separados por dois-pontos.'],
+        ['MAC','48 bits (Ethernet) — Endereço de camada de ligação atribuído a uma interface de rede.']
+      ]},
+      { h:'Classes IPv4 Clássicas', type:'table', headers:['Classe','Primeiro octeto','Máscara/Utilização'], rows:[
+        ['A','1–126','255.0.0.0'],
+        ['B','128–191','255.255.0.0'],
+        ['C','192–223','255.255.255.0'],
+        ['D','224–239','Multicast'],
+        ['E','240–255','Reservada/experimental']
+      ]},
+      { h:'Intervalos Privados e Modelo OSI', type:'html', html:`
+        <p><strong>Intervalos privados:</strong> 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16.</p>
+        <p class="muted" style="font-size:12px">O endereçamento classful é histórico; actualmente utiliza-se sobretudo CIDR e prefixos como /24 ou /27.</p>
+        <h4>Modelo OSI</h4>
+        <table><thead><tr><th>Camada</th><th>Nome</th><th>Função</th></tr></thead><tbody>
+          <tr><td>7</td><td>Aplicação</td><td>Serviços de rede às aplicações.</td></tr>
+          <tr><td>6</td><td>Apresentação</td><td>Representação, codificação, compressão e cifragem dos dados.</td></tr>
+          <tr><td>5</td><td>Sessão</td><td>Estabelecimento e gestão de sessões.</td></tr>
+          <tr><td>4</td><td>Transporte</td><td>Comunicação fim a fim; TCP e UDP.</td></tr>
+          <tr><td>3</td><td>Rede</td><td>Endereçamento lógico e encaminhamento IP.</td></tr>
+          <tr><td>2</td><td>Ligação de Dados</td><td>Quadros, endereços MAC e acesso ao meio.</td></tr>
+          <tr><td>1</td><td>Física</td><td>Transmissão de bits pelo meio físico.</td></tr>
+        </tbody></table>`}
+    ]
+  },
+  {
+    id:'info_hardware_rede', title:'3. Elementos de Rede Activos', color:'#0891b2',
+    sections:[
+      { h:'Equipamentos', type:'table', headers:['Equipamento','Camada OSI','Função'], rows:[
+        ['Hub','Camada 1','Repete o sinal recebido para as restantes portas; não aprende endereços MAC.'],
+        ['Switch','Normalmente camada 2','Encaminha quadros com base na tabela de endereços MAC; switches multicamada também podem encaminhar na camada 3.'],
+        ['Router','Camada 3','Encaminha pacotes entre redes com base em endereços IP e tabelas de encaminhamento.'],
+        ['Repetidor','Camada 1','Regenera ou repete o sinal para ampliar o alcance físico.'],
+        ['Bridge/Ponte','Camada 2','Interliga segmentos de rede e filtra quadros com base em endereços MAC.']
+      ]}
+    ]
+  },
+  {
+    id:'info_dados', title:'4. Conceitos de Informação e Dados', color:'#7c3aed',
+    sections:[
+      { h:'Conceitos Fundamentais', type:'list', items:[
+        ['Dado','Facto ou valor em estado bruto, ainda sem interpretação suficiente.'],
+        ['Informação','Dados processados, organizados e contextualizados para produzir significado.'],
+        ['Conhecimento','Compreensão e aplicação da informação, associada à experiência e ao raciocínio.'],
+        ['Sabedoria','Capacidade de aplicar conhecimento e julgamento para tomar decisões adequadas.'],
+        ['Entidade','Pessoa, objecto, lugar, organização ou conceito sobre o qual se guardam dados.'],
+        ['Atributo','Propriedade que descreve uma entidade.'],
+        ['Evento','Ocorrência ou acontecimento relevante registado pelo sistema.'],
+        ['Relacionamento','Associação entre duas ou mais entidades.'],
+        ['Informação registada','Informação fixada num suporte físico ou digital para consulta e utilização posterior.'],
+        ['Ficheiro','Unidade identificável de informação armazenada num sistema de ficheiros.'],
+        ['Base de dados','Colecção organizada de dados relacionados, concebida para armazenamento, consulta e actualização.'],
+        ['SGBD','Sistema de Gestão de Bases de Dados; software que cria, administra e manipula bases de dados.']
+      ]},
+      { h:'Qualidade da Informação', type:'pills', items:['Precisão','Relevância','Actualidade','Completude','Fiabilidade','Acessibilidade autorizada','Clareza','Consistência'] },
+      { h:'Modelos de Bases de Dados', type:'table', headers:['Tipo','Descrição'], rows:[
+        ['Relacional','Organiza dados em tabelas relacionadas.'],
+        ['Hierárquica','Organiza registos numa estrutura em árvore.'],
+        ['Em rede','Permite relações complexas entre registos.'],
+        ['Documental','Armazena documentos estruturados, frequentemente JSON ou BSON.'],
+        ['Chave-valor','Armazena pares de chave e valor.'],
+        ['Grafos','Representa entidades como nós e relações como arestas.']
+      ]},
+      { h:'Elementos Relacionais', type:'list', items:[
+        ['Tabela','Estrutura que organiza dados em linhas e colunas.'],
+        ['Registo/linha','Conjunto de valores que representa uma ocorrência.'],
+        ['Campo/coluna','Propriedade ou atributo armazenado na tabela.'],
+        ['Chave primária','Campo ou conjunto de campos que identifica unicamente cada registo.'],
+        ['Chave estrangeira','Campo ou conjunto de campos que referencia uma chave candidata, normalmente a chave primária, noutra tabela ou na mesma tabela.'],
+        ['Normalização','Organização das tabelas para reduzir redundâncias e anomalias de inserção, actualização e eliminação.']
+      ]},
+      { h:'Comandos SQL', type:'table', headers:['Comando','Categoria','Função'], rows:[
+        ['SELECT','DQL','Consultar dados.'],
+        ['INSERT','DML','Inserir registos.'],
+        ['UPDATE','DML','Actualizar registos.'],
+        ['DELETE','DML','Eliminar registos.'],
+        ['CREATE','DDL','Criar objectos da base de dados.'],
+        ['ALTER','DDL','Alterar estruturas.'],
+        ['DROP','DDL','Eliminar objectos.'],
+        ['GRANT','DCL','Conceder privilégios.'],
+        ['REVOKE','DCL','Retirar privilégios.'],
+        ['COMMIT','TCL','Confirmar transacção.'],
+        ['ROLLBACK','TCL','Reverter transacção não confirmada.']
+      ]},
+      { h:'Propriedades ACID', type:'list', items:[
+        ['Atomicidade','Todas as operações da transacção são aplicadas ou nenhuma é aplicada.'],
+        ['Consistência','A transacção preserva as regras e restrições de integridade.'],
+        ['Isolamento','Transacções concorrentes não interferem indevidamente umas nas outras.'],
+        ['Durabilidade','Os resultados confirmados persistem após falhas abrangidas pelo mecanismo de recuperação.']
+      ]},
+      { h:'Protecção de Dados — Tríade CIA', type:'list', items:[
+        ['Confidencialidade','Apenas pessoas autorizadas podem aceder à informação.'],
+        ['Integridade','A informação deve manter-se correcta e protegida contra alterações indevidas.'],
+        ['Disponibilidade','A informação e os serviços devem estar acessíveis quando necessários a utilizadores autorizados.']
+      ]},
+      { h:'Medidas de Protecção', type:'list', items:[
+        ['Autenticação','Verificação da identidade do utilizador.'],
+        ['Autorização','Definição das acções e recursos a que o utilizador pode aceder.'],
+        ['Encriptação','Transformação criptográfica dos dados para impedir leitura por quem não possui a chave adequada.'],
+        ['Backup','Cópia de segurança destinada à recuperação de dados.'],
+        ['Auditoria','Registo e análise de actividades e operações.'],
+        ['MFA','Autenticação multifactor, que combina factores distintos.'],
+        ['Menor privilégio','Conceder apenas as permissões necessárias para cada função.']
+      ]}
+    ]
+  },
+  {
+    id:'info_si', title:'5. Características dos Sistemas de Informação', color:'#ea580c',
+    sections:[
+      { h:'Sistemas e Organização', type:'list', items:[
+        ['Sistema','Conjunto de elementos inter-relacionados que trabalham para um objectivo.'],
+        ['Entrada (input)','Dados ou recursos introduzidos no sistema.'],
+        ['Processamento','Transformação das entradas.'],
+        ['Saída (output)','Resultados produzidos pelo sistema.'],
+        ['Feedback','Informação sobre os resultados, usada para ajustar e controlar o sistema.'],
+        ['Sistema aberto','Interage com o ambiente externo.'],
+        ['Sistema fechado','Modelo teórico com pouca ou nenhuma interacção com o ambiente.']
+      ]},
+      { h:'Componentes de um SI', type:'pills', items:['Pessoas','Processos e procedimentos','Dados','Hardware','Software','Redes e telecomunicações'] },
+      { h:'Níveis de Gestão', type:'table', headers:['Nível','Decisões','Foco'], rows:[
+        ['Operacional','Principalmente estruturadas','Operações diárias.'],
+        ['Táctico','Frequentemente semiestruturadas','Coordenação e controlo.'],
+        ['Estratégico','Frequentemente não estruturadas','Direcção e planeamento de longo prazo.']
+      ]},
+      { h:'Tipos de Sistemas', type:'table', headers:['Sigla','Nome','Função'], rows:[
+        ['TPS','Transaction Processing System','Registar e processar transacções operacionais, como vendas, pagamentos e matrículas.'],
+        ['MIS/SIG','Management Information System','Produzir relatórios e informação periódica para apoiar a gestão.'],
+        ['DSS/SAD','Decision Support System','Apoiar decisões através da análise de dados, modelos e cenários.'],
+        ['ESS/EIS','Executive Support/Information System','Apoiar a gestão de topo com indicadores e informação estratégica.'],
+        ['ERP','Enterprise Resource Planning','Integrar processos e dados de áreas como contabilidade, compras, recursos humanos e stocks.'],
+        ['CRM','Customer Relationship Management','Gerir o relacionamento com clientes.'],
+        ['SCM','Supply Chain Management','Gerir a cadeia de abastecimento.']
+      ]},
+      { h:'Ciclo de Desenvolvimento', type:'table', headers:['Fase','Descrição'], rows:[
+        ['Planeamento e viabilidade','Identificar problema, objectivos, recursos, riscos e viabilidade técnica, económica e operacional.'],
+        ['Levantamento e análise de requisitos','Identificar necessidades e requisitos dos utilizadores e da organização.'],
+        ['Desenho e arquitectura','Definir arquitectura, dados, interfaces e componentes.'],
+        ['Implementação','Desenvolver e integrar os componentes.'],
+        ['Testes','Verificar funcionamento, segurança, desempenho e conformidade com requisitos.'],
+        ['Implantação e manutenção','Colocar em produção, corrigir falhas e evoluir o sistema.']
+      ]},
+      { h:'Tipos de Testes', type:'table', headers:['Tipo','Objectivo'], rows:[
+        ['Unitários','Testar componentes individuais.'],
+        ['Integração','Testar a comunicação entre componentes.'],
+        ['Sistema','Avaliar o sistema completo.'],
+        ['Aceitação','Verificar se o sistema satisfaz as necessidades do utilizador.'],
+        ['Desempenho','Avaliar velocidade, capacidade e comportamento sob carga.'],
+        ['Segurança','Identificar vulnerabilidades e verificar controlos.']
+      ]},
+      { h:'Metodologias', type:'table', headers:['Nome','Descrição'], rows:[
+        ['Cascata','Abordagem sequencial, organizada por fases.'],
+        ['Ágil','Abordagem iterativa e incremental, com colaboração e adaptação frequentes.'],
+        ['Scrum','Framework ágil que organiza o trabalho em Sprints.'],
+        ['Prototipagem','Criação de versões preliminares para validar requisitos e interfaces.']
+      ]},
+      { h:'Segurança Informática — Ameaças', type:'table', headers:['Ameaça','Descrição'], rows:[
+        ['Vírus','Código malicioso que se associa a ficheiros ou programas e se replica quando estes são executados.'],
+        ['Worm','Malware que se pode propagar automaticamente entre sistemas.'],
+        ['Trojan','Programa malicioso disfarçado de software legítimo.'],
+        ['Ransomware','Malware que bloqueia ou cifra dados para exigir resgate.'],
+        ['Spyware','Software que recolhe informação sem conhecimento ou autorização adequada.'],
+        ['Phishing','Fraude que tenta levar a vítima a revelar credenciais ou executar acções.'],
+        ['Brute force','Tentativa sistemática de descobrir credenciais por combinações.'],
+        ['DoS','Ataque destinado a tornar um serviço indisponível.'],
+        ['DDoS','Ataque de negação de serviço distribuído por múltiplas origens.'],
+        ['Spoofing','Falsificação de identidade, endereço ou origem.'],
+        ['Sniffing','Captura e análise de tráfego de rede.']
+      ]},
+      { h:'Algoritmos e Lógica de Programação', type:'list', items:[
+        ['Algoritmo','Sequência finita, ordenada e não ambígua de instruções para resolver um problema.'],
+        ['Estrutura sequencial','Instruções executadas pela ordem definida.'],
+        ['Estrutura condicional','Escolha de caminhos com base numa condição.'],
+        ['Estrutura de repetição','Execução repetida de instruções.'],
+        ['FOR','Repetição normalmente controlada por contador.'],
+        ['WHILE','Repete enquanto a condição for verdadeira; pode executar zero vezes.'],
+        ['REPEAT/UNTIL','Executa primeiro o bloco e testa depois; executa pelo menos uma vez.']
+      ]},
+      { h:'Operadores', type:'table', headers:['Operador','Significado'], rows:[
+        ['+','Adição'], ['-','Subtracção'], ['*','Multiplicação'], ['/','Divisão'],
+        ['MOD','Resto da divisão inteira'], ['DIV','Quociente da divisão inteira'],
+        ['AND','Verdadeiro apenas quando ambas as condições são verdadeiras.'],
+        ['OR','Verdadeiro quando pelo menos uma condição é verdadeira.'],
+        ['NOT','Inverte o valor lógico.']
+      ]},
+      { h:'Tipos de Dados', type:'table', headers:['Tipo','Exemplo'], rows:[
+        ['Inteiro','10'], ['Real','3.14'], ['Carácter','"A"'], ['Cadeia de caracteres','"Angola"'], ['Lógico/Booleano','Verdadeiro ou Falso']
+      ]},
+      { h:'Gestão de Dados e Governança', type:'html', html:`
+        <p><strong>Definição:</strong> Práticas e processos que asseguram a recolha, validação, armazenamento, organização, protecção, utilização, partilha, arquivo e eliminação adequada dos dados.</p>
+        <p><strong>Qualidade:</strong> Exactidão, Completude, Consistência, Actualidade, Validade, Unicidade quando aplicável.</p>
+        <p><strong>Governança:</strong> Define políticas, responsabilidades, regras e normas para assegurar a gestão adequada dos dados.</p>
+        <p><strong>Ciclo de vida:</strong> Criação/recolha → Armazenamento → Utilização → Partilha → Arquivo → Eliminação.</p>
+        <p><strong>ETL:</strong> Extract (Extrair) — Transform (Transformar) — Load (Carregar).</p>` },
+      { h:'Contabilidade e Informática Aplicada à Gestão', type:'list', items:[
+        ['Contabilidade','Área que regista, classifica, resume e interpreta factos patrimoniais e operações económicas.'],
+        ['Património','Conjunto de bens, direitos e obrigações de uma entidade.'],
+        ['Activo','Recursos económicos controlados pela entidade.'],
+        ['Passivo','Obrigações da entidade perante terceiros.'],
+        ['Capital próprio','Interesse residual nos activos depois de deduzidos os passivos.'],
+        ['Balanço','Demonstra a posição financeira numa determinada data.'],
+        ['Demonstração de resultados','Apresenta rendimentos, gastos e resultado de um período.'],
+        ['Demonstração de fluxos de caixa','Apresenta entradas e saídas de caixa e equivalentes.']
+      ]},
+      { h:'Equação Fundamental e Aplicações', type:'html', html:`
+        <p><strong>Equação fundamental:</strong> <code>Activo = Passivo + Capital Próprio</code></p>
+        <p><strong>Partidas dobradas:</strong> Em cada transacção contabilística, o total dos débitos deve igualar o total dos créditos.</p>
+        <p><strong>Aplicações:</strong> Facturação, Processamento salarial, Controlo de despesas, Contas a pagar e a receber, Gestão de stock, Reconciliação bancária, Relatórios financeiros, Orçamentação, Controlo de activos, Análise de custos.</p>` }
+    ]
+  },
+  {
+    id:'info_ficheiros', title:'6. Ficheiros e Extensões', color:'#db2777',
+    sections:[
+      { h:'Texto e Documentos', type:'table', headers:['Extensão','Nome','Uso'], rows:[
+        ['.txt','Texto simples','Notas, registos e texto simples.'],
+        ['.rtf','Rich Text Format','Documentos com texto formatado.'],
+        ['.doc','Microsoft Word antigo','Documentos editáveis.'],
+        ['.docx','Office Open XML Word','Relatórios, cartas e trabalhos.'],
+        ['.odt','OpenDocument Text','Documentos editáveis, por exemplo no LibreOffice.'],
+        ['.pdf','Portable Document Format','Documentos finais, formulários e publicação.'],
+        ['.md','Markdown','Documentação e apontamentos.'],
+        ['.html / .htm','HyperText Markup Language','Páginas Web.'],
+        ['.xml','Extensible Markup Language','Configuração e intercâmbio de dados.'],
+        ['.json','JavaScript Object Notation','APIs, configurações e intercâmbio de dados.'],
+        ['.csv','Comma-Separated Values','Exportação e importação de tabelas.']
+      ]},
+      { h:'Folhas de Cálculo e Apresentações', type:'table', headers:['Extensão','Nome','Uso'], rows:[
+        ['.xls','Microsoft Excel antigo','Livros de cálculo.'],
+        ['.xlsx','Office Open XML Excel','Tabelas, fórmulas e gráficos.'],
+        ['.ods','OpenDocument Spreadsheet','Folhas de cálculo.'],
+        ['.ppt','Microsoft PowerPoint antigo','Apresentações.'],
+        ['.pptx','Office Open XML PowerPoint','Apresentações multimédia.'],
+        ['.odp','OpenDocument Presentation','Apresentações.']
+      ]},
+      { h:'Imagem', type:'table', headers:['Extensão','Nome','Uso'], rows:[
+        ['.jpg / .jpeg','JPEG','Fotografias.'],
+        ['.png','Portable Network Graphics','Logótipos, capturas e gráficos.'],
+        ['.gif','Graphics Interchange Format','Animações simples e imagens.'],
+        ['.bmp','Bitmap','Imagens bitmap.'],
+        ['.tif / .tiff','Tagged Image File Format','Digitalização e arquivo gráfico.'],
+        ['.svg','Scalable Vector Graphics','Ícones, logótipos e gráficos escaláveis.'],
+        ['.webp','WebP','Imagens optimizadas para Web.'],
+        ['.ico','Icon','Ícones.']
+      ]},
+      { h:'Áudio e Vídeo', type:'table', headers:['Extensão','Nome','Uso'], rows:[
+        ['.mp3','MPEG Audio Layer III','Música e áudio.'],
+        ['.wav','Waveform Audio File Format','Gravação e edição de áudio.'],
+        ['.aac','Advanced Audio Coding','Streaming e dispositivos móveis.'],
+        ['.flac','Free Lossless Audio Codec','Arquivo de áudio de alta fidelidade.'],
+        ['.mp4','MPEG-4 Part 14','Vídeos.'],
+        ['.avi','Audio Video Interleave','Vídeo.'],
+        ['.mkv','Matroska Video','Vídeo com múltiplas faixas e legendas.'],
+        ['.mov','QuickTime Movie','Vídeo.'],
+        ['.wmv','Windows Media Video','Vídeo em ambientes Windows.'],
+        ['.webm','WebM','Vídeo em navegadores.']
+      ]},
+      { h:'Compactação e Arquivo', type:'table', headers:['Extensão','Nome','Uso'], rows:[
+        ['.zip','ZIP','Distribuição e organização de ficheiros.'],
+        ['.rar','RAR','Compactação e arquivo.'],
+        ['.7z','7-Zip','Compactação.'],
+        ['.tar','Tape Archive','Arquivo em sistemas Unix/Linux.'],
+        ['.gz','Gzip','Compressão.'],
+        ['.tar.gz / .tgz','TAR + Gzip','Distribuição de software e cópias.']
+      ]},
+      { h:'Executáveis, Bibliotecas e Instalação', type:'table', headers:['Extensão','Nome','Uso'], rows:[
+        ['.exe','Executable','Execução de programas.'],
+        ['.msi','Microsoft Installer','Instalação de aplicações.'],
+        ['.bat','Batch','Automatização de tarefas.'],
+        ['.cmd','Command Script','Automatização.'],
+        ['.sh','Shell Script','Automatização em linha de comandos.'],
+        ['.dll','Dynamic Link Library','Funções partilhadas entre programas.'],
+        ['.so','Shared Object','Funções partilhadas em Unix/Linux.'],
+        ['.sys','System File','Componentes do sistema.'],
+        ['.apk','Android Package','Instalação de aplicações Android.'],
+        ['.deb','Debian Package','Instalação em distribuições Linux.'],
+        ['.rpm','RPM Package Manager','Instalação de software em Linux RPM.']
+      ]},
+      { h:'Código-Fonte e Desenvolvimento', type:'table', headers:['Extensão','Nome','Uso'], rows:[
+        ['.c','C Source','Programação.'],
+        ['.cpp','C++ Source','Programação.'],
+        ['.java','Java Source','Programação.'],
+        ['.py','Python','Scripts, automação e aplicações.'],
+        ['.js','JavaScript','Aplicações Web e servidores.'],
+        ['.ts','TypeScript','Desenvolvimento de software.'],
+        ['.php','PHP','Desenvolvimento Web.'],
+        ['.css','Cascading Style Sheets','Estilização de páginas Web.'],
+        ['.sql','SQL Script','Criação e consulta de bases de dados.'],
+        ['.class','Java Bytecode','Aplicações Java.'],
+        ['.jar','Java Archive','Distribuição de aplicações e bibliotecas Java.']
+      ]},
+      { h:'Bases de Dados e Correio', type:'table', headers:['Extensão','Nome','Uso'], rows:[
+        ['.db','Database','Armazenamento de dados; formato depende da aplicação.'],
+        ['.sqlite / .sqlite3','SQLite Database','Bases de dados locais e incorporadas.'],
+        ['.mdb','Microsoft Access Database','Bases de dados Access antigas.'],
+        ['.accdb','Access Database','Bases de dados Access modernas.'],
+        ['.pst','Personal Storage Table','Arquivo local de correio Outlook.'],
+        ['.eml','Email Message','Guardar ou transferir mensagens.'],
+        ['.msg','Outlook Message','Guardar mensagens Outlook.']
+      ]},
+      { h:'Alertas de Segurança', type:'html', html:`
+        <div class="alert-box">
+          <strong>Atenção:</strong>
+          <ul style="margin:8px 0 0 18px">
+            <li>A extensão pode ser alterada manualmente e não prova o verdadeiro formato do conteúdo.</li>
+            <li>Não executar ficheiros .exe, .bat, .cmd, .msi ou scripts de origem desconhecida.</li>
+            <li>Um ficheiro .pdf ou .docx também pode conter conteúdo malicioso ou ligações perigosas.</li>
+            <li>Um ficheiro .zip ou .rar pode conter executáveis maliciosos.</li>
+            <li>A extensão .tmp costuma indicar ficheiro temporário, mas o conteúdo depende da aplicação.</li>
+          </ul>
+        </div>` }
+    ]
+  }
 ];
 
 /* =========================================================
-   UTILITÁRIOS
+   ESTADO GLOBAL
    ========================================================= */
-function escapeHtml(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function shuffle(a){const arr=[...a];for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]]}return arr}
-function formatTime(sec){const m=String(Math.floor(sec/60)).padStart(2,'0');const s=String(sec%60).padStart(2,'0');return`${m}:${s}`}
-function pointsFor(q){return DIFFICULTY_POINTS[q.d]??10}
-
-/* =========================================================
-   GERADOR DE OPÇÕES MC
-   ========================================================= */
-function generateOptions(question){
-  const correct=String(question.a).trim();
-  if(/^(sim|não)\.?$/i.test(correct)){
-    const isSim=/^sim/i.test(correct);
-    const opts=isSim
-      ?['Sim.','Não.','Apenas em casos excecionais.','Depende do contexto.']
-      :['Não.','Sim.','Apenas em casos excecionais.','Depende do contexto.'];
-    return shuffle(opts);
-  }
-  const pool=QUESTIONS.filter(q=>q.id!==question.id&&q.a&&String(q.a).trim().toLowerCase()!==correct.toLowerCase());
-  const isCite=/^cite\b/i.test(question.q);
-  const sameTopic=pool.filter(q=>q.t===question.t);
-  const otherTopic=pool.filter(q=>q.t!==question.t);
-  const sortByLen=(a,b)=>Math.abs(String(a.a).length-correct.length)-Math.abs(String(b.a).length-correct.length);
-  const primary=(isCite?otherTopic:sameTopic).slice().sort(sortByLen).slice(0,8);
-  const secondary=(isCite?sameTopic:otherTopic).slice().sort(sortByLen).slice(0,8);
-  const distractors=[];const used=new Set([correct.toLowerCase()]);
-  const addFrom=(arr)=>{for(const q of shuffle(arr)){if(distractors.length>=3)break;const ans=String(q.a).trim();if(used.has(ans.toLowerCase()))continue;used.add(ans.toLowerCase());distractors.push(ans)}};
-  addFrom(primary);addFrom(secondary);
-  while(distractors.length<3)distractors.push('Nenhuma das anteriores.');
-  return shuffle([correct,...distractors.slice(0,3)]);
-}
-
-function evaluateAnswer(q,userAnswer){
-  if(userAnswer==null||userAnswer==='')return{correct:false};
-  return{correct:String(userAnswer).trim()===String(q.a).trim()};
-}
-function calculatePercentage(c,t){return t?Math.round((c/t)*100):0}
-function gradeFromPercentage(p){
-  if(p>=90)return{label:'Excelente',tone:'badge-ok'};
-  if(p>=75)return{label:'Bom',tone:'badge-accent'};
-  if(p>=60)return{label:'Suficiente',tone:'badge-warn'};
-  return{label:'Insuficiente',tone:'badge-danger'};
-}
-
-/* =========================================================
-   STORAGE
-   ========================================================= */
-const NS='minsa_quiz_v3_';
-const storage={
-  get(k,fb=null){try{const r=localStorage.getItem(NS+k);return r?JSON.parse(r):fb}catch{return fb}},
-  set(k,v){try{localStorage.setItem(NS+k,JSON.stringify(v))}catch(e){console.warn(e)}},
-  remove(k){localStorage.removeItem(NS+k)}
-};
-const state={
-  getPreferences(){return storage.get('prefs',{count:20,timer:15,feedback:true,name:''})},
-  setPreferences(p){storage.set('prefs',p)},
-  getName(){return this.getPreferences().name||''},
-  setName(n){const p=this.getPreferences();p.name=n;this.setPreferences(p)},
-  getHistory(){return storage.get('history',[])},
-  addHistory(e){const h=this.getHistory();h.unshift(e);storage.set('history',h.slice(0,50))},
-  clearHistory(){storage.remove('history')},
-  getGlobalScore(){return storage.get('globalScore',0)},
-  setGlobalScore(v){storage.set('globalScore',v)},
-  addGlobalScore(p){storage.set('globalScore',this.getGlobalScore()+p)},
-  getReviewQuestions(){return storage.get('review',[])},
-  toggleReview(id){const r=new Set(this.getReviewQuestions());if(r.has(id))r.delete(id);else r.add(id);storage.set('review',[...r])},
-  getInProgress(){return storage.get('inProgress',null)},
-  setInProgress(d){storage.set('inProgress',d)},
-  clearInProgress(){storage.remove('inProgress')}
+const state = {
+  name: '',
+  globalScore: 0,
+  view: 'home', // home | quiz | materia | extensoes
+  selectedTopic: null,
+  qIndex: 0,
+  answers: {}, // id -> {selected, correct}
+  history: {}
 };
 
 /* =========================================================
-   TIMER
+   HELPERS
    ========================================================= */
-class Timer{
-  constructor({seconds,onTick,onComplete,warnAt=30}){
-    this.totalSeconds=seconds;this.remaining=seconds;
-    this.onTick=onTick;this.onComplete=onComplete;this.warnAt=warnAt;
-    this._interval=null;this._running=false;
-  }
-  start(){if(this._running)return;this._running=true;this.onTick&&this.onTick(this.snapshot());
-    this._interval=setInterval(()=>{this.remaining=Math.max(0,this.remaining-1);this.onTick&&this.onTick(this.snapshot());if(this.remaining<=0){this.stop();this.onComplete&&this.onComplete()}},1000)}
-  stop(){if(this._interval)clearInterval(this._interval);this._interval=null;this._running=false}
-  snapshot(){return{remaining:this.remaining,total:this.totalSeconds,warning:this.remaining<=this.warnAt}}
-}
+function $(sel){return document.querySelector(sel)}
+function $all(sel){return document.querySelectorAll(sel)}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 
-/* =========================================================
-   QUIZ ENGINE — sempre MC
-   ========================================================= */
-function buildQuiz({topics,difficulties,count,onlyReview}){
-  let pool=QUESTIONS.slice();
-  if(onlyReview){
-    const review=new Set(state.getReviewQuestions());
-    pool=pool.filter(q=>review.has(q.id));
-    if(pool.length===0)return[];
-  }else{
-    if(topics&&topics.length)pool=pool.filter(q=>topics.includes(q.t));
-    if(difficulties&&difficulties.length)pool=pool.filter(q=>difficulties.includes(q.d));
-  }
-  pool=shuffle(pool);
-  if(count&&count>0)pool=pool.slice(0,count);
-  return pool.map(q=>({...q,ty:'mc',o:generateOptions(q)}));
+function getFilteredQuestions(){
+  if(!state.selectedTopic || state.selectedTopic==='all') return ALL_QUESTIONS;
+  return ALL_QUESTIONS.filter(q=>q.t===state.selectedTopic);
 }
-function gradeAll(questions,answers){
-  let correct=0,wrong=0,skipped=0,points=0;
-  const details=questions.map((q,i)=>{
-    const ua=answers[i];
-    const res=evaluateAnswer(q,ua);
-    let p=0;
-    if(res.correct){p=pointsFor(q);correct++}
-    else if(ua==null||ua==='')skipped++;
-    else wrong++;
-    points+=p;
-    return{question:q,userAnswer:ua,correct:res.correct,points:p};
-  });
-  return{correct,wrong,skipped,points,details};
+function updateGlobalScore(delta){
+  state.globalScore = Math.max(0, state.globalScore + delta);
+  const el = $('#global-score-value');
+  el.textContent = state.globalScore;
+  el.classList.add('score-bump');
+  setTimeout(()=>el.classList.remove('score-bump'), 500);
 }
 
 /* =========================================================
    RENDER
    ========================================================= */
-const root=document.getElementById('app');
-const globalScoreValue=document.getElementById('global-score-value');
-const headerUser=document.getElementById('header-user');
-const headerGreeting=document.getElementById('header-greeting');
-let session=null;
-let autoAdvanceTimeout=null;
-
-function syncGlobalScore(){globalScoreValue.textContent=state.getGlobalScore()}
-function syncHeaderName(){
-  const name=state.getName();
-  if(name){
-    headerUser.style.display='';
-    headerGreeting.textContent='Olá, '+name.split(' ')[0];
-  }else{
-    headerUser.style.display='none';
-  }
-}
-function clearAutoAdvance(){if(autoAdvanceTimeout){clearTimeout(autoAdvanceTimeout);autoAdvanceTimeout=null}}
-
-function saveProgress(){
-  if(!session||!session.questions)return;
-  state.setInProgress({
-    questions:session.questions,answers:session.answers,index:session.index,
-    timerRemaining:session.timerRemaining,totalTimer:session.totalTimer,
-    feedback:session.feedback,awardedPoints:session.awardedPoints||0,
-    elapsed:session.elapsedBefore||Math.round((Date.now()-session.startedAt)/1000),
-    savedAt:new Date().toISOString()
-  });
-}
-function syncSessionScore(){
-  if(!session)return;
-  let total=0;
-  session.answers.forEach((a,i)=>{
-    const q=session.questions[i];
-    if(!q||a==null||a==='')return;
-    if(evaluateAnswer(q,a).correct)total+=pointsFor(q);
-  });
-  const delta=total-(session.awardedPoints||0);
-  if(delta!==0){
-    state.addGlobalScore(delta);session.awardedPoints=total;syncGlobalScore();
-    globalScoreValue.classList.remove('score-bump');
-    void globalScoreValue.offsetWidth;
-    globalScoreValue.classList.add('score-bump');
-  }
+function render(){
+  const app = $('#app');
+  if(state.view==='home') app.innerHTML = renderHome();
+  else if(state.view==='quiz') app.innerHTML = renderQuiz();
+  else if(state.view==='materia') app.innerHTML = renderMateria();
+  else if(state.view==='extensoes') app.innerHTML = renderExtensoes();
+  bindEvents();
 }
 
-/* ---------- HOME ---------- */
-function showHome(){
-  const prefs=state.getPreferences();
-  const history=state.getHistory();
-  const reviewCount=state.getReviewQuestions().length;
-  const inProgress=state.getInProgress();
-  const savedName=prefs.name||'';
-
-  root.innerHTML=`
-  <div class="anim stack-5">
-    <section class="hero">
-      <div class="hero-inner">
-        <div class="eyebrow">Ministério da Saúde · Angola</div>
-        <h1 class="display display-xl" style="margin-top:12px">Preparação para o<br>Concurso Público</h1>
-        <p class="lead" style="margin-top:12px">Técnico Superior · Carreira de Regime Geral · 2.ª Classe</p>
-        <div class="hero-badges">
-          <span class="hero-badge">📚 ${QUESTIONS.length} perguntas</span>
-          <span class="hero-badge">🎯 ${TOPICS.length} tópicos</span>
-          <span class="hero-badge">⏱️ Temporizador</span>
-          <span class="hero-badge">⭐ Pontuação</span>
+function renderHome(){
+  const totalQ = ALL_QUESTIONS.length;
+  return `
+    <div class="stack-5 anim">
+      <div class="hero">
+        <div class="hero-inner">
+          <div class="eyebrow" style="color:rgba(255,255,255,0.9)">Concurso MINSA · 2026</div>
+          <h1 class="display display-xl mt-2">Preparação para<br>a Prova de Informática</h1>
+          <p class="lead mt-3" style="max-width:520px">Domina os tópicos do programa: introdução à informática, protocolos, redes, bases de dados, sistemas de informação e muito mais.</p>
+          <div class="hero-badges mt-4">
+            <span class="hero-badge">✦ ${totalQ} questões</span>
+            <span class="hero-badge">◫ 6 tópicos</span>
+            <span class="hero-badge">◈ Matéria completa</span>
+          </div>
+          <div class="row-wrap mt-5" style="gap:10px">
+            <button class="btn btn-lg" data-action="start-all" style="background:#fff;color:#dc2626;font-weight:700">Começar Quiz →</button>
+            <button class="btn btn-lg" data-action="view-materia" style="background:rgba(255,255,255,0.18);color:#fff;border:1px solid rgba(255,255,255,0.3);backdrop-filter:blur(8px)">Estudar Matéria</button>
+            <button class="btn btn-lg" data-action="view-extensoes" style="background:rgba(255,255,255,0.18);color:#fff;border:1px solid rgba(255,255,255,0.3);backdrop-filter:blur(8px)">Extensões</button>
+          </div>
         </div>
       </div>
-    </section>
 
-    ${inProgress?`
-    <div class="card card-pad" style="border-left:4px solid var(--orange);background:linear-gradient(135deg,#fff7ed,#ffedd5)">
-      <div class="row-between gap-4 row-wrap">
+      <div class="name-card">
+        <div class="name-card-inner">
+          <div class="name-card-title">✍ Como te chamas?</div>
+          <div class="name-card-sub">O teu nome aparece no cabeçalho e no certificado final.</div>
+          <div class="row gap-3 mt-3" style="flex-wrap:wrap">
+            <input class="input input-lg" id="name-input" placeholder="O teu nome…" value="${esc(state.name)}" style="flex:1;min-width:200px" maxlength="40" autocomplete="off">
+            <button class="btn btn-accent btn-lg" data-action="save-name">Guardar</button>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="eyebrow mb-2">Escolhe um tópico</div>
+        <div class="row-wrap" style="gap:8px">
+          <button class="chip" data-topic="all" data-selected="${state.selectedTopic==null||state.selectedTopic==='all'?'true':'false'}">
+            <span class="dot" style="background:#dc2626"></span> Todos
+          </button>
+          ${TOPICS.map(t=>`
+            <button class="chip" data-topic="${t.id}" data-selected="${state.selectedTopic===t.id?'true':'false'}">
+              <span class="dot" style="background:${t.color}"></span> ${t.name}
+            </button>`).join('')}
+        </div>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat stat-red"><div class="label">Questões</div><div class="stat-value">${totalQ}</div></div>
+        <div class="stat stat-amber"><div class="label">Tópicos</div><div class="stat-value">${TOPICS.length}</div></div>
+        <div class="stat stat-teal"><div class="label">Pontos</div><div class="stat-value stat-value-sm">${state.globalScore}</div></div>
+      </div>
+
+      <div class="row-wrap" style="gap:12px">
+        <button class="btn btn-accent btn-lg" data-action="start-selected" style="flex:1;min-width:200px">Começar Quiz ${state.selectedTopic&&state.selectedTopic!=='all'?'— '+topicName(state.selectedTopic):'— Todos'}</button>
+        <button class="btn btn-outline btn-lg" data-action="view-materia" style="flex:1;min-width:160px">📖 Matéria</button>
+        <button class="btn btn-outline btn-lg" data-action="view-extensoes" style="flex:1;min-width:160px">🗂 Extensões</button>
+      </div>
+    </div>`;
+}
+
+function renderQuiz(){
+  const qs = getFilteredQuestions();
+  if(!qs.length) return `<div class="card card-pad text-c"><p class="lead">Nenhuma questão disponível para este tópico.</p><button class="btn btn-primary mt-4" data-action="home">Voltar</button></div>`;
+  if(state.qIndex>=qs.length) return renderResults(qs);
+  const q = qs[state.qIndex];
+  const answered = state.answers[q.id];
+  const pct = Math.round((state.qIndex/qs.length)*100);
+  return `
+    <div class="stack-4 anim">
+      <div class="row-between">
+        <button class="btn btn-ghost btn-sm" data-action="home">← Sair</button>
+        <span class="name-pill">${state.name?esc(state.name):'Convidado'}</span>
+        <span class="q-num">${state.qIndex+1} / ${qs.length}</span>
+      </div>
+      <div class="progress"><span style="width:${pct}%"></span></div>
+      <div class="card card-pad">
+        <div class="row-between mb-2" style="margin-bottom:4px">
+          <span class="badge" style="background:${topicColor(q.t)}1a;color:${topicColor(q.t)}">${topicIcon(q.t)} ${topicName(q.t)}</span>
+          <span class="badge ${DIFFICULTY_BADGE[q.d]}">${DIFFICULTY_LABEL[q.d]}</span>
+        </div>
+        <div class="q-text">${esc(q.q)}</div>
+        <div id="options">
+          ${q.opts.map((opt,i)=>{
+            const letter = LETTERS[i];
+            let ds = '';
+            if(answered){
+              if(letter===q.ans) ds='correct';
+              else if(letter===answered.selected) ds='wrong';
+            }
+            return `<button class="option" data-opt="${letter}" ${answered?'disabled':''} ${ds?`data-state="${ds}"`:''}>
+              <span class="option-key">${letter}</span>
+              <span class="option-text">${esc(opt)}</span>
+              ${answered&&letter===q.ans?'<span class="option-tag ok">Correta</span>':''}
+              ${answered&&letter===answered.selected&&letter!==q.ans?'<span class="option-tag bad">Errada</span>':''}
+            </button>`;
+          }).join('')}
+        </div>
+        <div id="feedback" class="mt-3">${answered?renderFeedback(q,answered):''}</div>
+      </div>
+      <div class="row-between">
+        <button class="btn btn-outline" data-action="home">← Início</button>
+        <button class="btn btn-accent" id="next-btn" data-action="next" ${answered?'':'disabled'}>
+          ${state.qIndex+1>=qs.length?'Ver resultado →':'Seguinte →'}
+        </button>
+      </div>
+    </div>`;
+}
+
+function renderFeedback(q, ans){
+  const ok = ans.correct;
+  const expl = q.expl ? `<div class="expl">${esc(q.expl)}</div>` : '';
+  return `<div class="feedback ${ok?'feedback-ok':'feedback-err'}">
+    <span class="feedback-icon">${ok?'✓':'✕'}</span>
+    <div>${ok?'Resposta correta!':`Resposta errada. A opção correta é <strong>${q.ans}</strong>.`} ${expl}</div>
+  </div>`;
+}
+
+function renderResults(qs){
+  const correct = qs.filter(q=>state.answers[q.id]?.correct).length;
+  const total = qs.length;
+  const pct = Math.round((correct/total)*100);
+  const pts = qs.reduce((s,q)=>s+(state.answers[q.id]?.correct?DIFFICULTY_POINTS[q.d]:0),0);
+  return `
+    <div class="stack-5 anim">
+      <div class="hero" style="background:var(--grad-success);text-align:center">
+        <div class="hero-inner">
+          <div class="eyebrow" style="color:rgba(255,255,255,0.9)">Resultado final</div>
+          <h2 class="display display-lg mt-2">${pct}%</h2>
+          <p class="lead mt-2">${correct} de ${total} respostas corretas · ${pts} pontos</p>
+        </div>
+      </div>
+      <div class="stat-grid">
+        <div class="stat stat-teal"><div class="label">Acertos</div><div class="stat-value">${correct}</div></div>
+        <div class="stat stat-red"><div class="label">Erros</div><div class="stat-value">${total-correct}</div></div>
+        <div class="stat stat-amber"><div class="label">Pontos</div><div class="stat-value stat-value-sm">${pts}</div></div>
+      </div>
+      <div class="card card-pad">
+        <div class="display" style="font-size:20px;margin-bottom:12px">Revisão</div>
         <div class="stack-2">
-          <div class="label" style="color:#9a3412">Progresso guardado</div>
-          <div class="small"><strong>${escapeHtml(inProgress.name||'Aluno')}</strong> · pergunta ${(inProgress.index||0)+1} de ${inProgress.questions?.length||0} · ${inProgress.awardedPoints||0} pts</div>
-          <div class="tiny muted">Guardado em ${new Date(inProgress.savedAt).toLocaleString('pt-PT')}</div>
-        </div>
-        <div class="row-wrap">
-          <button id="btn-continue" class="btn btn-accent">▶ Continuar</button>
-          <button id="btn-discard" class="btn btn-outline">Descartar</button>
-        </div>
-      </div>
-    </div>`:''}
-
-    <div class="stat-grid">
-      <div class="stat stat-red">
-        <div class="label">Pontuação</div>
-        <div class="stat-value">${state.getGlobalScore()}</div>
-      </div>
-      <div class="stat stat-amber">
-        <div class="label">Testes</div>
-        <div class="stat-value">${history.length}</div>
-      </div>
-      <div class="stat stat-teal">
-        <div class="label">Revisão</div>
-        <div class="stat-value">${reviewCount}</div>
-      </div>
-    </div>
-
-    <div class="name-card">
-      <div class="name-card-inner">
-        <div class="name-card-title">👤 Identificação</div>
-        <div class="name-card-sub">Insira o seu nome para começar o quiz. Os resultados serão associados a este nome.</div>
-        <div class="field" style="margin-top:14px">
-          <label class="field-label" for="name-input" style="color:#9a3412">O seu nome <span class="req" style="color:var(--red)">*</span></label>
-          <input id="name-input" type="text" class="input input-lg" placeholder="Ex: Maria Silva" value="${escapeHtml(savedName)}" autocomplete="name" maxlength="60">
-        </div>
-      </div>
-    </div>
-
-    <section class="stack-5">
-      <div class="row-between">
-        <div class="label">Configuração do quiz</div>
-        <div class="tiny muted">Escolha múltipla</div>
-      </div>
-
-      <div class="stack-3">
-        <div class="field">
-          <span class="field-label">Tópicos <span class="muted" style="text-transform:none;letter-spacing:0">(nenhum = todos)</span></span>
-          <div id="topics-grid" class="row-wrap"></div>
-        </div>
-
-        <div class="field">
-          <span class="field-label">Dificuldade</span>
-          <div id="difficulty-grid" class="row-wrap"></div>
-        </div>
-      </div>
-
-      <div class="grid-2">
-        <div class="field">
-          <label class="field-label" for="count-select">Número de perguntas</label>
-          <select id="count-select" class="select">
-            <option value="10">10 perguntas</option>
-            <option value="20">20 perguntas</option>
-            <option value="30">30 perguntas</option>
-            <option value="50">50 perguntas</option>
-            <option value="0">Todas as disponíveis</option>
-          </select>
-        </div>
-        <div class="field">
-          <label class="field-label" for="timer-input">Tempo total (min · 0 = sem limite)</label>
-          <input id="timer-input" type="number" min="0" max="180" value="15" class="input">
-        </div>
-      </div>
-
-      <div class="field">
-        <span class="field-label">Opções</span>
-        <label class="row gap-2 small" style="cursor:pointer">
-          <input id="feedback-toggle" type="checkbox" checked style="accent-color:var(--orange);width:16px;height:16px">
-          Feedback imediato após responder
-        </label>
-      </div>
-
-      <div class="row-wrap" style="padding-top:8px">
-        <button id="btn-start" class="btn btn-accent btn-lg">🚀 Iniciar quiz</button>
-        <button id="btn-review" class="btn btn-outline">Rever marcadas</button>
-        <button id="btn-history" class="btn btn-outline">Histórico</button>
-        <button id="btn-reset" class="btn btn-danger">Reiniciar</button>
-      </div>
-      <div id="start-hint" class="tiny muted" style="margin-top:-4px"></div>
-    </section>
-  </div>`;
-
-  const selTopics=new Set();
-  const tGrid=document.getElementById('topics-grid');
-  TOPICS.forEach(t=>{
-    const btn=document.createElement('button');
-    btn.type='button';
-    btn.className='chip';
-    btn.dataset.topic=t.id;
-    btn.innerHTML=`<span class="dot" style="background:${t.color}"></span>${escapeHtml(t.name)}`;
-    btn.onclick=()=>{
-      if(selTopics.has(t.id)){selTopics.delete(t.id);btn.dataset.selected='false'}
-      else{selTopics.add(t.id);btn.dataset.selected='true'}
-    };
-    tGrid.appendChild(btn);
-  });
-
-  const selDiff=new Set();
-  const dGrid=document.getElementById('difficulty-grid');
-  ['ini','int','ava'].forEach(d=>{
-    const btn=document.createElement('button');
-    btn.type='button';
-    btn.className='chip';
-    btn.innerHTML=`${DIFFICULTY_LABEL[d]} <span class="mono tiny" style="opacity:.7">${DIFFICULTY_POINTS[d]}pts</span>`;
-    btn.onclick=()=>{
-      if(selDiff.has(d)){selDiff.delete(d);btn.dataset.selected='false'}
-      else{selDiff.add(d);btn.dataset.selected='true'}
-    };
-    dGrid.appendChild(btn);
-  });
-
-  const nameIn=document.getElementById('name-input');
-  const countSel=document.getElementById('count-select');
-  const timerIn=document.getElementById('timer-input');
-  const fbTog=document.getElementById('feedback-toggle');
-  const startBtn=document.getElementById('btn-start');
-  const startHint=document.getElementById('start-hint');
-  countSel.value=String(prefs.count??20);
-  timerIn.value=prefs.timer??15;
-  fbTog.checked=prefs.feedback!==false;
-
-  const validateName=()=>{
-    const ok=nameIn.value.trim().length>=2;
-    startBtn.disabled=!ok;
-    startHint.textContent=ok?'':'⚠ Insira o seu nome (mínimo 2 caracteres) para poder iniciar.';
-    startHint.style.color=ok?'var(--ink-3)':'var(--red)';
-  };
-  nameIn.addEventListener('input',validateName);
-  validateName();
-
-  document.getElementById('btn-start').onclick=()=>{
-    const name=nameIn.value.trim();
-    if(name.length<2){nameIn.focus();return}
-    state.setName(name);
-    syncHeaderName();
-    startQuiz({
-      topics:[...selTopics],difficulties:[...selDiff],
-      count:Number(countSel.value),
-      timerMin:Number(timerIn.value),feedback:fbTog.checked
-    });
-  };
-  nameIn.addEventListener('keydown',e=>{if(e.key==='Enter'&&!startBtn.disabled)startBtn.click()});
-  document.getElementById('btn-review').onclick=()=>{
-    const name=nameIn.value.trim();
-    if(name.length<2){nameIn.focus();return}
-    state.setName(name);syncHeaderName();
-    startQuiz({topics:[],difficulties:[],count:0,timerMin:15,feedback:true,onlyReview:true});
-  };
-  document.getElementById('btn-history').onclick=showHistory;
-  document.getElementById('btn-reset').onclick=()=>{
-    if(confirm('Isto vai apagar todo o progresso, histórico, pontuação e sessão guardada. Continuar?')){
-      Object.keys(localStorage).filter(k=>k.startsWith(NS)).forEach(k=>localStorage.removeItem(k));
-      syncGlobalScore();syncHeaderName();showHome();
-    }
-  };
-  if(inProgress){
-    document.getElementById('btn-continue').onclick=()=>continueQuiz(inProgress);
-    document.getElementById('btn-discard').onclick=()=>{
-      if(confirm('Descartar o progresso guardado?')){state.clearInProgress();showHome()}
-    };
-  }
-}
-
-/* ---------- CONTINUE ---------- */
-function continueQuiz(saved){
-  const questions=saved.questions.map(q=>({...q,ty:'mc',o:(q.o&&q.o.length)?q.o:generateOptions(q)}));
-  session={
-    questions,answers:saved.answers.slice(),index:saved.index||0,
-    startedAt:Date.now()-(saved.elapsed||0)*1000,elapsedBefore:saved.elapsed||0,
-    feedback:saved.feedback!==false,reviewSet:new Set(state.getReviewQuestions()),
-    lastFeedback:null,timer:null,awardedPoints:saved.awardedPoints||0,
-    totalTimer:saved.totalTimer||null,timerRemaining:saved.timerRemaining||null,
-    name:saved.name||state.getName()
-  };
-  if(session.totalTimer&&session.timerRemaining!=null&&session.timerRemaining>0){
-    session.timer=new Timer({seconds:session.timerRemaining,warnAt:30,
-      onTick:(snap)=>{
-        session.timerRemaining=snap.remaining;
-        const badge=document.getElementById('timer-badge');
-        if(badge){badge.textContent=formatTime(snap.remaining);badge.className=`badge ${snap.warning?'badge-danger pulse-warn':'mono'}`}
-      },
-      onComplete:()=>finishQuiz(true)});
-    session.timer.start();
-  }
-  renderQuizView();
-}
-
-/* ---------- START ---------- */
-function startQuiz(opts){
-  clearAutoAdvance();
-  state.clearInProgress();
-  const questions=buildQuiz({
-    topics:opts.topics,difficulties:opts.difficulties,
-    count:opts.count,onlyReview:opts.onlyReview
-  });
-  if(!questions.length){alert('Não há perguntas para os filtros selecionados.');return}
-  const totalSeconds=(opts.timerMin||0)*60;
-  session={
-    questions,answers:new Array(questions.length).fill(null),index:0,
-    startedAt:Date.now(),elapsedBefore:0,feedback:opts.feedback,
-    reviewSet:new Set(state.getReviewQuestions()),lastFeedback:null,timer:null,
-    awardedPoints:0,totalTimer:totalSeconds||null,timerRemaining:totalSeconds||null,
-    name:state.getName()
-  };
-  if(totalSeconds>0){
-    session.timer=new Timer({seconds:totalSeconds,warnAt:30,
-      onTick:(snap)=>{
-        session.timerRemaining=snap.remaining;
-        const badge=document.getElementById('timer-badge');
-        if(badge){badge.textContent=formatTime(snap.remaining);badge.className=`badge ${snap.warning?'badge-danger pulse-warn':'mono'}`}
-      },
-      onComplete:()=>finishQuiz(true)});
-    session.timer.start();
-  }
-  state.setPreferences({count:opts.count,timer:opts.timerMin,feedback:opts.feedback,name:session.name});
-  saveProgress();
-  renderQuizView();
-}
-
-/* ---------- QUIZ ---------- */
-function renderQuizView(){
-  if(!session)return;
-  const{questions,index,answers,feedback,reviewSet,timerRemaining,name}=session;
-  const q=questions[index];
-  const total=questions.length;
-  const progressPct=Math.round(((index+1)/total)*100);
-  const onReview=reviewSet.has(q.id);
-  const score=session.awardedPoints||0;
-  const current=answers[index];
-  const revealed=feedback&&session.lastFeedback&&session.lastFeedback.qid===q.id;
-  const tColor=topicColor(q.t);
-
-  root.innerHTML=`
-  <div class="anim stack-5">
-    <div class="row-between gap-4 row-wrap">
-      <div class="row gap-3 row-wrap">
-        <span class="label">Pergunta</span>
-        <span class="mono" style="font-size:15px;font-weight:600">${String(index+1).padStart(2,'0')}<span class="muted"> / ${String(total).padStart(2,'0')}</span></span>
-        ${name?`<span class="name-pill">👤 ${escapeHtml(name.split(' ')[0])}</span>`:''}
-      </div>
-      <div class="row gap-3">
-        <span class="badge">★ ${score} pts</span>
-        <span id="timer-badge" class="${timerRemaining!=null&&timerRemaining<=30?'badge badge-danger pulse-warn':'badge mono'}">
-          ${timerRemaining!=null?formatTime(timerRemaining):'∞'}
-        </span>
-        <button id="btn-toggle-review" class="btn btn-ghost btn-sm" title="${onReview?'Remover marcação':'Marcar para revisão'}" style="color:${onReview?'var(--orange)':'var(--ink-3)'};font-size:16px">${onReview?'★':'☆'}</button>
-      </div>
-    </div>
-
-    <div class="progress"><span style="width:${progressPct}%"></span></div>
-
-    <div class="card card-pad" style="border-top:3px solid ${tColor}">
-      <div class="row gap-2" style="margin-bottom:14px;flex-wrap:wrap">
-        <span class="badge ${DIFFICULTY_BADGE[q.d]}">${DIFFICULTY_LABEL[q.d]}</span>
-        <span class="badge">Escolha múltipla</span>
-        <span class="badge" style="background:${tColor}15;color:${tColor}">${topicIcon(q.t)} ${topicName(q.t)}</span>
-      </div>
-      <p class="serif" style="font-size:22px;line-height:1.35;letter-spacing:-0.01em">${escapeHtml(q.q)}</p>
-      <div id="answer-area" style="margin-top:24px"></div>
-      <div id="feedback-area" style="margin-top:16px"></div>
-    </div>
-
-    <div class="row-between gap-3 row-wrap">
-      <button id="btn-prev" class="btn btn-outline" ${index===0?'disabled':''}>← Anterior</button>
-      <div class="row-wrap">
-        <button id="btn-skip" class="btn btn-ghost">Ignorar</button>
-        <button id="btn-finish" class="btn btn-danger">Terminar</button>
-        ${index<total-1
-          ?`<button id="btn-next" class="btn btn-primary">Seguinte →</button>`
-          :`<button id="btn-finish-2" class="btn btn-accent">Concluir quiz ✓</button>`}
-      </div>
-    </div>
-  </div>`;
-
-  const area=document.getElementById('answer-area');
-
-  const handleAnswer=(val,delayMs)=>{
-    clearAutoAdvance();
-    answers[index]=val;
-    if(feedback&&val!=null&&val!==''){
-      const r=evaluateAnswer(q,val);
-      session.lastFeedback={qid:q.id,correct:r.correct};
-    }else session.lastFeedback=null;
-    syncSessionScore();saveProgress();renderQuizView();
-    if(val!=null&&val!==''&&index<total-1){
-      autoAdvanceTimeout=setTimeout(()=>{
-        if(!session)return;
-        session.index=Math.min(session.index+1,total-1);
-        session.lastFeedback=null;saveProgress();renderQuizView();
-      },delayMs);
-    }
-  };
-
-  (q.o||[]).forEach((opt,i)=>{
-    const btn=document.createElement('button');
-    btn.type='button';btn.className='option';
-    const isSel=current===opt;
-    const isCorrect=opt===q.a;
-
-    if(revealed){
-      btn.disabled=true;
-      if(isCorrect)btn.dataset.state='correct';
-      else if(isSel)btn.dataset.state='wrong';
-    }else if(isSel){btn.dataset.selected='true'}
-
-    let tag='';
-    if(revealed&&isCorrect)tag='<span class="option-tag ok">✓ Correta</span>';
-    else if(revealed&&isSel&&!isCorrect)tag='<span class="option-tag bad">✗ A sua escolha</span>';
-
-    btn.innerHTML=`<span class="option-key">${LETTERS[i]}</span><span class="option-text">${escapeHtml(opt)}</span>${tag}`;
-    if(!revealed)btn.onclick=()=>handleAnswer(opt,900);
-    area.appendChild(btn);
-  });
-
-  const fb=document.getElementById('feedback-area');
-  if(revealed){
-    const ok=session.lastFeedback.correct;
-    fb.innerHTML=`
-      <div class="feedback ${ok?'feedback-ok':'feedback-err'}">
-        <span class="feedback-icon">${ok?'✓':'✗'}</span>
-        <div style="flex:1">
-          <strong>${ok?'Muito bem! Resposta correta.':'Resposta incorreta.'}</strong>
-          ${!ok?`<div style="margin-top:2px;font-weight:400">A resposta correta é: <strong>${escapeHtml(q.a)}</strong></div>`:''}
-        </div>
-      </div>`;
-  }
-
-  document.getElementById('btn-prev').onclick=()=>{clearAutoAdvance();if(session.index>0){session.index--;session.lastFeedback=null;saveProgress();renderQuizView()}};
-  document.getElementById('btn-skip').onclick=()=>{clearAutoAdvance();answers[index]=null;session.lastFeedback=null;saveProgress();renderQuizView()};
-  const btnNext=document.getElementById('btn-next');
-  if(btnNext)btnNext.onclick=()=>{clearAutoAdvance();if(session.index<questions.length-1){session.index++;session.lastFeedback=null;saveProgress();renderQuizView()}};
-  document.getElementById('btn-finish').onclick=()=>{clearAutoAdvance();finishQuiz(false)};
-  const btnF2=document.getElementById('btn-finish-2');
-  if(btnF2)btnF2.onclick=()=>{clearAutoAdvance();finishQuiz(false)};
-  document.getElementById('btn-toggle-review').onclick=()=>{
-    state.toggleReview(q.id);
-    session.reviewSet=new Set(state.getReviewQuestions());
-    saveProgress();renderQuizView();
-  };
-}
-
-/* ---------- FINISH ---------- */
-function finishQuiz(autoSubmitted){
-  clearAutoAdvance();
-  if(!session)return;
-  if(session.timer)session.timer.stop();
-  syncSessionScore();
-  const elapsed=Math.round((Date.now()-session.startedAt)/1000);
-  const{correct,wrong,skipped,points,details}=gradeAll(session.questions,session.answers);
-  const maxScore=session.questions.reduce((a,q)=>a+pointsFor(q),0);
-  const pct=calculatePercentage(correct,session.questions.length);
-
-  state.addHistory({
-    date:new Date().toISOString(),
-    name:session.name||state.getName(),
-    label:`Quiz MC (${session.questions.length} perguntas)${autoSubmitted?' · auto':''}`,
-    correct,total:session.questions.length,pct,points,maxScore
-  });
-  state.clearInProgress();
-  showResults({correct,wrong,skipped,points,maxScore,pct,elapsed,details,name:session.name});
-  session=null;
-}
-
-/* ---------- RESULTS ---------- */
-function showResults({correct,wrong,skipped,points,maxScore,pct,elapsed,details,name}){
-  const g=gradeFromPercentage(pct);
-  const reviewSet=new Set(state.getReviewQuestions());
-  const firstName=(name||'Aluno').split(' ')[0];
-
-  let headline='';
-  if(pct>=90)headline=`Parabéns, ${escapeHtml(firstName)}! 🎉`;
-  else if(pct>=75)headline=`Muito bom, ${escapeHtml(firstName)}! 👏`;
-  else if(pct>=60)headline=`Bom trabalho, ${escapeHtml(firstName)}.`;
-  else headline=`Continue a estudar, ${escapeHtml(firstName)}.`;
-
-  root.innerHTML=`
-  <div class="anim stack-6">
-    <section class="stack-3 text-c">
-      <div class="eyebrow">Resultado final · ${escapeHtml(name||'Aluno')}</div>
-      <div class="display" style="font-size:clamp(64px,14vw,108px);line-height:.95;letter-spacing:-0.04em;background:var(--grad-hero);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">${pct}<span style="font-size:.4em;vertical-align:super">%</span></div>
-      <div class="row" style="justify-content:center;gap:12px;flex-wrap:wrap">
-        <span class="badge ${g.tone}" style="height:28px;padding:0 14px;font-size:12px">${g.label}</span>
-        <span class="mono small" style="color:var(--ink-3)">${escapeHtml(name||'Aluno')}</span>
-      </div>
-      <p class="serif" style="font-size:22px;margin-top:8px;color:var(--ink-2)">${headline}</p>
-    </section>
-
-    <section class="stat-grid">
-      <div class="stat stat-red">
-        <div class="label">Pontos</div>
-        <div class="stat-value stat-value-sm">${points}<span style="font-size:.5em;opacity:.6">/${maxScore}</span></div>
-      </div>
-      <div class="stat stat-teal">
-        <div class="label">Acertos</div>
-        <div class="stat-value stat-value-sm">${correct}<span style="font-size:.5em;opacity:.6">/${details.length}</span></div>
-      </div>
-      <div class="stat stat-amber">
-        <div class="label">Tempo</div>
-        <div class="stat-value stat-value-sm mono">${formatTime(elapsed)}</div>
-      </div>
-    </section>
-
-    <div class="row-wrap" style="justify-content:center">
-      <button id="btn-retry" class="btn btn-accent">🔁 Tentar novamente</button>
-      <button id="btn-new" class="btn btn-primary">Novo quiz</button>
-      <button id="btn-review-wrong" class="btn btn-outline">Rever marcadas</button>
-      <button id="btn-home" class="btn btn-ghost">Início</button>
-    </div>
-
-    <hr class="rule">
-
-    <section class="stack-4">
-      <div class="row-between">
-        <div class="label">Revisão das respostas</div>
-        <div class="tiny muted">✓ ${correct} · ✗ ${wrong} · — ${skipped}</div>
-      </div>
-
-      <div class="stack-2">
-        ${details.map((d,i)=>{
-          const on=reviewSet.has(d.question.id);
-          const border=d.correct?'var(--green)':d.userAnswer?'var(--red)':'var(--line-2)';
-          const bg=d.correct?'linear-gradient(135deg,#ecfdf5,#f0fdf4)':d.userAnswer?'linear-gradient(135deg,#fef2f2,#fff5f5)':'var(--surface)';
-          return`
-            <div class="card" style="padding:16px;border-left:4px solid ${border};background:${bg}">
-              <div class="row-between gap-3" style="align-items:flex-start">
-                <div style="flex:1;min-width:0">
-                  <div class="row gap-2" style="margin-bottom:6px;flex-wrap:wrap">
-                    <span class="mono tiny muted">${String(i+1).padStart(2,'0')}</span>
-                    <span class="badge ${DIFFICULTY_BADGE[d.question.d]}">${DIFFICULTY_LABEL[d.question.d]}</span>
-                  </div>
-                  <p class="small" style="font-weight:500;line-height:1.45">${escapeHtml(d.question.q)}</p>
-                  <p class="tiny" style="margin-top:6px;color:var(--ink-2)">
-                    <span class="muted">Sua escolha:</span>
-                    ${d.userAnswer?escapeHtml(String(d.userAnswer)):'<em class="muted">não respondida</em>'}
-                  </p>
-                  ${!d.correct?`<p class="tiny" style="margin-top:2px;color:var(--green-2)"><span class="muted">Correta:</span> <strong>${escapeHtml(d.question.a)}</strong></p>`:''}
-                </div>
-                <div class="text-c" style="flex-shrink:0">
-                  <div class="mono tiny" style="color:${d.correct?'var(--green-2)':'var(--ink-3)'};font-weight:600">${d.correct?'+'+d.points:'0'} pts</div>
-                  <button data-review="${d.question.id}" class="btn btn-ghost btn-sm" style="margin-top:4px;color:${on?'var(--orange)':'var(--ink-3)'};font-size:14px">${on?'★':'☆'}</button>
-                </div>
-              </div>
+          ${qs.map(q=>{
+            const a = state.answers[q.id];
+            return `<div class="row gap-3" style="padding:8px 0;border-bottom:1px solid var(--line);font-size:13px">
+              <span style="color:${a?.correct?'var(--green)':'var(--red)'};font-weight:700">${a?.correct?'✓':'✕'}</span>
+              <span style="flex:1">${esc(q.q)}</span>
             </div>`;
-        }).join('')}
+          }).join('')}
+        </div>
       </div>
-    </section>
-  </div>`;
+      <div class="row-wrap" style="gap:12px">
+        <button class="btn btn-accent btn-lg" data-action="restart" style="flex:1">Repetir Quiz</button>
+        <button class="btn btn-outline btn-lg" data-action="home" style="flex:1">Voltar ao Início</button>
+      </div>
+    </div>`;
+}
 
-  document.getElementById('btn-retry').onclick=()=>{
-    startQuiz({topics:[],difficulties:[],count:details.length,timerMin:15,feedback:true});
-  };
-  document.getElementById('btn-new').onclick=showHome;
-  document.getElementById('btn-home').onclick=showHome;
-  document.getElementById('btn-review-wrong').onclick=()=>{
-    startQuiz({topics:[],difficulties:[],count:0,timerMin:15,feedback:true,onlyReview:true});
-  };
-  document.querySelectorAll('[data-review]').forEach(b=>{
-    b.onclick=()=>{
-      state.toggleReview(b.dataset.review);
-      const on=state.getReviewQuestions().includes(b.dataset.review);
-      b.textContent=on?'★':'☆';
-      b.style.color=on?'var(--orange)':'var(--ink-3)';
+function renderMateria(){
+  return `
+    <div class="stack-5 anim">
+      <div class="row-between">
+        <button class="btn btn-ghost btn-sm" data-action="home">← Voltar</button>
+        <span class="eyebrow">Matéria de Estudo</span>
+      </div>
+      <h1 class="display display-lg">Matéria de Informática</h1>
+      ${MATERIA.map(sec=>`
+        <div class="acc-item" data-open="false">
+          <button class="acc-head" data-acc="${sec.id}">
+            <span class="acc-icon" style="background:${sec.color}">${sec.title.charAt(0)}</span>
+            <span class="acc-title">${sec.title}</span>
+            <span class="acc-chevron">▸</span>
+          </button>
+          <div class="acc-body hidden" id="body-${sec.id}">
+            ${sec.sections.map(s=>renderSection(s)).join('')}
+          </div>
+        </div>`).join('')}
+    </div>`;
+}
+
+function renderSection(s){
+  if(s.type==='list'){
+    return `<h4>${s.h}</h4><ul>${s.items.map(it=>`<li><span class="term">${esc(it[0])}:</span> <span class="def">${esc(it[1])}</span></li>`).join('')}</ul>`;
+  }
+  if(s.type==='table'){
+    return `<h4>${s.h}</h4><table><thead><tr>${s.headers.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${s.rows.map(r=>`<tr>${r.map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+  }
+  if(s.type==='kv'){
+    return `<h4>${s.h}</h4><ul>${s.items.map(it=>`<li><span class="term">${esc(it[0])}:</span> <span class="def">${esc(it[1])}</span></li>`).join('')}</ul>`;
+  }
+  if(s.type==='pills'){
+    return `<h4>${s.h}</h4><div class="row-wrap" style="margin:6px 0 10px">${s.items.map(p=>`<span class="badge">${esc(p)}</span>`).join('')}</div>`;
+  }
+  if(s.type==='html'){ return `<h4>${s.h}</h4>${s.html}` }
+  return '';
+}
+
+function renderExtensoes(){
+  const cats = [
+    {title:'Texto e Documentos', items:[['.txt','Texto simples'],['.rtf','Rich Text Format'],['.doc','Word antigo'],['.docx','Word moderno'],['.odt','OpenDocument Text'],['.pdf','Portable Document Format'],['.md','Markdown'],['.html/.htm','HTML'],['.xml','XML'],['.json','JSON'],['.csv','CSV']]},
+    {title:'Folhas de Cálculo e Apresentações', items:[['.xls','Excel antigo'],['.xlsx','Excel moderno'],['.ods','OpenDocument Spreadsheet'],['.ppt','PowerPoint antigo'],['.pptx','PowerPoint moderno'],['.odp','OpenDocument Presentation']]},
+    {title:'Imagem', items:[['.jpg/.jpeg','JPEG'],['.png','PNG'],['.gif','GIF'],['.bmp','Bitmap'],['.tif/.tiff','TIFF'],['.svg','SVG'],['.webp','WebP'],['.ico','Icon']]},
+    {title:'Áudio e Vídeo', items:[['.mp3','MP3'],['.wav','WAV'],['.aac','AAC'],['.flac','FLAC'],['.mp4','MP4'],['.avi','AVI'],['.mkv','MKV'],['.mov','QuickTime'],['.wmv','Windows Media Video'],['.webm','WebM']]},
+    {title:'Compactação e Arquivo', items:[['.zip','ZIP'],['.rar','RAR'],['.7z','7-Zip'],['.tar','TAR'],['.gz','Gzip'],['.tar.gz/.tgz','TAR+Gzip']]},
+    {title:'Executáveis e Instalação', items:[['.exe','Executable'],['.msi','Microsoft Installer'],['.bat','Batch'],['.cmd','Command Script'],['.sh','Shell Script'],['.dll','Dynamic Link Library'],['.so','Shared Object'],['.sys','System File'],['.apk','Android Package'],['.deb','Debian Package'],['.rpm','RPM Package']]},
+    {title:'Código-Fonte', items:[['.c','C'],['.cpp','C++'],['.java','Java'],['.py','Python'],['.js','JavaScript'],['.ts','TypeScript'],['.php','PHP'],['.css','CSS'],['.sql','SQL'],['.class','Java Bytecode'],['.jar','Java Archive']]},
+    {title:'Bases de Dados e Correio', items:[['.db','Database'],['.sqlite/.sqlite3','SQLite'],['.mdb','Access antigo'],['.accdb','Access moderno'],['.pst','Outlook PST'],['.eml','Email Message'],['.msg','Outlook Message']]}
+  ];
+  return `
+    <div class="stack-5 anim">
+      <div class="row-between">
+        <button class="btn btn-ghost btn-sm" data-action="home">← Voltar</button>
+        <span class="eyebrow">Referência</span>
+      </div>
+      <h1 class="display display-lg">Catálogo de Ficheiros e Extensões</h1>
+      <p class="lead">A extensão é a parte final do nome do ficheiro, normalmente depois do último ponto. Ajuda a identificar o formato, mas não garante por si só que o conteúdo seja seguro.</p>
+      ${cats.map(c=>`
+        <div>
+          <div class="ext-cat-title">${c.title}</div>
+          <div class="ext-grid">
+            ${c.items.map(([ext,name])=>`<div class="ext-card"><div class="ext">${ext}</div><div class="ext-name">${name}</div></div>`).join('')}
+          </div>
+        </div>`).join('')}
+      <div class="alert-box">
+        <strong>Alertas de segurança:</strong>
+        <ul style="margin:8px 0 0 18px">
+          <li>A extensão pode ser alterada manualmente e não prova o verdadeiro formato do conteúdo.</li>
+          <li>Não executar ficheiros .exe, .bat, .cmd, .msi ou scripts de origem desconhecida.</li>
+          <li>Um ficheiro .pdf ou .docx também pode conter conteúdo malicioso.</li>
+          <li>Um ficheiro .zip ou .rar pode conter executáveis maliciosos.</li>
+          <li>A extensão .tmp costuma indicar ficheiro temporário.</li>
+        </ul>
+      </div>
+    </div>`;
+}
+
+/* =========================================================
+   EVENTOS
+   ========================================================= */
+function bindEvents(){
+  $all('[data-action]').forEach(el=>{
+    el.onclick = ()=>{
+      const a = el.dataset.action;
+      if(a==='home'){state.view='home';state.qIndex=0;state.answers={};render()}
+      else if(a==='start-all'){state.selectedTopic='all';state.view='quiz';state.qIndex=0;state.answers={};render()}
+      else if(a==='start-selected'){state.view='quiz';state.qIndex=0;state.answers={};render()}
+      else if(a==='view-materia'){state.view='materia';render()}
+      else if(a==='view-extensoes'){state.view='extensoes';render()}
+      else if(a==='save-name'){
+        const v = $('#name-input').value.trim();
+        state.name = v;
+        $('#header-user').style.display = v?'block':'none';
+        $('#header-greeting').textContent = v?'Olá, '+v:'';
+        render();
+      }
+      else if(a==='next'){
+        state.qIndex++;
+        render();
+        window.scrollTo({top:0,behavior:'smooth'});
+      }
+      else if(a==='restart'){
+        state.qIndex=0;state.answers={};render();
+      }
+    };
+  });
+
+  $all('[data-topic]').forEach(el=>{
+    el.onclick = ()=>{
+      state.selectedTopic = el.dataset.topic;
+      render();
+    };
+  });
+
+  $all('[data-opt]').forEach(el=>{
+    el.onclick = ()=>{
+      const qs = getFilteredQuestions();
+      const q = qs[state.qIndex];
+      if(state.answers[q.id]) return;
+      const letter = el.dataset.opt;
+      const correct = letter===q.ans;
+      state.answers[q.id] = {selected:letter, correct};
+      if(correct) updateGlobalScore(DIFFICULTY_POINTS[q.d]);
+      render();
+    };
+  });
+
+  $all('[data-acc]').forEach(el=>{
+    el.onclick = ()=>{
+      const item = el.closest('.acc-item');
+      const body = document.getElementById('body-'+el.dataset.acc);
+      const open = item.dataset.open==='true';
+      item.dataset.open = !open;
+      body.classList.toggle('hidden', open);
     };
   });
 }
 
-/* ---------- HISTORY ---------- */
-function showHistory(){
-  const history=state.getHistory();
-  root.innerHTML=`
-  <div class="anim stack-5">
-    <div class="row-between">
-      <h2 class="display display-lg">Histórico</h2>
-      <div class="row-wrap">
-        <button id="btn-clear" class="btn btn-danger btn-sm">Limpar</button>
-        <button id="btn-back" class="btn btn-outline btn-sm">← Voltar</button>
-      </div>
-    </div>
-    <hr class="rule">
-    ${history.length===0
-      ?`<div class="card card-pad text-c" style="padding:48px 24px;color:var(--ink-3)">Nenhum teste realizado ainda.</div>`
-      :`<div class="stack-2">${history.map(h=>{
-        const pct=h.pct;
-        const color=pct>=75?'var(--green)':pct>=60?'var(--amber-2)':'var(--red)';
-        return`
-          <div class="card" style="padding:16px;border-left:4px solid ${color}">
-            <div class="row-between gap-4 row-wrap">
-              <div style="min-width:0">
-                <p class="small" style="font-weight:600">${h.name?`👤 ${escapeHtml(h.name)} · `:''}${escapeHtml(h.label)}</p>
-                <p class="tiny muted">${new Date(h.date).toLocaleString('pt-PT')}</p>
-              </div>
-              <div class="row gap-4" style="flex-shrink:0">
-                <span class="mono tiny muted">${h.correct}/${h.total}</span>
-                <span class="mono" style="font-weight:700;font-size:15px;color:${color}">${pct}%</span>
-              </div>
-            </div>
-          </div>`}).join('')}</div>`}
-  </div>`;
-  document.getElementById('btn-back').onclick=showHome;
-  document.getElementById('btn-clear').onclick=()=>{
-    if(confirm('Limpar todo o histórico?')){state.clearHistory();showHistory()}
-  };
-}
-
-/* ---------- BOOT ---------- */
-syncGlobalScore();
-syncHeaderName();
-showHome();
-
-window.addEventListener('beforeunload',()=>{
-  if(session&&session.questions){
-    session.elapsedBefore=Math.round((Date.now()-session.startedAt)/1000);
-    saveProgress();
-  }
-});
+/* =========================================================
+   INIT
+   ========================================================= */
+render();
 </script>
 </body>
 </html>
