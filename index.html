@@ -101,12 +101,10 @@ main{flex:1;padding:28px 0 64px}
 .option{display:flex;align-items:flex-start;gap:14px;width:100%;padding:15px 18px;font-family:var(--fb);font-size:15px;line-height:1.5;text-align:left;color:var(--ink);background:var(--surface);border:1.5px solid var(--line-2);border-radius:10px;cursor:pointer;transition:border-color .12s,background .12s,transform .1s,box-shadow .15s;margin-bottom:10px;position:relative}
 .option:hover:not(:disabled){border-color:var(--amber-2);background:linear-gradient(135deg,#fffbeb,#fef3c7);transform:translateX(2px)}
 .option:active:not(:disabled){transform:scale(0.995)}
-.option[data-selected="true"]{border-color:var(--amber-2);background:linear-gradient(135deg,#fff7ed,#fef3c7);box-shadow:0 0 0 1px var(--amber-2),0 4px 12px -4px rgba(234,88,12,0.25)}
 .option[data-state="correct"]{border-color:var(--green);background:linear-gradient(135deg,#ecfdf5,#d1fae5);box-shadow:0 0 0 1px var(--green),0 4px 12px -4px rgba(5,150,105,0.3);cursor:default}
 .option[data-state="wrong"]{border-color:var(--red);background:linear-gradient(135deg,#fef2f2,#fee2e2);box-shadow:0 0 0 1px var(--red);cursor:default;opacity:.85}
 .option:disabled{cursor:default}
 .option-key{font-family:var(--fm);font-size:12.5px;font-weight:600;color:var(--ink-3);letter-spacing:0.06em;min-width:24px;height:24px;padding:0 6px;border-radius:5px;background:var(--paper-3);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:-1px}
-.option[data-selected="true"] .option-key{background:var(--orange);color:#fff}
 .option[data-state="correct"] .option-key{background:var(--green);color:#fff}
 .option[data-state="wrong"] .option-key{background:var(--red);color:#fff}
 .option-text{flex:1;min-width:0}
@@ -138,10 +136,10 @@ main{flex:1;padding:28px 0 64px}
 .stat-red .stat-value{color:#991b1b}
 .stat-amber .stat-value{color:#92400e}
 .stat-teal .stat-value{color:#115e59}
-.feedback{padding:14px 16px;border-radius:10px;font-size:13.5px;border:1.5px solid;line-height:1.5;font-weight:500;display:flex;align-items:center;gap:10px}
+.feedback{padding:14px 16px;border-radius:10px;font-size:13.5px;border:1.5px solid;line-height:1.5;font-weight:500;display:flex;align-items:flex-start;gap:10px}
 .feedback-ok{background:linear-gradient(135deg,#ecfdf5,#d1fae5);border-color:#6ee7b7;color:var(--green-2)}
 .feedback-err{background:linear-gradient(135deg,#fef2f2,#fee2e2);border-color:#fca5a5;color:var(--red-2)}
-.feedback-icon{font-size:18px;flex-shrink:0}
+.feedback-icon{font-size:18px;flex-shrink:0;line-height:1.2}
 .name-pill{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;background:linear-gradient(135deg,#fef3c7,#fed7aa);border-radius:999px;font-family:var(--fm);font-size:11px;font-weight:500;color:#92400e;text-transform:uppercase;letter-spacing:0.06em}
 .stack{display:flex;flex-direction:column}
 .stack-2{gap:8px}.stack-3{gap:12px}.stack-4{gap:16px}.stack-5{gap:24px}.stack-6{gap:32px}
@@ -155,20 +153,16 @@ main{flex:1;padding:28px 0 64px}
 .mt-1{margin-top:4px}.mt-2{margin-top:8px}.mt-3{margin-top:12px}.mt-4{margin-top:16px}.mt-5{margin-top:24px}.mt-6{margin-top:32px}
 @keyframes fadeUp{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 .anim{animation:fadeUp .3s ease}
-@keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
-.pulse-warn{animation:pulse 1.2s infinite}
 @keyframes bump{0%{transform:scale(1)}50%{transform:scale(1.22);color:var(--green)}100%{transform:scale(1)}}
 .score-bump{animation:bump .5s ease;display:inline-block}
 .site-footer{border-top:1px solid var(--line);padding:24px 0;background:var(--paper-2)}
 .footer-inner{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-/* Tabs de navegação */
 .tabs{display:flex;gap:4px;background:var(--paper-3);padding:4px;border-radius:10px;margin-bottom:20px;overflow-x:auto}
 .tab{flex:1;min-width:120px;display:flex;align-items:center;justify-content:center;gap:6px;height:38px;padding:0 14px;font-family:var(--fb);font-size:12.5px;font-weight:600;color:var(--ink-2);background:transparent;border:0;border-radius:8px;cursor:pointer;transition:all .15s;white-space:nowrap}
 .tab:hover{color:var(--ink);background:rgba(255,255,255,0.5)}
 .tab[data-active="true"]{background:var(--surface);color:var(--ink);box-shadow:0 2px 8px -2px rgba(0,0,0,0.12)}
 .tab .tab-count{font-family:var(--fm);font-size:10px;padding:2px 6px;border-radius:999px;background:var(--paper-3);color:var(--ink-3)}
 .tab[data-active="true"] .tab-count{background:var(--orange-soft);color:var(--orange)}
-/* Acordeão de matéria */
 .acc-item{border:1px solid var(--line);border-radius:10px;background:var(--surface);overflow:hidden;margin-bottom:10px}
 .acc-head{display:flex;align-items:center;gap:12px;width:100%;padding:16px 18px;background:transparent;border:0;cursor:pointer;text-align:left;font-family:var(--fb);transition:background .15s}
 .acc-head:hover{background:var(--paper-2)}
@@ -186,11 +180,9 @@ main{flex:1;padding:28px 0 64px}
 .acc-body th,.acc-body td{padding:6px 8px;text-align:left;border-bottom:1px solid var(--line)}
 .acc-body th{font-family:var(--fm);font-size:10px;text-transform:uppercase;letter-spacing:0.06em;color:var(--ink-3)}
 .acc-body code{font-family:var(--fm);font-size:12px;background:var(--paper-3);padding:1px 5px;border-radius:3px}
-/* Utilitário de pergunta em cartão */
 .q-num{font-family:var(--fm);font-size:11px;font-weight:600;color:var(--ink-3);letter-spacing:0.06em}
 .q-text{font-size:16px;font-weight:500;line-height:1.5;color:var(--ink);margin:6px 0 16px}
-.expl{font-size:12.5px;color:var(--ink-3);margin-top:12px;padding-top:12px;border-top:1px dashed var(--line-2);line-height:1.5}
-/* Extensões */
+.expl{font-size:12.5px;color:var(--ink-2);margin-top:8px;line-height:1.5}
 .ext-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
 .ext-card{padding:12px 14px;border:1px solid var(--line);border-radius:9px;background:var(--surface)}
 .ext-card .ext{font-family:var(--fm);font-size:13px;font-weight:600;color:var(--orange);margin-bottom:2px}
@@ -199,6 +191,12 @@ main{flex:1;padding:28px 0 64px}
 .ext-cat-title{font-family:var(--fd);font-size:20px;color:var(--ink);margin:24px 0 12px;letter-spacing:-0.01em}
 .alert-box{background:linear-gradient(135deg,#fffbeb,#fef3c7);border:1.5px solid #fde68a;border-radius:10px;padding:14px 16px;font-size:13px;color:#92400e;line-height:1.55}
 .alert-box strong{color:#78350f}
+.setup-box{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px}
+.count-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(70px,1fr));gap:8px}
+.count-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;height:56px;border-radius:9px;border:1.5px solid var(--line-2);background:var(--surface);cursor:pointer;font-family:var(--fm);font-size:16px;font-weight:600;color:var(--ink-2);transition:all .15s}
+.count-btn:hover{border-color:var(--amber-2);color:var(--amber-2)}
+.count-btn[data-active="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.count-btn small{font-family:var(--fb);font-size:10px;font-weight:500;opacity:.7;margin-top:2px}
 @media (max-width:640px){
   .container{padding:0 16px}
   main{padding:20px 0 48px}
@@ -269,7 +267,6 @@ const TOPICS = [
   { id:'cultura',     name:'Cultura Geral',         icon:'●', color:'#d97706' },
   { id:'numerico',    name:'Raciocínio Numérico',   icon:'#', color:'#059669' },
   { id:'portugues',   name:'Língua Portuguesa',     icon:'¶', color:'#4f46e5' },
-  /* Novos tópicos do JSON de Informática */
   { id:'info_intro',  name:'Introdução à Informática', icon:'⚙', color:'#0d9488' },
   { id:'info_redes',  name:'Protocolos e Endereçamento IP', icon:'⇄', color:'#2563eb' },
   { id:'info_hardware_rede', name:'Elementos de Rede Activos', icon:'⌘', color:'#0891b2' },
@@ -287,549 +284,804 @@ const DIFFICULTY_BADGE = { ini:'badge-diff-ini', int:'badge-diff-int', ava:'badg
 const LETTERS = ['A','B','C','D'];
 
 /* =========================================================
-   BANCO DE PERGUNTAS — Informática (JSON 67–170 + ficheiros)
+   BANCO DE PERGUNTAS — versão complexificada
    ========================================================= */
-const INFORMATICA_QUESTIONS = [
-  { id:'i67', t:'info_dados', d:'ini', q:'Qual das seguintes opções representa uma entidade num sistema de gestão escolar?', opts:['Data de matrícula','Estudante','Aprovação numa disciplina','Pagamento de propina'], ans:'B', expl:'Estudante é o objecto sobre o qual o sistema guarda dados.' },
-  { id:'i68', t:'info_dados', d:'ini', q:'Num sistema hospitalar, a realização de uma consulta representa:', opts:['Um atributo','Um evento','Um sistema operativo','Uma unidade de armazenamento'], ans:'B', expl:'A consulta é uma ocorrência registada.' },
-  { id:'i69', t:'info_dados', d:'ini', q:'O nome, a idade e o endereço de um funcionário representam:', opts:['Entidades','Atributos','Eventos','Protocolos'], ans:'B' },
-  { id:'i70', t:'info_dados', d:'int', q:'Qual é a diferença entre entidade e atributo?', opts:['A entidade representa o objecto; o atributo descreve uma propriedade desse objecto','A entidade representa um evento e o atributo representa uma rede','Ambos representam exclusivamente ficheiros','Não existe diferença'], ans:'A' },
-  { id:'i71', t:'info_dados', d:'int', q:'Num sistema de vendas, a realização de uma venda pode ser considerada:', opts:['Uma entidade exclusivamente','Um evento que envolve entidades como cliente e produto','Um atributo de uma impressora','Um sistema operativo'], ans:'B' },
-  { id:'i72', t:'info_dados', d:'int', q:'Qual é a principal função de um SGBD?', opts:['Criar exclusivamente apresentações','Gerir o armazenamento, consulta, actualização e administração de bases de dados','Substituir o sistema operativo','Controlar apenas dispositivos de rede'], ans:'B' },
-  { id:'i73', t:'info_dados', d:'ini', q:'Numa base de dados relacional, uma linha representa:', opts:['Um campo','Um registo','Uma tabela','Uma relação obrigatoriamente entre duas tabelas'], ans:'B' },
-  { id:'i74', t:'info_dados', d:'ini', q:'A chave primária de uma tabela deve:', opts:['Identificar exclusivamente cada registo','Permitir valores duplicados','Ser obrigatoriamente um texto','Conter sempre valores nulos'], ans:'A' },
-  { id:'i75', t:'info_dados', d:'int', q:'Qual é a finalidade de uma chave estrangeira?', opts:['Encriptar os dados','Estabelecer uma relação entre tabelas através de uma referência a uma chave','Eliminar registos automaticamente','Substituir todas as chaves primárias'], ans:'B' },
-  { id:'i76', t:'info_dados', d:'ini', q:'Qual comando SQL permite consultar dados?', opts:['INSERT','UPDATE','SELECT','DROP'], ans:'C' },
-  { id:'i77', t:'info_dados', d:'ini', q:'Qual comando SQL permite inserir novos registos?', opts:['INSERT','SELECT','DROP','GRANT'], ans:'A' },
-  { id:'i78', t:'info_dados', d:'ini', q:'Qual comando SQL elimina registos de uma tabela?', opts:['CREATE','DELETE','SELECT','ALTER'], ans:'B' },
-  { id:'i79', t:'info_dados', d:'int', q:'Qual propriedade ACID garante que uma transacção seja executada integralmente ou não seja aplicada?', opts:['Consistência','Isolamento','Atomicidade','Durabilidade'], ans:'C' },
-  { id:'i80', t:'info_dados', d:'ini', q:'Qual das seguintes opções é um SGBD relacional?', opts:['PostgreSQL','JPEG','HTML','HTTP'], ans:'A' },
-  { id:'i81', t:'info_dados', d:'int', q:'O MongoDB é normalmente classificado como:', opts:['SGBD relacional tradicional','SGBD documental NoSQL','Sistema operativo','Protocolo de rede'], ans:'B' },
-  { id:'i82', t:'info_dados', d:'int', q:'A normalização de bases de dados procura principalmente:', opts:['Aumentar a duplicação de dados','Reduzir redundâncias e anomalias de inserção, actualização e eliminação','Eliminar todas as relações entre tabelas','Substituir o SQL por HTML'], ans:'B' },
-  { id:'i83', t:'info_dados', d:'int', q:'Uma base de dados contém o nome de um cliente repetido em 100 facturas. Uma das vantagens de um modelo relacional bem concebido é:', opts:['Eliminar a necessidade de clientes','Armazenar os dados do cliente numa tabela própria e referenciá-lo através de uma chave','Duplicar todos os dados em cada consulta','Impedir a criação de facturas'], ans:'B' },
-  { id:'i84', t:'info_dados', d:'ini', q:'Qual é o principal objectivo da confidencialidade?', opts:['Garantir que todos os dados sejam públicos','Impedir o acesso à informação por pessoas não autorizadas','Eliminar automaticamente os dados antigos','Garantir exclusivamente a velocidade do sistema'], ans:'B' },
-  { id:'i85', t:'info_dados', d:'int', q:'Uma pessoa altera sem autorização o saldo de uma conta bancária. Que princípio foi violado?', opts:['Disponibilidade','Integridade','Portabilidade','Compatibilidade'], ans:'B' },
-  { id:'i86', t:'info_dados', d:'int', q:'Um sistema deixa de estar acessível aos funcionários durante várias horas. Qual princípio foi afectado?', opts:['Confidencialidade','Integridade','Disponibilidade','Autenticidade exclusivamente'], ans:'C' },
-  { id:'i87', t:'info_dados', d:'int', q:'Qual é a diferença entre autenticação e autorização?', opts:['Autenticação verifica a identidade; autorização define as permissões','Ambas significam exactamente o mesmo','Autorização verifica a identidade e autenticação define permissões','Ambas servem apenas para encriptar dados'], ans:'A' },
-  { id:'i88', t:'info_dados', d:'ini', q:'Qual das seguintes práticas aumenta a segurança de uma conta?', opts:['Utilizar a mesma palavra-passe em todos os serviços','Partilhar a palavra-passe com colegas','Utilizar autenticação multifactor','Desactivar todas as actualizações'], ans:'C' },
-  { id:'i89', t:'info_dados', d:'ini', q:'O que é uma cópia de segurança?', opts:['Uma cópia de dados destinada a permitir a sua recuperação','Um vírus informático','Um mecanismo de compressão exclusivamente','Uma ligação à Internet'], ans:'A' },
-  { id:'i90', t:'info_dados', d:'int', q:'Qual é a principal finalidade da encriptação?', opts:['Tornar os dados legíveis por qualquer utilizador','Proteger a informação, tornando-a ilegível sem a chave ou mecanismo de descodificação apropriado','Eliminar todos os dados','Aumentar obrigatoriamente a capacidade do disco'], ans:'B' },
-  { id:'i91', t:'info_dados', d:'int', q:'Qual é a principal diferença entre informação e conhecimento?', opts:['Informação é sempre mais complexa que conhecimento','Conhecimento implica compreensão, interpretação e capacidade de aplicação da informação','Conhecimento é apenas um conjunto de números','Informação não pode ser utilizada na tomada de decisões'], ans:'B' },
-  { id:'i92', t:'info_dados', d:'int', q:'Uma organização analisa relatórios de vendas, identifica padrões de consumo e utiliza esses padrões para definir estratégias. Está a transformar:', opts:['Hardware em software','Informação em conhecimento aplicável à decisão','Protocolos em ficheiros','Memória RAM em ROM'], ans:'B' },
-  { id:'i93', t:'info_si', d:'ini', q:'Um sistema é definido como:', opts:['Um conjunto de elementos independentes sem objectivos','Um conjunto de componentes inter-relacionados que trabalham para um objectivo','Um único equipamento electrónico','Um conjunto de ficheiros sem organização'], ans:'B' },
-  { id:'i94', t:'info_si', d:'int', q:'Qual é a função do feedback num sistema?', opts:['Eliminar todas as entradas','Fornecer informação sobre os resultados para permitir ajustes e controlo','Substituir todos os componentes','Impedir a saída de informação'], ans:'B' },
-  { id:'i95', t:'info_si', d:'int', q:'Uma organização que troca informação, recursos e serviços com o ambiente externo representa um:', opts:['Sistema fechado','Sistema aberto','Sistema isolado','Sistema exclusivamente físico'], ans:'B' },
-  { id:'i96', t:'info_si', d:'int', q:'Qual sistema é mais adequado para registar diariamente as vendas de uma empresa?', opts:['TPS','ESS','DSS','Sistema exclusivamente gráfico'], ans:'A' },
-  { id:'i97', t:'info_si', d:'int', q:'Qual sistema fornece relatórios periódicos para apoiar os gestores intermédios?', opts:['MIS/SIG','Hub','BIOS','DNS'], ans:'A' },
-  { id:'i98', t:'info_si', d:'int', q:'Qual é a principal finalidade de um DSS/SAD?', opts:['Processar exclusivamente salários','Apoiar decisões através da análise de dados e cenários','Substituir a rede informática','Criar ficheiros de texto'], ans:'B' },
-  { id:'i99', t:'info_si', d:'int', q:'Qual sistema integra diferentes áreas funcionais de uma organização?', opts:['ERP','Hub','DNS','BIOS'], ans:'A' },
-  { id:'i100', t:'info_si', d:'int', q:'Qual sistema é orientado para a gestão do relacionamento com clientes?', opts:['ERP','CRM','DNS','DHCP'], ans:'B' },
-  { id:'i101', t:'info_si', d:'int', q:'Qual é a principal função de um sistema SCM?', opts:['Gerir a cadeia de abastecimento','Gerir exclusivamente palavras-passe','Processar imagens','Controlar apenas os sistemas operativos'], ans:'A' },
-  { id:'i102', t:'info_si', d:'int', q:'As decisões estratégicas são normalmente tomadas:', opts:['Apenas pelos operadores de caixa','Pela gestão de topo','Exclusivamente pelos técnicos de informática','Apenas pelos clientes'], ans:'B' },
-  { id:'i103', t:'info_si', d:'int', q:'Qual é a finalidade do levantamento de requisitos?', opts:['Definir as necessidades e funcionalidades que o sistema deve satisfazer','Eliminar a necessidade de testes','Instalar imediatamente o sistema','Substituir a manutenção'], ans:'A' },
-  { id:'i104', t:'info_si', d:'int', q:'Em que fase são definidas a arquitectura e a estrutura do sistema?', opts:['Desenho','Manutenção','Utilização','Encerramento'], ans:'A' },
-  { id:'i105', t:'info_si', d:'ini', q:'Qual é o objectivo dos testes unitários?', opts:['Testar exclusivamente o sistema completo','Verificar o funcionamento de unidades ou componentes individuais','Testar apenas a ligação à Internet','Avaliar exclusivamente a satisfação dos clientes'], ans:'B' },
-  { id:'i106', t:'info_si', d:'int', q:'Os testes de integração verificam:', opts:['A comunicação e funcionamento conjunto dos componentes','Apenas a aparência do sistema','Apenas a velocidade da Internet','A substituição dos requisitos'], ans:'A' },
-  { id:'i107', t:'info_si', d:'ini', q:'Qual é a principal característica da metodologia Cascata?', opts:['Desenvolvimento sequencial por fases','Ausência de planeamento','Entregas contínuas sem qualquer organização','Eliminação dos testes'], ans:'A' },
-  { id:'i108', t:'info_si', d:'int', q:'No Scrum, um Sprint é:', opts:['Um período de trabalho com duração fixa para produzir um incremento do produto','Uma linguagem de programação','Um tipo de base de dados','Um dispositivo de rede'], ans:'A' },
-  { id:'i109', t:'info_si', d:'int', q:'A manutenção correctiva de um sistema consiste em:', opts:['Corrigir erros identificados após a implementação','Criar obrigatoriamente um novo sistema','Eliminar todas as funcionalidades','Impedir futuras actualizações'], ans:'A' },
-  { id:'i110', t:'info_si', d:'int', q:'Qual é a finalidade da análise de viabilidade?', opts:['Avaliar se o projecto pode ser realizado e se faz sentido técnica, económica e operacionalmente','Escolher exclusivamente a cor da interface','Eliminar a participação dos utilizadores','Substituir a documentação'], ans:'A' },
-  { id:'i111', t:'info_si', d:'ini', q:'Qual malware tem como característica principal exigir um resgate para devolver o acesso aos dados?', opts:['Spyware','Ransomware','Adware','Driver'], ans:'B' },
-  { id:'i112', t:'info_si', d:'ini', q:'Um programa malicioso que se apresenta como software legítimo é normalmente classificado como:', opts:['Trojan','Firewall','Sistema operativo','Repetidor'], ans:'A' },
-  { id:'i113', t:'info_si', d:'int', q:'Qual é a diferença fundamental entre vírus e worm?', opts:['O worm pode propagar-se autonomamente, enquanto o vírus normalmente depende de um ficheiro ou programa hospedeiro','O vírus só afecta redes e o worm só afecta discos','Ambos são equipamentos físicos','Não existe qualquer diferença'], ans:'A' },
-  { id:'i114', t:'info_si', d:'int', q:'Um ataque DDoS procura principalmente:', opts:['Melhorar a disponibilidade do serviço','Tornar um serviço indisponível através de tráfego distribuído','Aumentar a capacidade da memória','Corrigir erros de programação'], ans:'B' },
-  { id:'i115', t:'info_dados', d:'int', q:'Qual é o princípio do menor privilégio?', opts:['Todos os utilizadores devem ter privilégios de administrador','Cada utilizador deve possuir apenas as permissões necessárias para executar as suas funções','As permissões devem ser sempre públicas','Nenhum utilizador deve ter acesso aos dados'], ans:'B' },
-  { id:'i116', t:'info_si', d:'int', q:'O que é engenharia social?', opts:['Manipulação de pessoas para obter informações ou induzir acções prejudiciais','Desenvolvimento de circuitos electrónicos','Construção de bases de dados','Instalação de sistemas operativos'], ans:'A' },
-  { id:'i117', t:'info_si', d:'int', q:'Qual é a principal finalidade de um firewall?', opts:['Controlar o tráfego de rede segundo regras de segurança','Substituir a memória RAM','Eliminar automaticamente qualquer vírus existente','Criar documentos'], ans:'A' },
-  { id:'i118', t:'info_si', d:'int', q:'Qual medida é mais adequada para recuperar dados após um ataque de ransomware?', opts:['Pagar sempre o resgate','Recuperar a partir de cópias de segurança íntegras e isoladas, após conter o incidente','Desactivar permanentemente o antivírus','Partilhar os ficheiros cifrados'], ans:'B' },
-  { id:'i119', t:'info_si', d:'ini', q:'Um algoritmo deve possuir como característica fundamental:', opts:['Ser infinito','Ter passos definidos e terminar após um número finito de operações','Não produzir resultados','Depender obrigatoriamente da Internet'], ans:'B' },
-  { id:'i120', t:'info_si', d:'ini', q:'Qual estrutura permite executar instruções mediante uma condição?', opts:['Sequencial','Condicional','Declaração','Comentário'], ans:'B' },
-  { id:'i121', t:'info_si', d:'ini', q:'Qual é o resultado de 17 MOD 5?', opts:['2','3','4','5'], ans:'A' },
-  { id:'i122', t:'info_si', d:'ini', q:'Qual é o resultado de 17 DIV 5, considerando divisão inteira?', opts:['2','3','3,4','4'], ans:'B' },
-  { id:'i123', t:'info_si', d:'ini', q:'Qual é o resultado lógico de VERDADEIRO AND FALSO?', opts:['Verdadeiro','Falso','Indeterminado','Nulo'], ans:'B' },
-  { id:'i124', t:'info_si', d:'ini', q:'Qual é o resultado de VERDADEIRO OR FALSO?', opts:['Verdadeiro','Falso','Nulo','Erro'], ans:'A' },
-  { id:'i125', t:'info_si', d:'ini', q:'O operador NOT serve para:', opts:['Somar valores','Inverter um valor lógico','Multiplicar números','Repetir instruções'], ans:'B' },
-  { id:'i126', t:'info_si', d:'int', q:'Qual estrutura garante que as instruções sejam executadas pelo menos uma vez?', opts:['WHILE','FOR','REPEAT/UNTIL','IF'], ans:'C' },
-  { id:'i127', t:'info_si', d:'ini', q:'Qual é a função de uma variável?', opts:['Armazenar temporariamente um valor que pode ser utilizado e alterado durante a execução do programa','Substituir a CPU','Ligar computadores em rede','Eliminar todos os erros de programação'], ans:'A' },
-  { id:'i128', t:'info_si', d:'ini', q:'Qual é a saída do pseudocódigo a=5; b=3; c=a*b+2; escrever c?', opts:['13','15','17','25'], ans:'C' },
-  { id:'i129', t:'info_si', d:'ini', q:'Se x=10 e a condição x>10 for testada, qual ramo será executado?', opts:['Maior','Menor ou igual','10','Erro'], ans:'B' },
-  { id:'i130', t:'info_si', d:'ini', q:'Qual estrutura é mais adequada para percorrer uma lista de 1 a 100 elementos?', opts:['FOR','IF','SWITCH exclusivamente','RETURN'], ans:'A' },
-  { id:'i131', t:'info_si', d:'int', q:'Uma estrutura de repetição que nunca termina, devido a uma condição que permanece verdadeira, é denominada:', opts:['Ciclo infinito','Função recursiva obrigatoriamente correcta','Estrutura sequencial','Variável constante'], ans:'A' },
-  { id:'i132', t:'info_si', d:'int', q:'Qual é a finalidade de uma função num programa?', opts:['Organizar e reutilizar um bloco de código que realiza uma tarefa','Substituir todos os algoritmos','Impedir a passagem de parâmetros','Eliminar as variáveis'], ans:'A' },
-  { id:'i133', t:'info_si', d:'int', q:'Qual é o principal objectivo de um SIG?', opts:['Apoiar a gestão através da produção de informação útil e organizada','Substituir todos os gestores','Impedir a realização de operações','Controlar exclusivamente os dispositivos electrónicos'], ans:'A' },
-  { id:'i134', t:'info_si', d:'int', q:'Um relatório mensal de vendas por departamento é um exemplo de:', opts:['Informação de gestão','Hardware','Protocolo','Sistema operativo'], ans:'A' },
-  { id:'i135', t:'info_si', d:'int', q:'Qual indicador permite avaliar a relação entre o resultado obtido e os recursos utilizados?', opts:['Produtividade','Endereço IP','Número de portas','Capacidade de RAM'], ans:'A' },
-  { id:'i136', t:'info_si', d:'int', q:'Qual é a principal vantagem de um SIG para a direcção de uma organização?', opts:['Tomar decisões com base em informação organizada e relevante','Eliminar a necessidade de planeamento','Impedir a produção de relatórios','Substituir a contabilidade'], ans:'A' },
-  { id:'i137', t:'info_si', d:'int', q:'Qual é o objectivo da gestão de dados?', opts:['Garantir que os dados sejam geridos durante todo o seu ciclo de vida','Eliminar todos os registos antigos imediatamente','Impedir a consulta de dados','Substituir os sistemas operativos'], ans:'A' },
-  { id:'i138', t:'info_si', d:'int', q:'Qual das opções representa uma característica de dados de qualidade?', opts:['Duplicação permanente','Inconsistência','Exactidão','Desactualização'], ans:'C' },
-  { id:'i139', t:'info_si', d:'int', q:'O processo ETL significa:', opts:['Extract, Transform, Load','Execute, Transfer, Link','Enter, Test, Launch','Export, Translate, Login'], ans:'A' },
-  { id:'i140', t:'info_si', d:'int', q:'A governação de dados procura:', opts:['Definir políticas, responsabilidades e regras para gerir os dados','Eliminar a segurança dos sistemas','Impedir o acesso de todos os utilizadores','Substituir as bases de dados'], ans:'A' },
-  { id:'i141', t:'info_si', d:'int', q:'Uma base de dados contém três registos para o mesmo cliente, quando deveria existir apenas um. Que problema está presente?', opts:['Duplicação de dados','Disponibilidade','Encriptação','Autenticação'], ans:'A' },
-  { id:'i142', t:'info_si', d:'ini', q:'Qual é a equação fundamental da contabilidade?', opts:['Activo = Passivo + Capital Próprio','Activo = Passivo − Capital Próprio','Passivo = Activo + Capital Próprio','Capital Próprio = Activo + Passivo'], ans:'A' },
-  { id:'i143', t:'info_si', d:'ini', q:'Uma empresa possui activos de 1 000 000 Kz e passivos de 400 000 Kz. Qual é o seu capital próprio?', opts:['400 000 Kz','500 000 Kz','600 000 Kz','1 400 000 Kz'], ans:'C' },
-  { id:'i144', t:'info_si', d:'int', q:'Qual demonstração financeira apresenta a posição financeira da entidade numa determinada data?', opts:['Demonstração de resultados','Balanço','Demonstração de fluxos de caixa','Relatório de vendas'], ans:'B' },
-  { id:'i145', t:'info_si', d:'int', q:'Qual demonstração financeira evidencia os rendimentos, gastos e resultados de um período?', opts:['Balanço','Demonstração de resultados','Inventário físico exclusivamente','Relatório de rede'], ans:'B' },
-  { id:'i146', t:'info_si', d:'int', q:'Na contabilidade por partidas dobradas:', opts:['O total de débitos deve ser igual ao total de créditos','Os créditos são sempre superiores aos débitos','Os débitos não precisam de corresponder aos créditos','Cada operação só pode ter um registo'], ans:'A' },
-  { id:'i147', t:'info_si', d:'int', q:'Qual é a principal finalidade de um sistema informático de facturação?', opts:['Apoiar a emissão, registo e gestão de documentos de facturação','Substituir o sistema operativo','Criar endereços IP','Gerir exclusivamente os funcionários'], ans:'A' },
-  { id:'i148', t:'info_si', d:'int', q:'Uma empresa utiliza um sistema para acompanhar entradas, saídas e níveis de produtos no armazém. Está a utilizar um sistema de:', opts:['Gestão de stock','Gestão de DNS','Processamento gráfico','Autenticação biométrica exclusivamente'], ans:'A' },
-  { id:'i149', t:'info_si', d:'int', q:'Qual é a vantagem de integrar a contabilidade num ERP?', opts:['Eliminar a necessidade de dados','Permitir a integração de informação financeira com outras áreas da organização','Impedir a comunicação entre departamentos','Duplicar obrigatoriamente todas as operações'], ans:'B' },
-  { id:'i150', t:'info_si', d:'int', q:'O Excel é especialmente útil na gestão porque permite:', opts:['Realizar cálculos, organizar dados, analisar informação e produzir relatórios','Substituir todos os sistemas de bases de dados','Criar redes físicas','Executar exclusivamente sistemas operativos'], ans:'A' },
-  { id:'i151', t:'info_hardware_rede', d:'ini', q:'Qual equipamento desempenha a função principal de encaminhamento entre redes?', opts:['Hub','Switch de camada 2','Router','Repetidor'], ans:'C' },
-  { id:'i152', t:'info_si', d:'ini', q:'Uma mensagem imita a página de acesso do banco e solicita credenciais. Trata-se de:', opts:['Ransomware','Phishing','Defragmentação','Backup'], ans:'B' },
-  { id:'i153', t:'info_dados', d:'int', q:'Para armazenar dados relacionados de funcionários, departamentos e salários, qual solução é mais adequada?', opts:['Pasta com imagens','Base de dados relacional','Hub','Repetidor'], ans:'B' },
-  { id:'i154', t:'info_dados', d:'int', q:'Qual propriedade ACID garante que uma transferência seja integralmente concluída ou não aplicada?', opts:['Disponibilidade','Atomicidade','Confidencialidade','Redundância'], ans:'B' },
-  { id:'i155', t:'info_si', d:'int', q:'Qual sistema é adequado para analisar vendas e comparar cenários de investimento?', opts:['Sistema de apoio à decisão','Hub','Sistema operativo','Repetidor'], ans:'A' },
-  { id:'i156', t:'info_redes', d:'int', q:'Um computador tem o endereço 192.168.1.100/24. Qual é o endereço de rede?', opts:['192.168.1.0','192.168.1.100','192.168.1.255','192.168.0.0'], ans:'A' },
-  { id:'i157', t:'info_dados', d:'int', q:'Permitir que cada funcionário aceda apenas aos dados necessários aplica o princípio de:', opts:['Privilégio máximo','Menor privilégio','Acesso público','Redundância'], ans:'B' },
-  { id:'i158', t:'info_dados', d:'int', q:'Num sistema escolar, estudante e inscrição representam, respectivamente:', opts:['Evento e atributo','Entidade e evento','Atributo e entidade','Protocolo e ficheiro'], ans:'B' },
-  { id:'i159', t:'info_intro', d:'ini', q:'Qual componente deve ser analisado quando falta memória temporária para executar vários programas?', opts:['RAM','Impressora','Router','Monitor'], ans:'A' },
-  { id:'i160', t:'info_si', d:'int', q:'Um sistema transforma dados de vendas em relatórios e indicadores para gestores. Isto representa:', opts:['Apenas transmissão de dados','Processamento de dados para produzir informação de gestão','Apenas armazenamento físico','Exclusivamente autenticação'], ans:'B' },
-  { id:'i161', t:'info_dados', d:'int', q:'Impedir que utilizadores não autorizados consultem dados de pacientes protege principalmente:', opts:['Disponibilidade','Confidencialidade','Escalabilidade','Portabilidade'], ans:'B' },
-  { id:'i162', t:'info_redes', d:'ava', q:'Uma rede 192.168.10.0/24 dividida em quatro sub-redes de igual dimensão passa a usar qual prefixo?', opts:['/25','/26','/27','/28'], ans:'B' },
-  { id:'i163', t:'info_si', d:'ini', q:'Qual é a sequência correcta de ETL?', opts:['Transformar, eliminar, transferir','Extrair, transformar e carregar','Executar, testar e ligar','Entrar, transmitir e listar'], ans:'B' },
-  { id:'i164', t:'info_si', d:'int', q:'Qual sistema integra informação financeira, recursos humanos, compras e stocks?', opts:['ERP','CRM exclusivamente','Hub','DNS'], ans:'A' },
-  { id:'i165', t:'info_si', d:'int', q:'Executar instruções enquanto uma variável for inferior a 10 utiliza uma estrutura de:', opts:['Condicional exclusivamente','Repetição','Declaração de constante','Estrutura de ficheiros'], ans:'B' },
-  { id:'i166', t:'info_si', d:'int', q:'Um serviço recebe tráfego anormal proveniente de muitos dispositivos e deixa de responder. Qual ataque é provável?', opts:['DDoS','Phishing','SQL SELECT','Backup'], ans:'A' },
-  { id:'i167', t:'info_dados', d:'int', q:'Um utilizador autentica-se correctamente, mas não tem permissão para consultar salários. Qual afirmação é correcta?', opts:['A autenticação falhou necessariamente','A autenticação ocorreu, mas a autorização negou o acesso','A confidencialidade deixou de existir em toda a organização','Necessita obrigatoriamente de novo sistema operativo'], ans:'B' },
-  { id:'i168', t:'info_redes', d:'int', q:'Qual endereço é normalmente utilizado para encaminhar quadros dentro de uma LAN Ethernet?', opts:['Endereço MAC','Endereço de e-mail','Nome de domínio','Número de série do monitor'], ans:'A' },
-  { id:'i169', t:'info_dados', d:'int', q:'Qual situação representa uma falha de integridade?', opts:['Um sistema fica temporariamente indisponível','Um utilizador não autorizado altera o registo de uma factura','Um utilizador autorizado consulta um relatório','Um computador é desligado correctamente'], ans:'B' },
-  { id:'i170', t:'info_si', d:'ini', q:'Qual equação deve manter-se no balanço contabilístico?', opts:['Activo = Passivo + Capital Próprio','Activo = Rendimentos + Gastos','Passivo = Activo + Capital Próprio','Capital Próprio = Activo + Passivo'], ans:'A' },
-  /* Perguntas sobre ficheiros e extensões */
-  { id:'if1', t:'info_ficheiros', d:'ini', q:'Qual extensão é normalmente associada a um documento PDF?', opts:['.docx','.pdf','.xlsx','.pptx'], ans:'B', expl:'PDF significa Portable Document Format.' },
-  { id:'if2', t:'info_ficheiros', d:'ini', q:'Qual extensão identifica normalmente um ficheiro de folha de cálculo moderno do Excel?', opts:['.xlsx','.pptx','.docx','.mp3'], ans:'A' },
-  { id:'if3', t:'info_ficheiros', d:'ini', q:'Qual extensão é normalmente utilizada para imagens com suporte de transparência e compressão sem perdas?', opts:['.mp3','.png','.exe','.csv'], ans:'B' },
-  { id:'if4', t:'info_ficheiros', d:'ini', q:'Qual extensão corresponde a um ficheiro de texto simples?', opts:['.txt','.dll','.mp4','.zip'], ans:'A' },
-  { id:'if5', t:'info_ficheiros', d:'ini', q:'Qual extensão é normalmente usada para ficheiros comprimidos no formato ZIP?', opts:['.jpg','.zip','.html','.sql'], ans:'B' },
-  { id:'if6', t:'info_ficheiros', d:'ini', q:'Qual extensão é associada a um ficheiro executável comum do Windows?', opts:['.exe','.pdf','.png','.csv'], ans:'A' },
-  { id:'if7', t:'info_ficheiros', d:'ini', q:'Qual extensão representa frequentemente um ficheiro de dados estruturados em JavaScript Object Notation?', opts:['.json','.wav','.bmp','.sys'], ans:'A' },
-  { id:'if8', t:'info_ficheiros', d:'ini', q:'Qual extensão é normalmente associada a uma página Web estruturada em HTML?', opts:['.html','.xlsx','.rar','.dll'], ans:'A' },
-  { id:'if9', t:'info_ficheiros', d:'ini', q:'Qual extensão é normalmente usada para código-fonte Python?', opts:['.py','.ppt','.tiff','.apk'], ans:'A' },
-  { id:'if10', t:'info_ficheiros', d:'ini', q:'Qual extensão é normalmente usada para uma base de dados SQLite?', opts:['.sqlite3','.mp3','.css','.gif'], ans:'A' }
+const ALL_QUESTIONS = [
+  /* ---- Conceitos de Informação e Dados ---- */
+  { id:'i67', t:'info_dados', d:'int',
+    q:'Num sistema de gestão escolar que regista matrículas, notas e pagamentos, qual dos elementos seguintes representa uma ENTIDADE e não um atributo ou evento?',
+    opts:['A data em que o aluno efectuou a matrícula','O estudante matriculado no 10.º ano','A aprovação do aluno numa disciplina','O pagamento da propina do 2.º trimestre'],
+    ans:'B', expl:'O estudante é o objecto persistente sobre o qual se guardam dados. Data, aprovação e pagamento são ocorrências ou propriedades ligadas a esse objecto.' },
+  { id:'i68', t:'info_dados', d:'int',
+    q:'Num sistema hospitalar, o registo de uma consulta realizada entre um médico e um paciente deve ser modelado principalmente como:',
+    opts:['Um atributo multivalorado do paciente','Uma entidade associativa que relaciona médico, paciente e data','Um sistema operativo de gestão clínica','Uma unidade de armazenamento secundária'],
+    ans:'B', expl:'A consulta é um evento/relacionamento que liga entidades (médico, paciente) num determinado momento.' },
+  { id:'i69', t:'info_dados', d:'ini',
+    q:'O nome, a idade e o endereço de um funcionário, considerados isoladamente num modelo de dados, classificam-se como:',
+    opts:['Entidades independentes','Atributos da entidade Funcionário','Eventos registados pelo sistema','Protocolos de comunicação'],
+    ans:'B' },
+  { id:'i70', t:'info_dados', d:'int',
+    q:'Qual afirmação distingue correctamente entidade de atributo num modelo relacional?',
+    opts:['A entidade é uma ocorrência temporal; o atributo é uma tabela permanente','A entidade representa um objecto ou conceito com identidade própria; o atributo descreve uma propriedade desse objecto','A entidade é sempre numérica; o atributo é sempre textual','Não há distinção: ambos são colunas de uma tabela'],
+    ans:'B' },
+  { id:'i71', t:'info_dados', d:'int',
+    q:'Num sistema de vendas, a operação "venda" deve ser registada como:',
+    opts:['Uma entidade autónoma sem relações','Um evento que relaciona cliente, produto, quantidade e data','Um atributo da tabela de impressoras','Um sistema operativo dedicado ao comércio'],
+    ans:'B' },
+  { id:'i72', t:'info_dados', d:'int',
+    q:'Qual das seguintes afirmações descreve melhor a função de um SGBD e não a de um sistema operativo?',
+    opts:['Gerir a memória RAM e escalonar processos do processador','Garantir a integridade, consistência, concorrência e segurança no acesso a dados armazenados','Controlar os dispositivos periféricos ligados ao computador','Interpretar instruções de linguagem máquina'],
+    ans:'B', expl:'O SGBD actua sobre os dados (integridade, transacções, concorrência); o SO actua sobre recursos físicos.' },
+  { id:'i73', t:'info_dados', d:'ini',
+    q:'Numa tabela relacional, o conjunto de valores de uma única linha designa-se por:',
+    opts:['Campo ou coluna','Registo ou tuplo','Esquema da base de dados','Índice primário'],
+    ans:'B' },
+  { id:'i74', t:'info_dados', d:'int',
+    q:'Qual das seguintes condições NÃO é exigida a uma chave primária?',
+    opts:['Unicidade dos valores em cada registo','Não permitir valores nulos','Ser sempre do tipo texto','Identificar de forma unívoca cada linha da tabela'],
+    ans:'C', expl:'A chave primária pode ser numérica, textual ou composta; não há exigência de ser texto.' },
+  { id:'i75', t:'info_dados', d:'int',
+    q:'Uma chave estrangeira numa tabela de facturas que referencia a chave primária da tabela de clientes serve para:',
+    opts:['Encriptar os dados do cliente','Garantir a integridade referencial entre facturas e clientes','Eliminar automaticamente clientes sem facturas','Substituir a chave primária da tabela de clientes'],
+    ans:'B' },
+  { id:'i76', t:'info_dados', d:'ini',
+    q:'Qual comando SQL pertence ao subconjunto DQL (Data Query Language)?',
+    opts:['INSERT','UPDATE','SELECT','DROP'],
+    ans:'C' },
+  { id:'i77', t:'info_dados', d:'ini',
+    q:'Para adicionar um novo registo a uma tabela existente utiliza-se:',
+    opts:['INSERT INTO … VALUES …','SELECT … FROM …','DROP TABLE …','GRANT … TO …'],
+    ans:'A' },
+  { id:'i78', t:'info_dados', d:'int',
+    q:'Qual comando remove registos mas mantém a estrutura da tabela intacta?',
+    opts:['DROP TABLE','DELETE FROM','ALTER TABLE','TRUNCATE SCHEMA'],
+    ans:'B', expl:'DELETE remove linhas; DROP elimina a tabela; ALTER altera a estrutura.' },
+  { id:'i79', t:'info_dados', d:'int',
+    q:'Numa transferência bancária entre duas contas, qual propriedade ACID impede que o débito seja aplicado sem o crédito correspondente?',
+    opts:['Consistência','Isolamento','Atomicidade','Durabilidade'],
+    ans:'C' },
+  { id:'i80', t:'info_dados', d:'int',
+    q:'Qual dos seguintes é um SGBD relacional de código aberto amplamente utilizado em produção?',
+    opts:['PostgreSQL','JPEG','HTML','HTTP'],
+    ans:'A' },
+  { id:'i81', t:'info_dados', d:'int',
+    q:'O MongoDB distingue-se de um SGBD relacional tradicional principalmente porque:',
+    opts:['Armazena documentos BSON sem esquema fixo, em vez de tabelas com colunas rígidas','Não permite consultas por campos','Só funciona em mainframes','Substitui o sistema operativo'],
+    ans:'A' },
+  { id:'i82', t:'info_dados', d:'int',
+    q:'A normalização de uma base de dados relacional procura sobretudo:',
+    opts:['Aumentar a duplicação para acelerar leituras','Reduzir redundância e anomalias de inserção, actualização e eliminação','Eliminar todas as chaves estrangeiras','Substituir o SQL por HTML'],
+    ans:'B' },
+  { id:'i83', t:'info_dados', d:'ava',
+    q:'Numa base de dados, o nome de um cliente aparece repetido em 100 facturas. Qual é a consequência mais grave deste desenho?',
+    opts:['Aumento do espaço em disco apenas, sem outros efeitos','Risco de anomalia de actualização: alterar o nome num sítio e deixar os restantes desactualizados','Impossibilidade de emitir facturas','Perda automática da chave primária'],
+    ans:'B' },
+  { id:'i84', t:'info_dados', d:'ini',
+    q:'O princípio da confidencialidade garante que:',
+    opts:['Todos os dados estão sempre disponíveis','Apenas entidades autorizadas acedem à informação','Os dados não podem ser alterados por ninguém','Os dados são apagados após um período'],
+    ans:'B' },
+  { id:'i85', t:'info_dados', d:'int',
+    q:'Um funcionário altera, sem autorização, o saldo de uma conta bancária. Qual propriedade da tríade CIA foi directamente violada?',
+    opts:['Disponibilidade','Integridade','Portabilidade','Compatibilidade'],
+    ans:'B' },
+  { id:'i86', t:'info_dados', d:'int',
+    q:'Um servidor de correio fica inacessível durante seis horas devido a uma falha. Qual propriedade foi afectada?',
+    opts:['Confidencialidade','Integridade','Disponibilidade','Autenticidade exclusivamente'],
+    ans:'C' },
+  { id:'i87', t:'info_dados', d:'int',
+    q:'Um utilizador introduz correctamente as credenciais mas o sistema recusa o acesso a uma pasta. O que aconteceu?',
+    opts:['A autenticação falhou','A autenticação teve êxito, mas a autorização negou o acesso','A confidencialidade foi violada','É necessário reinstalar o sistema operativo'],
+    ans:'B' },
+  { id:'i88', t:'info_dados', d:'ini',
+    q:'Qual das seguintes práticas reforça mais significativamente a segurança de uma conta?',
+    opts:['Reutilizar a mesma palavra-passe em vários serviços','Partilhar a palavra-passe por email','Activar autenticação multifactor (MFA)','Desactivar as actualizações automáticas'],
+    ans:'C' },
+  { id:'i89', t:'info_dados', d:'ini',
+    q:'Uma cópia de segurança (backup) tem como finalidade principal:',
+    opts:['Permitir recuperar dados após perda, corrupção ou ataque','Substituir o antivírus','Comprimir ficheiros para poupar espaço','Acelerar a ligação à Internet'],
+    ans:'A' },
+  { id:'i90', t:'info_dados', d:'int',
+    q:'A encriptação de dados em repouso protege essencialmente contra:',
+    opts:['Acesso não autorizado ao conteúdo caso o suporte seja roubado','Falhas de energia','Erros de programação','Ataques de negação de serviço'],
+    ans:'A' },
+  { id:'i91', t:'info_dados', d:'int',
+    q:'Qual afirmação traduz melhor a passagem de informação para conhecimento?',
+    opts:['A informação é sempre mais complexa do que o conhecimento','O conhecimento resulta da interpretação e aplicação da informação a situações concretas','Conhecimento é apenas um conjunto de números','A informação não pode apoiar decisões'],
+    ans:'B' },
+  { id:'i92', t:'info_dados', d:'int',
+    q:'Uma empresa analisa relatórios de vendas, identifica padrões de consumo e redefine a sua estratégia comercial. Esta sequência ilustra:',
+    opts:['Conversão de hardware em software','Transformação de informação em conhecimento aplicado à decisão','Substituição de protocolos por ficheiros','Migração de RAM para ROM'],
+    ans:'B' },
+
+  /* ---- Sistemas de Informação ---- */
+  { id:'i93', t:'info_si', d:'ini',
+    q:'Um sistema, na acepção da teoria de sistemas, caracteriza-se por:',
+    opts:['Elementos independentes sem objectivo comum','Componentes inter-relacionados que concorrem para um objectivo','Um único equipamento electrónico','Um conjunto de ficheiros sem organização'],
+    ans:'B' },
+  { id:'i94', t:'info_si', d:'int',
+    q:'A função do feedback num sistema é:',
+    opts:['Eliminar todas as entradas','Fornecer informação sobre os resultados para permitir ajustes e controlo','Substituir todos os componentes','Impedir a saída de informação'],
+    ans:'B' },
+  { id:'i95', t:'info_si', d:'int',
+    q:'Uma organização que troca informação, recursos e serviços com o ambiente externo classifica-se como:',
+    opts:['Sistema fechado','Sistema aberto','Sistema isolado','Sistema exclusivamente físico'],
+    ans:'B' },
+  { id:'i96', t:'info_si', d:'int',
+    q:'Para registar diariamente as vendas ao balcão de uma empresa, o sistema mais adequado é:',
+    opts:['TPS — Transaction Processing System','ESS — Executive Support System','DSS — Decision Support System','Um sistema exclusivamente gráfico'],
+    ans:'A' },
+  { id:'i97', t:'info_si', d:'int',
+    q:'Relatórios periódicos de vendas por departamento destinados aos gestores intermédios são típicos de:',
+    opts:['MIS/SIG — Management Information System','Hub de rede','BIOS','Servidor DNS'],
+    ans:'A' },
+  { id:'i98', t:'info_si', d:'int',
+    q:'Um sistema que permite simular cenários de investimento e comparar alternativas apoia principalmente:',
+    opts:['O processamento de salários','A decisão através de modelos e análise de dados (DSS/SAD)','A substituição da rede informática','A criação de ficheiros de texto'],
+    ans:'B' },
+  { id:'i99', t:'info_si', d:'int',
+    q:'Qual sistema integra processos e dados de contabilidade, compras, recursos humanos e stocks numa única plataforma?',
+    opts:['ERP','Hub','DNS','BIOS'],
+    ans:'A' },
+  { id:'i100', t:'info_si', d:'int',
+    q:'Um sistema orientado para gerir o relacionamento com clientes, histórico de contactos e campanhas designa-se:',
+    opts:['ERP','CRM','DNS','DHCP'],
+    ans:'B' },
+  { id:'i101', t:'info_si', d:'int',
+    q:'A principal função de um sistema SCM é:',
+    opts:['Gerir a cadeia de abastecimento, desde fornecedores até à entrega','Gerir exclusivamente palavras-passe','Processar imagens','Controlar apenas sistemas operativos'],
+    ans:'A' },
+  { id:'i102', t:'info_si', d:'int',
+    q:'As decisões estratégicas, por serem frequentemente não estruturadas, são normalmente tomadas:',
+    opts:['Apenas por operadores de caixa','Pela gestão de topo','Exclusivamente por técnicos de informática','Apenas por clientes'],
+    ans:'B' },
+  { id:'i103', t:'info_si', d:'int',
+    q:'O levantamento e análise de requisitos tem como finalidade:',
+    opts:['Definir as necessidades e funcionalidades que o sistema deve satisfazer','Eliminar a necessidade de testes','Instalar imediatamente o sistema','Substituir a manutenção futura'],
+    ans:'A' },
+  { id:'i104', t:'info_si', d:'int',
+    q:'A arquitectura, os modelos de dados e as interfaces de um sistema são definidos na fase de:',
+    opts:['Desenho','Manutenção','Utilização','Encerramento'],
+    ans:'A' },
+  { id:'i105', t:'info_si', d:'int',
+    q:'Os testes unitários verificam:',
+    opts:['O sistema completo em produção','O funcionamento isolado de componentes ou unidades de código','Apenas a ligação à Internet','A satisfação dos clientes'],
+    ans:'B' },
+  { id:'i106', t:'info_si', d:'int',
+    q:'Os testes de integração destinam-se a verificar:',
+    opts:['A comunicação e o funcionamento conjunto dos componentes','Apenas a aparência do sistema','Apenas a velocidade da Internet','A substituição dos requisitos'],
+    ans:'A' },
+  { id:'i107', t:'info_si', d:'int',
+    q:'A principal característica da metodologia Cascata é:',
+    opts:['Desenvolvimento sequencial por fases com pouca retroacção','Ausência total de planeamento','Entregas contínuas sem organização','Eliminação dos testes'],
+    ans:'A' },
+  { id:'i108', t:'info_si', d:'int',
+    q:'No Scrum, um Sprint é:',
+    opts:['Um período de trabalho de duração fixa que produz um incremento do produto','Uma linguagem de programação','Um tipo de base de dados','Um dispositivo de rede'],
+    ans:'A' },
+  { id:'i109', t:'info_si', d:'int',
+    q:'A manutenção correctiva de um sistema consiste em:',
+    opts:['Corrigir erros detectados após a implementação','Criar obrigatoriamente um novo sistema','Eliminar todas as funcionalidades','Impedir futuras actualizações'],
+    ans:'A' },
+  { id:'i110', t:'info_si', d:'int',
+    q:'A análise de viabilidade de um projecto procura:',
+    opts:['Avaliar se o projecto é técnica, económica e operacionalmente exequível','Escolher exclusivamente a cor da interface','Eliminar a participação dos utilizadores','Substituir a documentação'],
+    ans:'A' },
+  { id:'i111', t:'info_si', d:'int',
+    q:'Um malware que cifra os ficheiros do utilizador e exige pagamento para os devolver classifica-se como:',
+    opts:['Spyware','Ransomware','Adware','Driver'],
+    ans:'B' },
+  { id:'i112', t:'info_si', d:'int',
+    q:'Um programa malicioso que se apresenta como software legítimo para induzir o utilizador a executá-lo é um:',
+    opts:['Trojan','Firewall','Sistema operativo','Repetidor'],
+    ans:'A' },
+  { id:'i113', t:'info_si', d:'int',
+    q:'A diferença fundamental entre vírus e worm é que:',
+    opts:['O worm se propaga autonomamente pela rede, enquanto o vírus depende de um hospedeiro','O vírus só afecta redes e o worm só discos','Ambos são equipamentos físicos','Não existe diferença'],
+    ans:'A' },
+  { id:'i114', t:'info_si', d:'int',
+    q:'Um ataque DDoS caracteriza-se por:',
+    opts:['Melhorar a disponibilidade do serviço','Tornar um serviço indisponível através de tráfego massivo distribuído por múltiplas origens','Aumentar a memória do servidor','Corrigir erros de programação'],
+    ans:'B' },
+  { id:'i115', t:'info_dados', d:'int',
+    q:'O princípio do menor privilégio determina que:',
+    opts:['Todos os utilizadores devem ser administradores','Cada utilizador deve ter apenas as permissões necessárias às suas funções','As permissões devem ser públicas','Nenhum utilizador deve aceder a dados'],
+    ans:'B' },
+  { id:'i116', t:'info_si', d:'int',
+    q:'A engenharia social explora principalmente:',
+    opts:['A manipulação psicológica das pessoas para obter informações ou induzir acções','Circuitos electrónicos','Bases de dados','Sistemas operativos'],
+    ans:'A' },
+  { id:'i117', t:'info_si', d:'int',
+    q:'A principal finalidade de uma firewall é:',
+    opts:['Controlar o tráfego de rede segundo regras de segurança','Substituir a memória RAM','Eliminar automaticamente todos os vírus','Criar documentos'],
+    ans:'A' },
+  { id:'i118', t:'info_si', d:'int',
+    q:'Após um ataque de ransomware, a medida mais adequada é:',
+    opts:['Pagar sempre o resgate','Recuperar a partir de cópias de segurança íntegras e isoladas, após conter o incidente','Desactivar permanentemente o antivírus','Partilhar os ficheiros cifrados'],
+    ans:'B' },
+  { id:'i119', t:'info_si', d:'int',
+    q:'Um algoritmo, por definição, deve:',
+    opts:['Ser infinito','Ter passos definidos e terminar após um número finito de operações','Não produzir resultados','Depender obrigatoriamente da Internet'],
+    ans:'B' },
+  { id:'i120', t:'info_si', d:'int',
+    q:'A estrutura que permite executar instruções diferentes conforme uma condição designa-se:',
+    opts:['Sequencial','Condicional','Declaração','Comentário'],
+    ans:'B' },
+  { id:'i121', t:'info_si', d:'int',
+    q:'Qual é o resultado de 17 MOD 5?',
+    opts:['2','3','4','5'],
+    ans:'A' },
+  { id:'i122', t:'info_si', d:'int',
+    q:'Qual é o resultado de 17 DIV 5, considerando divisão inteira?',
+    opts:['2','3','3,4','4'],
+    ans:'B' },
+  { id:'i123', t:'info_si', d:'int',
+    q:'Qual é o resultado lógico de VERDADEIRO AND FALSO?',
+    opts:['Verdadeiro','Falso','Indeterminado','Nulo'],
+    ans:'B' },
+  { id:'i124', t:'info_si', d:'int',
+    q:'Qual é o resultado de VERDADEIRO OR FALSO?',
+    opts:['Verdadeiro','Falso','Nulo','Erro'],
+    ans:'A' },
+  { id:'i125', t:'info_si', d:'int',
+    q:'O operador NOT serve para:',
+    opts:['Somar valores','Inverter um valor lógico','Multiplicar números','Repetir instruções'],
+    ans:'B' },
+  { id:'i126', t:'info_si', d:'int',
+    q:'Qual estrutura garante que as instruções sejam executadas pelo menos uma vez?',
+    opts:['WHILE','FOR','REPEAT/UNTIL','IF'],
+    ans:'C' },
+  { id:'i127', t:'info_si', d:'int',
+    q:'A função de uma variável num programa é:',
+    opts:['Armazenar temporariamente um valor que pode ser utilizado e alterado durante a execução','Substituir a CPU','Ligar computadores em rede','Eliminar todos os erros de programação'],
+    ans:'A' },
+  { id:'i128', t:'info_si', d:'int',
+    q:'Qual é a saída do pseudocódigo a=5; b=3; c=a*b+2; escrever c?',
+    opts:['13','15','17','25'],
+    ans:'C' },
+  { id:'i129', t:'info_si', d:'int',
+    q:'Se x=10 e a condição x>10 for testada, qual ramo será executado?',
+    opts:['Maior','Menor ou igual','10','Erro'],
+    ans:'B' },
+  { id:'i130', t:'info_si', d:'int',
+    q:'Qual estrutura é mais adequada para percorrer uma lista de 1 a 100 elementos?',
+    opts:['FOR','IF','SWITCH exclusivamente','RETURN'],
+    ans:'A' },
+  { id:'i131', t:'info_si', d:'int',
+    q:'Uma estrutura de repetição que nunca termina, devido a uma condição que permanece verdadeira, denomina-se:',
+    opts:['Ciclo infinito','Função recursiva correcta','Estrutura sequencial','Variável constante'],
+    ans:'A' },
+  { id:'i132', t:'info_si', d:'int',
+    q:'A finalidade de uma função num programa é:',
+    opts:['Organizar e reutilizar um bloco de código que realiza uma tarefa','Substituir todos os algoritmos','Impedir a passagem de parâmetros','Eliminar as variáveis'],
+    ans:'A' },
+  { id:'i133', t:'info_si', d:'int',
+    q:'O principal objectivo de um Sistema de Informação de Gestão é:',
+    opts:['Apoiar a gestão através da produção de informação útil e organizada','Substituir todos os gestores','Impedir a realização de operações','Controlar exclusivamente dispositivos electrónicos'],
+    ans:'A' },
+  { id:'i134', t:'info_si', d:'int',
+    q:'Um relatório mensal de vendas por departamento é um exemplo de:',
+    opts:['Informação de gestão','Hardware','Protocolo','Sistema operativo'],
+    ans:'A' },
+  { id:'i135', t:'info_si', d:'int',
+    q:'O indicador que relaciona o resultado obtido com os recursos utilizados denomina-se:',
+    opts:['Produtividade','Endereço IP','Número de portas','Capacidade de RAM'],
+    ans:'A' },
+  { id:'i136', t:'info_si', d:'int',
+    q:'A principal vantagem de um SIG para a direcção de uma organização é:',
+    opts:['Tomar decisões com base em informação organizada e relevante','Eliminar a necessidade de planeamento','Impedir a produção de relatórios','Substituir a contabilidade'],
+    ans:'A' },
+  { id:'i137', t:'info_si', d:'int',
+    q:'O objectivo da gestão de dados é:',
+    opts:['Garantir que os dados sejam geridos durante todo o seu ciclo de vida','Eliminar todos os registos antigos imediatamente','Impedir a consulta de dados','Substituir os sistemas operativos'],
+    ans:'A' },
+  { id:'i138', t:'info_si', d:'int',
+    q:'Qual das seguintes é uma característica de dados de qualidade?',
+    opts:['Duplicação permanente','Inconsistência','Exactidão','Desactualização'],
+    ans:'C' },
+  { id:'i139', t:'info_si', d:'int',
+    q:'O processo ETL significa:',
+    opts:['Extract, Transform, Load','Execute, Transfer, Link','Enter, Test, Launch','Export, Translate, Login'],
+    ans:'A' },
+  { id:'i140', t:'info_si', d:'int',
+    q:'A governação de dados procura:',
+    opts:['Definir políticas, responsabilidades e regras para gerir os dados','Eliminar a segurança dos sistemas','Impedir o acesso de todos os utilizadores','Substituir as bases de dados'],
+    ans:'A' },
+  { id:'i141', t:'info_si', d:'int',
+    q:'Uma base de dados contém três registos para o mesmo cliente quando deveria existir apenas um. Que problema está presente?',
+    opts:['Duplicação de dados','Disponibilidade','Encriptação','Autenticação'],
+    ans:'A' },
+  { id:'i142', t:'info_si', d:'int',
+    q:'A equação fundamental da contabilidade é:',
+    opts:['Activo = Passivo + Capital Próprio','Activo = Passivo − Capital Próprio','Passivo = Activo + Capital Próprio','Capital Próprio = Activo + Passivo'],
+    ans:'A' },
+  { id:'i143', t:'info_si', d:'int',
+    q:'Uma empresa possui activos de 1 000 000 Kz e passivos de 400 000 Kz. Qual é o seu capital próprio?',
+    opts:['400 000 Kz','500 000 Kz','600 000 Kz','1 400 000 Kz'],
+    ans:'C' },
+  { id:'i144', t:'info_si', d:'int',
+    q:'A demonstração financeira que apresenta a posição da entidade numa determinada data é:',
+    opts:['Demonstração de resultados','Balanço','Demonstração de fluxos de caixa','Relatório de vendas'],
+    ans:'B' },
+  { id:'i145', t:'info_si', d:'int',
+    q:'A demonstração financeira que evidencia rendimentos, gastos e resultado de um período é:',
+    opts:['Balanço','Demonstração de resultados','Inventário físico','Relatório de rede'],
+    ans:'B' },
+  { id:'i146', t:'info_si', d:'int',
+    q:'Na contabilidade por partidas dobradas:',
+    opts:['O total de débitos deve igualar o total de créditos','Os créditos são sempre superiores aos débitos','Os débitos não precisam de corresponder aos créditos','Cada operação só pode ter um registo'],
+    ans:'A' },
+  { id:'i147', t:'info_si', d:'int',
+    q:'A principal finalidade de um sistema informático de facturação é:',
+    opts:['Apoiar a emissão, registo e gestão de documentos de facturação','Substituir o sistema operativo','Criar endereços IP','Gerir exclusivamente funcionários'],
+    ans:'A' },
+  { id:'i148', t:'info_si', d:'int',
+    q:'Uma empresa usa um sistema para acompanhar entradas, saídas e níveis de produtos no armazém. Trata-se de um sistema de:',
+    opts:['Gestão de stock','Gestão de DNS','Processamento gráfico','Autenticação biométrica'],
+    ans:'A' },
+  { id:'i149', t:'info_si', d:'int',
+    q:'A vantagem de integrar a contabilidade num ERP é:',
+    opts:['Eliminar a necessidade de dados','Permitir a integração da informação financeira com outras áreas da organização','Impedir a comunicação entre departamentos','Duplicar todas as operações'],
+    ans:'B' },
+  { id:'i150', t:'info_si', d:'int',
+    q:'O Excel é útil na gestão sobretudo porque permite:',
+    opts:['Realizar cálculos, organizar dados, analisar informação e produzir relatórios','Substituir todos os SGBD','Criar redes físicas','Executar sistemas operativos'],
+    ans:'A' },
+
+  /* ---- Elementos de Rede Activos ---- */
+  { id:'i151', t:'info_hardware_rede', d:'int',
+    q:'Qual equipamento encaminha pacotes entre redes distintas com base em endereços IP?',
+    opts:['Hub','Switch de camada 2','Router','Repetidor'],
+    ans:'C' },
+  { id:'i152', t:'info_si', d:'int',
+    q:'Uma mensagem que imita a página de acesso de um banco e solicita credenciais é típica de:',
+    opts:['Ransomware','Phishing','Defragmentação','Backup'],
+    ans:'B' },
+  { id:'i153', t:'info_dados', d:'int',
+    q:'Para armazenar dados relacionados de funcionários, departamentos e salários, a solução mais adequada é:',
+    opts:['Pasta com imagens','Base de dados relacional','Hub','Repetidor'],
+    ans:'B' },
+  { id:'i154', t:'info_dados', d:'int',
+    q:'Qual propriedade ACID garante que uma transferência seja integralmente concluída ou não aplicada?',
+    opts:['Disponibilidade','Atomicidade','Confidencialidade','Redundância'],
+    ans:'B' },
+  { id:'i155', t:'info_si', d:'int',
+    q:'Um sistema adequado para analisar vendas e comparar cenários de investimento é:',
+    opts:['Sistema de apoio à decisão','Hub','Sistema operativo','Repetidor'],
+    ans:'A' },
+  { id:'i156', t:'info_redes', d:'int',
+    q:'Um computador tem o endereço 192.168.1.100/24. Qual é o endereço de rede?',
+    opts:['192.168.1.0','192.168.1.100','192.168.1.255','192.168.0.0'],
+    ans:'A' },
+  { id:'i157', t:'info_dados', d:'int',
+    q:'Permitir que cada funcionário aceda apenas aos dados necessários aplica o princípio de:',
+    opts:['Privilégio máximo','Menor privilégio','Acesso público','Redundância'],
+    ans:'B' },
+  { id:'i158', t:'info_dados', d:'int',
+    q:'Num sistema escolar, estudante e inscrição representam, respectivamente:',
+    opts:['Evento e atributo','Entidade e evento','Atributo e entidade','Protocolo e ficheiro'],
+    ans:'B' },
+  { id:'i159', t:'info_intro', d:'int',
+    q:'Quando falta memória temporária para executar vários programas simultaneamente, o componente a analisar é:',
+    opts:['RAM','Impressora','Router','Monitor'],
+    ans:'A' },
+  { id:'i160', t:'info_si', d:'int',
+    q:'Um sistema que transforma dados de vendas em relatórios e indicadores para gestores realiza:',
+    opts:['Apenas transmissão de dados','Processamento de dados para produzir informação de gestão','Apenas armazenamento físico','Exclusivamente autenticação'],
+    ans:'B' },
+  { id:'i161', t:'info_dados', d:'int',
+    q:'Impedir que utilizadores não autorizados consultem dados de pacientes protege principalmente:',
+    opts:['Disponibilidade','Confidencialidade','Escalabilidade','Portabilidade'],
+    ans:'B' },
+  { id:'i162', t:'info_redes', d:'ava',
+    q:'Uma rede 192.168.10.0/24 dividida em quatro sub-redes de igual dimensão passa a usar qual prefixo?',
+    opts:['/25','/26','/27','/28'],
+    ans:'B' },
+  { id:'i163', t:'info_si', d:'int',
+    q:'A sequência correcta de ETL é:',
+    opts:['Transformar, eliminar, transferir','Extrair, transformar e carregar','Executar, testar e ligar','Entrar, transmitir e listar'],
+    ans:'B' },
+  { id:'i164', t:'info_si', d:'int',
+    q:'O sistema que integra informação financeira, recursos humanos, compras e stocks é:',
+    opts:['ERP','CRM exclusivamente','Hub','DNS'],
+    ans:'A' },
+  { id:'i165', t:'info_si', d:'int',
+    q:'Executar instruções enquanto uma variável for inferior a 10 utiliza uma estrutura de:',
+    opts:['Condicional exclusivamente','Repetição','Declaração de constante','Estrutura de ficheiros'],
+    ans:'B' },
+  { id:'i166', t:'info_si', d:'int',
+    q:'Um serviço recebe tráfego anormal proveniente de muitos dispositivos e deixa de responder. O ataque provável é:',
+    opts:['DDoS','Phishing','SQL SELECT','Backup'],
+    ans:'A' },
+  { id:'i167', t:'info_dados', d:'int',
+    q:'Um utilizador autentica-se correctamente mas não tem permissão para consultar salários. Qual afirmação é correcta?',
+    opts:['A autenticação falhou necessariamente','A autenticação ocorreu, mas a autorização negou o acesso','A confidencialidade deixou de existir em toda a organização','É necessário um novo sistema operativo'],
+    ans:'B' },
+  { id:'i168', t:'info_redes', d:'int',
+    q:'O endereço utilizado para encaminhar quadros dentro de uma LAN Ethernet é:',
+    opts:['Endereço MAC','Endereço de e-mail','Nome de domínio','Número de série do monitor'],
+    ans:'A' },
+  { id:'i169', t:'info_dados', d:'int',
+    q:'Qual situação representa uma falha de integridade?',
+    opts:['Um sistema fica temporariamente indisponível','Um utilizador não autorizado altera o registo de uma factura','Um utilizador autorizado consulta um relatório','Um computador é desligado correctamente'],
+    ans:'B' },
+  { id:'i170', t:'info_si', d:'int',
+    q:'A equação que deve manter-se no balanço contabilístico é:',
+    opts:['Activo = Passivo + Capital Próprio','Activo = Rendimentos + Gastos','Passivo = Activo + Capital Próprio','Capital Próprio = Activo + Passivo'],
+    ans:'A' },
+
+  /* ---- Ficheiros e Extensões ---- */
+  { id:'if1', t:'info_ficheiros', d:'int',
+    q:'Para publicar um documento final cuja formatação deve ser preservada em qualquer dispositivo, a extensão mais adequada é:',
+    opts:['.docx','.pdf','.txt','.md'],
+    ans:'B', expl:'O PDF foi concebido para preservar a apresentação do documento independentemente do software.' },
+  { id:'if2', t:'info_ficheiros', d:'int',
+    q:'Qual extensão identifica uma folha de cálculo moderna do Excel baseada em Office Open XML?',
+    opts:['.xlsx','.xls','.csv','.ods'],
+    ans:'A' },
+  { id:'if3', t:'info_ficheiros', d:'int',
+    q:'Para uma imagem Web que combine transparência e compressão sem perdas, a extensão mais indicada é:',
+    opts:['.jpg','.png','.gif','.bmp'],
+    ans:'B' },
+  { id:'if4', t:'info_ficheiros', d:'int',
+    q:'Qual extensão corresponde a um ficheiro de texto simples sem formatação?',
+    opts:['.txt','.rtf','.docx','.pdf'],
+    ans:'A' },
+  { id:'if5', t:'info_ficheiros', d:'int',
+    q:'Qual extensão é normalmente usada para arquivos comprimidos que agrupam vários ficheiros?',
+    opts:['.jpg','.zip','.html','.sql'],
+    ans:'B' },
+  { id:'if6', t:'info_ficheiros', d:'int',
+    q:'Qual extensão está associada a um executável comum do Windows?',
+    opts:['.exe','.dll','.bat','.msi'],
+    ans:'A', expl:'.exe é o executável; .bat é script; .msi é instalador; .dll é biblioteca.' },
+  { id:'if7', t:'info_ficheiros', d:'int',
+    q:'Qual extensão representa dados estruturados em JavaScript Object Notation?',
+    opts:['.json','.xml','.csv','.yaml'],
+    ans:'A' },
+  { id:'if8', t:'info_ficheiros', d:'int',
+    q:'Qual extensão corresponde a uma página Web estruturada em HTML?',
+    opts:['.html','.css','.js','.php'],
+    ans:'A' },
+  { id:'if9', t:'info_ficheiros', d:'int',
+    q:'Qual extensão é usada para código-fonte Python?',
+    opts:['.py','.java','.js','.php'],
+    ans:'A' },
+  { id:'if10', t:'info_ficheiros', d:'int',
+    q:'Qual extensão é usada para uma base de dados SQLite?',
+    opts:['.sqlite3','.mdb','.accdb','.db'],
+    ans:'A' }
 ];
 
-const ALL_QUESTIONS = INFORMATICA_QUESTIONS;
-
 /* =========================================================
-   MATÉRIA — estruturada a partir do JSON
+   MATÉRIA
    ========================================================= */
 const MATERIA = [
-  {
-    id:'info_intro', title:'1. Introdução à Informática', color:'#0d9488',
-    sections:[
-      { h:'Conceitos Básicos', type:'list', items:[
-        ['Informática','Área que estuda o tratamento automático da informação através de sistemas computacionais.'],
-        ['Dados','Representações de factos, valores ou observações que podem ser processados.'],
-        ['Informação','Dados organizados e contextualizados, com significado e utilidade.'],
-        ['Hardware','Componentes físicos de um sistema informático.'],
-        ['Software','Conjunto de programas e instruções que orientam o funcionamento do computador.'],
-        ['Firmware','Software de baixo nível, normalmente armazenado em memória não volátil, que controla funções específicas de um equipamento.'],
-        ['CPU','Unidade Central de Processamento; executa instruções e coordena operações.'],
-        ['ALU/ULA','Unidade Aritmética e Lógica; executa operações aritméticas e lógicas.'],
-        ['RAM','Memória principal, volátil, usada temporariamente durante a execução de programas.'],
-        ['ROM','Memória não volátil usada para guardar firmware e instruções persistentes.'],
-        ['Motherboard','Placa principal que interliga os componentes do computador.'],
-        ['HDD','Dispositivo de armazenamento magnético.'],
-        ['SSD','Dispositivo de armazenamento baseado em memória flash, sem partes móveis.'],
-        ['Sistema Operativo','Software de sistema que gere hardware, memória, processos, ficheiros, dispositivos e fornece serviços às aplicações.'],
-        ['Kernel','Núcleo do sistema operativo, responsável pela gestão central dos recursos do sistema.'],
-        ['Shell','Interface que permite ao utilizador interagir com os serviços do sistema operativo, por linha de comandos ou ambiente gráfico.']
-      ]},
-      { h:'Unidades de Medida', type:'table', headers:['Unidade','Significado'], rows:[
-        ['bit','Menor unidade binária de informação; pode assumir 0 ou 1.'],
-        ['Byte (B)','Conjunto de 8 bits.'],
-        ['Kilobyte (KB)','Em convenção decimal, 1 000 bytes; em convenção binária, 1 KiB = 1 024 bytes.'],
-        ['Megabyte (MB)','Em convenção decimal, 1 000 000 bytes; 1 MiB = 1 024 KiB.'],
-        ['Gigabyte (GB)','Em convenção decimal, 1 000 000 000 bytes; 1 GiB = 1 024 MiB.'],
-        ['Terabyte (TB)','Em convenção decimal, 1 000 000 000 000 bytes; 1 TiB = 1 024 GiB.'],
-        ['bps','Bits por segundo, unidade de velocidade de transmissão.'],
-        ['B/s','Bytes por segundo; 1 byte/s equivale a 8 bits/s.']
-      ]},
-      { h:'Sistemas de Numeração', type:'table', headers:['Sistema','Base','Dígitos'], rows:[
-        ['Binário','2','0 e 1'],
-        ['Octal','8','0 a 7'],
-        ['Decimal','10','0 a 9'],
-        ['Hexadecimal','16','0 a 9 e A a F']
-      ]},
-      { h:'Classificações de Software', type:'table', headers:['Tipo','Descrição'], rows:[
-        ['Software de sistema','Gere o funcionamento do computador; exemplo: sistema operativo e drivers.'],
-        ['Software de aplicação','Executa tarefas do utilizador; exemplo: processador de texto, folha de cálculo e navegador.'],
-        ['Software de programação','Ferramentas para desenvolver programas; exemplo: compiladores, interpretadores e IDE.']
-      ]}
-    ]
-  },
-  {
-    id:'info_redes', title:'2. Protocolos de Comunicação e Endereçamento IP', color:'#2563eb',
-    sections:[
-      { h:'Protocolos', type:'list', items:[
-        ['Protocolo','Conjunto de regras que permite a comunicação entre dispositivos, definindo formato, ordem, endereçamento e tratamento de mensagens.'],
-        ['TCP','Protocolo de transporte orientado à ligação, com mecanismos de fiabilidade, controlo de fluxo e ordenação.'],
-        ['UDP','Protocolo de transporte sem ligação, com menor sobrecarga e sem garantia inerente de entrega ou ordenação.'],
-        ['IP','Protocolo da camada de rede que permite endereçar e encaminhar pacotes entre redes.'],
-        ['DNS','Sistema que traduz nomes de domínio em endereços IP e também suporta outros registos.'],
-        ['DHCP','Protocolo que atribui automaticamente endereços IP e outros parâmetros de rede.'],
-        ['HTTP','Protocolo de aplicação usado na comunicação Web.'],
-        ['HTTPS','HTTP protegido por TLS, oferecendo confidencialidade e integridade no canal.'],
-        ['SMTP','Protocolo usado para envio e encaminhamento de correio electrónico.'],
-        ['FTP','Protocolo tradicional de transferência de ficheiros.'],
-        ['SSH','Protocolo seguro para acesso remoto e execução de comandos.']
-      ]},
-      { h:'Portas Comuns', type:'table', headers:['Protocolo','Porta','Nota'], rows:[
-        ['HTTP','80','Porta padrão.'],
-        ['HTTPS','443','Porta padrão.'],
-        ['FTP','20 e 21','FTP tradicional; modo activo usa normalmente 20 para dados e 21 para controlo.'],
-        ['SSH','22','Porta padrão.'],
-        ['DNS','53','UDP e TCP, conforme a operação.'],
-        ['DHCP','67/68','Servidor UDP 67 e cliente UDP 68.'],
-        ['SMTP','25','Envio/relay tradicional; submissão também pode usar 587 ou 465.'],
-        ['POP3','110','Acesso a correio electrónico; POP3S usa normalmente 995.'],
-        ['IMAP','143','Acesso e sincronização de correio; IMAPS usa normalmente 993.']
-      ]},
-      { h:'Endereçamento IP', type:'kv', items:[
-        ['IPv4','32 bits — Quatro octetos decimais separados por pontos.'],
-        ['IPv6','128 bits — Grupos hexadecimais separados por dois-pontos.'],
-        ['MAC','48 bits (Ethernet) — Endereço de camada de ligação atribuído a uma interface de rede.']
-      ]},
-      { h:'Classes IPv4 Clássicas', type:'table', headers:['Classe','Primeiro octeto','Máscara/Utilização'], rows:[
-        ['A','1–126','255.0.0.0'],
-        ['B','128–191','255.255.0.0'],
-        ['C','192–223','255.255.255.0'],
-        ['D','224–239','Multicast'],
-        ['E','240–255','Reservada/experimental']
-      ]},
-      { h:'Intervalos Privados e Modelo OSI', type:'html', html:`
-        <p><strong>Intervalos privados:</strong> 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16.</p>
-        <p class="muted" style="font-size:12px">O endereçamento classful é histórico; actualmente utiliza-se sobretudo CIDR e prefixos como /24 ou /27.</p>
-        <h4>Modelo OSI</h4>
-        <table><thead><tr><th>Camada</th><th>Nome</th><th>Função</th></tr></thead><tbody>
-          <tr><td>7</td><td>Aplicação</td><td>Serviços de rede às aplicações.</td></tr>
-          <tr><td>6</td><td>Apresentação</td><td>Representação, codificação, compressão e cifragem dos dados.</td></tr>
-          <tr><td>5</td><td>Sessão</td><td>Estabelecimento e gestão de sessões.</td></tr>
-          <tr><td>4</td><td>Transporte</td><td>Comunicação fim a fim; TCP e UDP.</td></tr>
-          <tr><td>3</td><td>Rede</td><td>Endereçamento lógico e encaminhamento IP.</td></tr>
-          <tr><td>2</td><td>Ligação de Dados</td><td>Quadros, endereços MAC e acesso ao meio.</td></tr>
-          <tr><td>1</td><td>Física</td><td>Transmissão de bits pelo meio físico.</td></tr>
-        </tbody></table>`}
-    ]
-  },
-  {
-    id:'info_hardware_rede', title:'3. Elementos de Rede Activos', color:'#0891b2',
-    sections:[
-      { h:'Equipamentos', type:'table', headers:['Equipamento','Camada OSI','Função'], rows:[
-        ['Hub','Camada 1','Repete o sinal recebido para as restantes portas; não aprende endereços MAC.'],
-        ['Switch','Normalmente camada 2','Encaminha quadros com base na tabela de endereços MAC; switches multicamada também podem encaminhar na camada 3.'],
-        ['Router','Camada 3','Encaminha pacotes entre redes com base em endereços IP e tabelas de encaminhamento.'],
-        ['Repetidor','Camada 1','Regenera ou repete o sinal para ampliar o alcance físico.'],
-        ['Bridge/Ponte','Camada 2','Interliga segmentos de rede e filtra quadros com base em endereços MAC.']
-      ]}
-    ]
-  },
-  {
-    id:'info_dados', title:'4. Conceitos de Informação e Dados', color:'#7c3aed',
-    sections:[
-      { h:'Conceitos Fundamentais', type:'list', items:[
-        ['Dado','Facto ou valor em estado bruto, ainda sem interpretação suficiente.'],
-        ['Informação','Dados processados, organizados e contextualizados para produzir significado.'],
-        ['Conhecimento','Compreensão e aplicação da informação, associada à experiência e ao raciocínio.'],
-        ['Sabedoria','Capacidade de aplicar conhecimento e julgamento para tomar decisões adequadas.'],
-        ['Entidade','Pessoa, objecto, lugar, organização ou conceito sobre o qual se guardam dados.'],
-        ['Atributo','Propriedade que descreve uma entidade.'],
-        ['Evento','Ocorrência ou acontecimento relevante registado pelo sistema.'],
-        ['Relacionamento','Associação entre duas ou mais entidades.'],
-        ['Informação registada','Informação fixada num suporte físico ou digital para consulta e utilização posterior.'],
-        ['Ficheiro','Unidade identificável de informação armazenada num sistema de ficheiros.'],
-        ['Base de dados','Colecção organizada de dados relacionados, concebida para armazenamento, consulta e actualização.'],
-        ['SGBD','Sistema de Gestão de Bases de Dados; software que cria, administra e manipula bases de dados.']
-      ]},
-      { h:'Qualidade da Informação', type:'pills', items:['Precisão','Relevância','Actualidade','Completude','Fiabilidade','Acessibilidade autorizada','Clareza','Consistência'] },
-      { h:'Modelos de Bases de Dados', type:'table', headers:['Tipo','Descrição'], rows:[
-        ['Relacional','Organiza dados em tabelas relacionadas.'],
-        ['Hierárquica','Organiza registos numa estrutura em árvore.'],
-        ['Em rede','Permite relações complexas entre registos.'],
-        ['Documental','Armazena documentos estruturados, frequentemente JSON ou BSON.'],
-        ['Chave-valor','Armazena pares de chave e valor.'],
-        ['Grafos','Representa entidades como nós e relações como arestas.']
-      ]},
-      { h:'Elementos Relacionais', type:'list', items:[
-        ['Tabela','Estrutura que organiza dados em linhas e colunas.'],
-        ['Registo/linha','Conjunto de valores que representa uma ocorrência.'],
-        ['Campo/coluna','Propriedade ou atributo armazenado na tabela.'],
-        ['Chave primária','Campo ou conjunto de campos que identifica unicamente cada registo.'],
-        ['Chave estrangeira','Campo ou conjunto de campos que referencia uma chave candidata, normalmente a chave primária, noutra tabela ou na mesma tabela.'],
-        ['Normalização','Organização das tabelas para reduzir redundâncias e anomalias de inserção, actualização e eliminação.']
-      ]},
-      { h:'Comandos SQL', type:'table', headers:['Comando','Categoria','Função'], rows:[
-        ['SELECT','DQL','Consultar dados.'],
-        ['INSERT','DML','Inserir registos.'],
-        ['UPDATE','DML','Actualizar registos.'],
-        ['DELETE','DML','Eliminar registos.'],
-        ['CREATE','DDL','Criar objectos da base de dados.'],
-        ['ALTER','DDL','Alterar estruturas.'],
-        ['DROP','DDL','Eliminar objectos.'],
-        ['GRANT','DCL','Conceder privilégios.'],
-        ['REVOKE','DCL','Retirar privilégios.'],
-        ['COMMIT','TCL','Confirmar transacção.'],
-        ['ROLLBACK','TCL','Reverter transacção não confirmada.']
-      ]},
-      { h:'Propriedades ACID', type:'list', items:[
-        ['Atomicidade','Todas as operações da transacção são aplicadas ou nenhuma é aplicada.'],
-        ['Consistência','A transacção preserva as regras e restrições de integridade.'],
-        ['Isolamento','Transacções concorrentes não interferem indevidamente umas nas outras.'],
-        ['Durabilidade','Os resultados confirmados persistem após falhas abrangidas pelo mecanismo de recuperação.']
-      ]},
-      { h:'Protecção de Dados — Tríade CIA', type:'list', items:[
-        ['Confidencialidade','Apenas pessoas autorizadas podem aceder à informação.'],
-        ['Integridade','A informação deve manter-se correcta e protegida contra alterações indevidas.'],
-        ['Disponibilidade','A informação e os serviços devem estar acessíveis quando necessários a utilizadores autorizados.']
-      ]},
-      { h:'Medidas de Protecção', type:'list', items:[
-        ['Autenticação','Verificação da identidade do utilizador.'],
-        ['Autorização','Definição das acções e recursos a que o utilizador pode aceder.'],
-        ['Encriptação','Transformação criptográfica dos dados para impedir leitura por quem não possui a chave adequada.'],
-        ['Backup','Cópia de segurança destinada à recuperação de dados.'],
-        ['Auditoria','Registo e análise de actividades e operações.'],
-        ['MFA','Autenticação multifactor, que combina factores distintos.'],
-        ['Menor privilégio','Conceder apenas as permissões necessárias para cada função.']
-      ]}
-    ]
-  },
-  {
-    id:'info_si', title:'5. Características dos Sistemas de Informação', color:'#ea580c',
-    sections:[
-      { h:'Sistemas e Organização', type:'list', items:[
-        ['Sistema','Conjunto de elementos inter-relacionados que trabalham para um objectivo.'],
-        ['Entrada (input)','Dados ou recursos introduzidos no sistema.'],
-        ['Processamento','Transformação das entradas.'],
-        ['Saída (output)','Resultados produzidos pelo sistema.'],
-        ['Feedback','Informação sobre os resultados, usada para ajustar e controlar o sistema.'],
-        ['Sistema aberto','Interage com o ambiente externo.'],
-        ['Sistema fechado','Modelo teórico com pouca ou nenhuma interacção com o ambiente.']
-      ]},
-      { h:'Componentes de um SI', type:'pills', items:['Pessoas','Processos e procedimentos','Dados','Hardware','Software','Redes e telecomunicações'] },
-      { h:'Níveis de Gestão', type:'table', headers:['Nível','Decisões','Foco'], rows:[
-        ['Operacional','Principalmente estruturadas','Operações diárias.'],
-        ['Táctico','Frequentemente semiestruturadas','Coordenação e controlo.'],
-        ['Estratégico','Frequentemente não estruturadas','Direcção e planeamento de longo prazo.']
-      ]},
-      { h:'Tipos de Sistemas', type:'table', headers:['Sigla','Nome','Função'], rows:[
-        ['TPS','Transaction Processing System','Registar e processar transacções operacionais, como vendas, pagamentos e matrículas.'],
-        ['MIS/SIG','Management Information System','Produzir relatórios e informação periódica para apoiar a gestão.'],
-        ['DSS/SAD','Decision Support System','Apoiar decisões através da análise de dados, modelos e cenários.'],
-        ['ESS/EIS','Executive Support/Information System','Apoiar a gestão de topo com indicadores e informação estratégica.'],
-        ['ERP','Enterprise Resource Planning','Integrar processos e dados de áreas como contabilidade, compras, recursos humanos e stocks.'],
-        ['CRM','Customer Relationship Management','Gerir o relacionamento com clientes.'],
-        ['SCM','Supply Chain Management','Gerir a cadeia de abastecimento.']
-      ]},
-      { h:'Ciclo de Desenvolvimento', type:'table', headers:['Fase','Descrição'], rows:[
-        ['Planeamento e viabilidade','Identificar problema, objectivos, recursos, riscos e viabilidade técnica, económica e operacional.'],
-        ['Levantamento e análise de requisitos','Identificar necessidades e requisitos dos utilizadores e da organização.'],
-        ['Desenho e arquitectura','Definir arquitectura, dados, interfaces e componentes.'],
-        ['Implementação','Desenvolver e integrar os componentes.'],
-        ['Testes','Verificar funcionamento, segurança, desempenho e conformidade com requisitos.'],
-        ['Implantação e manutenção','Colocar em produção, corrigir falhas e evoluir o sistema.']
-      ]},
-      { h:'Tipos de Testes', type:'table', headers:['Tipo','Objectivo'], rows:[
-        ['Unitários','Testar componentes individuais.'],
-        ['Integração','Testar a comunicação entre componentes.'],
-        ['Sistema','Avaliar o sistema completo.'],
-        ['Aceitação','Verificar se o sistema satisfaz as necessidades do utilizador.'],
-        ['Desempenho','Avaliar velocidade, capacidade e comportamento sob carga.'],
-        ['Segurança','Identificar vulnerabilidades e verificar controlos.']
-      ]},
-      { h:'Metodologias', type:'table', headers:['Nome','Descrição'], rows:[
-        ['Cascata','Abordagem sequencial, organizada por fases.'],
-        ['Ágil','Abordagem iterativa e incremental, com colaboração e adaptação frequentes.'],
-        ['Scrum','Framework ágil que organiza o trabalho em Sprints.'],
-        ['Prototipagem','Criação de versões preliminares para validar requisitos e interfaces.']
-      ]},
-      { h:'Segurança Informática — Ameaças', type:'table', headers:['Ameaça','Descrição'], rows:[
-        ['Vírus','Código malicioso que se associa a ficheiros ou programas e se replica quando estes são executados.'],
-        ['Worm','Malware que se pode propagar automaticamente entre sistemas.'],
-        ['Trojan','Programa malicioso disfarçado de software legítimo.'],
-        ['Ransomware','Malware que bloqueia ou cifra dados para exigir resgate.'],
-        ['Spyware','Software que recolhe informação sem conhecimento ou autorização adequada.'],
-        ['Phishing','Fraude que tenta levar a vítima a revelar credenciais ou executar acções.'],
-        ['Brute force','Tentativa sistemática de descobrir credenciais por combinações.'],
-        ['DoS','Ataque destinado a tornar um serviço indisponível.'],
-        ['DDoS','Ataque de negação de serviço distribuído por múltiplas origens.'],
-        ['Spoofing','Falsificação de identidade, endereço ou origem.'],
-        ['Sniffing','Captura e análise de tráfego de rede.']
-      ]},
-      { h:'Algoritmos e Lógica de Programação', type:'list', items:[
-        ['Algoritmo','Sequência finita, ordenada e não ambígua de instruções para resolver um problema.'],
-        ['Estrutura sequencial','Instruções executadas pela ordem definida.'],
-        ['Estrutura condicional','Escolha de caminhos com base numa condição.'],
-        ['Estrutura de repetição','Execução repetida de instruções.'],
-        ['FOR','Repetição normalmente controlada por contador.'],
-        ['WHILE','Repete enquanto a condição for verdadeira; pode executar zero vezes.'],
-        ['REPEAT/UNTIL','Executa primeiro o bloco e testa depois; executa pelo menos uma vez.']
-      ]},
-      { h:'Operadores', type:'table', headers:['Operador','Significado'], rows:[
-        ['+','Adição'], ['-','Subtracção'], ['*','Multiplicação'], ['/','Divisão'],
-        ['MOD','Resto da divisão inteira'], ['DIV','Quociente da divisão inteira'],
-        ['AND','Verdadeiro apenas quando ambas as condições são verdadeiras.'],
-        ['OR','Verdadeiro quando pelo menos uma condição é verdadeira.'],
-        ['NOT','Inverte o valor lógico.']
-      ]},
-      { h:'Tipos de Dados', type:'table', headers:['Tipo','Exemplo'], rows:[
-        ['Inteiro','10'], ['Real','3.14'], ['Carácter','"A"'], ['Cadeia de caracteres','"Angola"'], ['Lógico/Booleano','Verdadeiro ou Falso']
-      ]},
-      { h:'Gestão de Dados e Governança', type:'html', html:`
-        <p><strong>Definição:</strong> Práticas e processos que asseguram a recolha, validação, armazenamento, organização, protecção, utilização, partilha, arquivo e eliminação adequada dos dados.</p>
-        <p><strong>Qualidade:</strong> Exactidão, Completude, Consistência, Actualidade, Validade, Unicidade quando aplicável.</p>
-        <p><strong>Governança:</strong> Define políticas, responsabilidades, regras e normas para assegurar a gestão adequada dos dados.</p>
-        <p><strong>Ciclo de vida:</strong> Criação/recolha → Armazenamento → Utilização → Partilha → Arquivo → Eliminação.</p>
-        <p><strong>ETL:</strong> Extract (Extrair) — Transform (Transformar) — Load (Carregar).</p>` },
-      { h:'Contabilidade e Informática Aplicada à Gestão', type:'list', items:[
-        ['Contabilidade','Área que regista, classifica, resume e interpreta factos patrimoniais e operações económicas.'],
-        ['Património','Conjunto de bens, direitos e obrigações de uma entidade.'],
-        ['Activo','Recursos económicos controlados pela entidade.'],
-        ['Passivo','Obrigações da entidade perante terceiros.'],
-        ['Capital próprio','Interesse residual nos activos depois de deduzidos os passivos.'],
-        ['Balanço','Demonstra a posição financeira numa determinada data.'],
-        ['Demonstração de resultados','Apresenta rendimentos, gastos e resultado de um período.'],
-        ['Demonstração de fluxos de caixa','Apresenta entradas e saídas de caixa e equivalentes.']
-      ]},
-      { h:'Equação Fundamental e Aplicações', type:'html', html:`
-        <p><strong>Equação fundamental:</strong> <code>Activo = Passivo + Capital Próprio</code></p>
-        <p><strong>Partidas dobradas:</strong> Em cada transacção contabilística, o total dos débitos deve igualar o total dos créditos.</p>
-        <p><strong>Aplicações:</strong> Facturação, Processamento salarial, Controlo de despesas, Contas a pagar e a receber, Gestão de stock, Reconciliação bancária, Relatórios financeiros, Orçamentação, Controlo de activos, Análise de custos.</p>` }
-    ]
-  },
-  {
-    id:'info_ficheiros', title:'6. Ficheiros e Extensões', color:'#db2777',
-    sections:[
-      { h:'Texto e Documentos', type:'table', headers:['Extensão','Nome','Uso'], rows:[
-        ['.txt','Texto simples','Notas, registos e texto simples.'],
-        ['.rtf','Rich Text Format','Documentos com texto formatado.'],
-        ['.doc','Microsoft Word antigo','Documentos editáveis.'],
-        ['.docx','Office Open XML Word','Relatórios, cartas e trabalhos.'],
-        ['.odt','OpenDocument Text','Documentos editáveis, por exemplo no LibreOffice.'],
-        ['.pdf','Portable Document Format','Documentos finais, formulários e publicação.'],
-        ['.md','Markdown','Documentação e apontamentos.'],
-        ['.html / .htm','HyperText Markup Language','Páginas Web.'],
-        ['.xml','Extensible Markup Language','Configuração e intercâmbio de dados.'],
-        ['.json','JavaScript Object Notation','APIs, configurações e intercâmbio de dados.'],
-        ['.csv','Comma-Separated Values','Exportação e importação de tabelas.']
-      ]},
-      { h:'Folhas de Cálculo e Apresentações', type:'table', headers:['Extensão','Nome','Uso'], rows:[
-        ['.xls','Microsoft Excel antigo','Livros de cálculo.'],
-        ['.xlsx','Office Open XML Excel','Tabelas, fórmulas e gráficos.'],
-        ['.ods','OpenDocument Spreadsheet','Folhas de cálculo.'],
-        ['.ppt','Microsoft PowerPoint antigo','Apresentações.'],
-        ['.pptx','Office Open XML PowerPoint','Apresentações multimédia.'],
-        ['.odp','OpenDocument Presentation','Apresentações.']
-      ]},
-      { h:'Imagem', type:'table', headers:['Extensão','Nome','Uso'], rows:[
-        ['.jpg / .jpeg','JPEG','Fotografias.'],
-        ['.png','Portable Network Graphics','Logótipos, capturas e gráficos.'],
-        ['.gif','Graphics Interchange Format','Animações simples e imagens.'],
-        ['.bmp','Bitmap','Imagens bitmap.'],
-        ['.tif / .tiff','Tagged Image File Format','Digitalização e arquivo gráfico.'],
-        ['.svg','Scalable Vector Graphics','Ícones, logótipos e gráficos escaláveis.'],
-        ['.webp','WebP','Imagens optimizadas para Web.'],
-        ['.ico','Icon','Ícones.']
-      ]},
-      { h:'Áudio e Vídeo', type:'table', headers:['Extensão','Nome','Uso'], rows:[
-        ['.mp3','MPEG Audio Layer III','Música e áudio.'],
-        ['.wav','Waveform Audio File Format','Gravação e edição de áudio.'],
-        ['.aac','Advanced Audio Coding','Streaming e dispositivos móveis.'],
-        ['.flac','Free Lossless Audio Codec','Arquivo de áudio de alta fidelidade.'],
-        ['.mp4','MPEG-4 Part 14','Vídeos.'],
-        ['.avi','Audio Video Interleave','Vídeo.'],
-        ['.mkv','Matroska Video','Vídeo com múltiplas faixas e legendas.'],
-        ['.mov','QuickTime Movie','Vídeo.'],
-        ['.wmv','Windows Media Video','Vídeo em ambientes Windows.'],
-        ['.webm','WebM','Vídeo em navegadores.']
-      ]},
-      { h:'Compactação e Arquivo', type:'table', headers:['Extensão','Nome','Uso'], rows:[
-        ['.zip','ZIP','Distribuição e organização de ficheiros.'],
-        ['.rar','RAR','Compactação e arquivo.'],
-        ['.7z','7-Zip','Compactação.'],
-        ['.tar','Tape Archive','Arquivo em sistemas Unix/Linux.'],
-        ['.gz','Gzip','Compressão.'],
-        ['.tar.gz / .tgz','TAR + Gzip','Distribuição de software e cópias.']
-      ]},
-      { h:'Executáveis, Bibliotecas e Instalação', type:'table', headers:['Extensão','Nome','Uso'], rows:[
-        ['.exe','Executable','Execução de programas.'],
-        ['.msi','Microsoft Installer','Instalação de aplicações.'],
-        ['.bat','Batch','Automatização de tarefas.'],
-        ['.cmd','Command Script','Automatização.'],
-        ['.sh','Shell Script','Automatização em linha de comandos.'],
-        ['.dll','Dynamic Link Library','Funções partilhadas entre programas.'],
-        ['.so','Shared Object','Funções partilhadas em Unix/Linux.'],
-        ['.sys','System File','Componentes do sistema.'],
-        ['.apk','Android Package','Instalação de aplicações Android.'],
-        ['.deb','Debian Package','Instalação em distribuições Linux.'],
-        ['.rpm','RPM Package Manager','Instalação de software em Linux RPM.']
-      ]},
-      { h:'Código-Fonte e Desenvolvimento', type:'table', headers:['Extensão','Nome','Uso'], rows:[
-        ['.c','C Source','Programação.'],
-        ['.cpp','C++ Source','Programação.'],
-        ['.java','Java Source','Programação.'],
-        ['.py','Python','Scripts, automação e aplicações.'],
-        ['.js','JavaScript','Aplicações Web e servidores.'],
-        ['.ts','TypeScript','Desenvolvimento de software.'],
-        ['.php','PHP','Desenvolvimento Web.'],
-        ['.css','Cascading Style Sheets','Estilização de páginas Web.'],
-        ['.sql','SQL Script','Criação e consulta de bases de dados.'],
-        ['.class','Java Bytecode','Aplicações Java.'],
-        ['.jar','Java Archive','Distribuição de aplicações e bibliotecas Java.']
-      ]},
-      { h:'Bases de Dados e Correio', type:'table', headers:['Extensão','Nome','Uso'], rows:[
-        ['.db','Database','Armazenamento de dados; formato depende da aplicação.'],
-        ['.sqlite / .sqlite3','SQLite Database','Bases de dados locais e incorporadas.'],
-        ['.mdb','Microsoft Access Database','Bases de dados Access antigas.'],
-        ['.accdb','Access Database','Bases de dados Access modernas.'],
-        ['.pst','Personal Storage Table','Arquivo local de correio Outlook.'],
-        ['.eml','Email Message','Guardar ou transferir mensagens.'],
-        ['.msg','Outlook Message','Guardar mensagens Outlook.']
-      ]},
-      { h:'Alertas de Segurança', type:'html', html:`
-        <div class="alert-box">
-          <strong>Atenção:</strong>
-          <ul style="margin:8px 0 0 18px">
-            <li>A extensão pode ser alterada manualmente e não prova o verdadeiro formato do conteúdo.</li>
-            <li>Não executar ficheiros .exe, .bat, .cmd, .msi ou scripts de origem desconhecida.</li>
-            <li>Um ficheiro .pdf ou .docx também pode conter conteúdo malicioso ou ligações perigosas.</li>
-            <li>Um ficheiro .zip ou .rar pode conter executáveis maliciosos.</li>
-            <li>A extensão .tmp costuma indicar ficheiro temporário, mas o conteúdo depende da aplicação.</li>
-          </ul>
-        </div>` }
-    ]
-  }
+  { id:'info_intro', title:'1. Introdução à Informática', color:'#0d9488', sections:[
+    { h:'Conceitos Básicos', type:'list', items:[
+      ['Informática','Área que estuda o tratamento automático da informação através de sistemas computacionais.'],
+      ['Dados','Representações de factos, valores ou observações que podem ser processados.'],
+      ['Informação','Dados organizados e contextualizados, com significado e utilidade.'],
+      ['Hardware','Componentes físicos de um sistema informático.'],
+      ['Software','Conjunto de programas e instruções que orientam o funcionamento do computador.'],
+      ['Firmware','Software de baixo nível, normalmente armazenado em memória não volátil, que controla funções específicas de um equipamento.'],
+      ['CPU','Unidade Central de Processamento; executa instruções e coordena operações.'],
+      ['ALU/ULA','Unidade Aritmética e Lógica; executa operações aritméticas e lógicas.'],
+      ['RAM','Memória principal, volátil, usada temporariamente durante a execução de programas.'],
+      ['ROM','Memória não volátil usada para guardar firmware e instruções persistentes.'],
+      ['Motherboard','Placa principal que interliga os componentes do computador.'],
+      ['HDD','Dispositivo de armazenamento magnético.'],
+      ['SSD','Dispositivo de armazenamento baseado em memória flash, sem partes móveis.'],
+      ['Sistema Operativo','Software de sistema que gere hardware, memória, processos, ficheiros, dispositivos e fornece serviços às aplicações.'],
+      ['Kernel','Núcleo do sistema operativo, responsável pela gestão central dos recursos do sistema.'],
+      ['Shell','Interface que permite ao utilizador interagir com os serviços do sistema operativo.']
+    ]},
+    { h:'Unidades de Medida', type:'table', headers:['Unidade','Significado'], rows:[
+      ['bit','Menor unidade binária de informação; pode assumir 0 ou 1.'],
+      ['Byte (B)','Conjunto de 8 bits.'],
+      ['Kilobyte (KB)','1 000 bytes (decimal); 1 KiB = 1 024 bytes.'],
+      ['Megabyte (MB)','1 000 000 bytes; 1 MiB = 1 024 KiB.'],
+      ['Gigabyte (GB)','1 000 000 000 bytes; 1 GiB = 1 024 MiB.'],
+      ['Terabyte (TB)','1 000 000 000 000 bytes; 1 TiB = 1 024 GiB.'],
+      ['bps','Bits por segundo, unidade de velocidade de transmissão.'],
+      ['B/s','Bytes por segundo; 1 byte/s = 8 bits/s.']
+    ]},
+    { h:'Sistemas de Numeração', type:'table', headers:['Sistema','Base','Dígitos'], rows:[
+      ['Binário','2','0 e 1'], ['Octal','8','0 a 7'], ['Decimal','10','0 a 9'], ['Hexadecimal','16','0 a 9 e A a F']
+    ]},
+    { h:'Classificações de Software', type:'table', headers:['Tipo','Descrição'], rows:[
+      ['Software de sistema','Gere o funcionamento do computador; exemplo: SO e drivers.'],
+      ['Software de aplicação','Executa tarefas do utilizador; exemplo: processador de texto, folha de cálculo e navegador.'],
+      ['Software de programação','Ferramentas para desenvolver programas; exemplo: compiladores, interpretadores e IDE.']
+    ]}
+  ]},
+  { id:'info_redes', title:'2. Protocolos de Comunicação e Endereçamento IP', color:'#2563eb', sections:[
+    { h:'Protocolos', type:'list', items:[
+      ['Protocolo','Conjunto de regras que permite a comunicação entre dispositivos.'],
+      ['TCP','Transporte orientado à ligação, com fiabilidade, controlo de fluxo e ordenação.'],
+      ['UDP','Transporte sem ligação, menor sobrecarga, sem garantia de entrega/ordenação.'],
+      ['IP','Protocolo da camada de rede que endereça e encaminha pacotes entre redes.'],
+      ['DNS','Traduz nomes de domínio em endereços IP.'],
+      ['DHCP','Atribui automaticamente endereços IP e outros parâmetros de rede.'],
+      ['HTTP/HTTPS','Comunicação Web; HTTPS acrescenta TLS.'],
+      ['SMTP','Envio e encaminhamento de correio electrónico.'],
+      ['FTP','Transferência de ficheiros.'],
+      ['SSH','Acesso remoto seguro e execução de comandos.']
+    ]},
+    { h:'Portas Comuns', type:'table', headers:['Protocolo','Porta','Nota'], rows:[
+      ['HTTP','80','Padrão.'], ['HTTPS','443','Padrão.'],
+      ['FTP','20 e 21','20 dados, 21 controlo.'],
+      ['SSH','22','Padrão.'], ['DNS','53','UDP e TCP.'],
+      ['DHCP','67/68','Servidor 67, cliente 68.'],
+      ['SMTP','25','Submissão também 587/465.'],
+      ['POP3','110','POP3S 995.'], ['IMAP','143','IMAPS 993.']
+    ]},
+    { h:'Endereçamento IP', type:'kv', items:[
+      ['IPv4','32 bits — quatro octetos decimais separados por pontos.'],
+      ['IPv6','128 bits — grupos hexadecimais separados por dois-pontos.'],
+      ['MAC','48 bits (Ethernet) — endereço de camada de ligação.']
+    ]},
+    { h:'Classes IPv4 Clássicas', type:'table', headers:['Classe','Primeiro octeto','Máscara/Utilização'], rows:[
+      ['A','1–126','255.0.0.0'], ['B','128–191','255.255.0.0'], ['C','192–223','255.255.255.0'],
+      ['D','224–239','Multicast'], ['E','240–255','Reservada/experimental']
+    ]},
+    { h:'Intervalos Privados e Modelo OSI', type:'html', html:`
+      <p><strong>Intervalos privados:</strong> 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16.</p>
+      <p class="muted" style="font-size:12px">O endereçamento classful é histórico; actualmente usa-se CIDR (ex.: /24, /27).</p>
+      <h4>Modelo OSI</h4>
+      <table><thead><tr><th>Camada</th><th>Nome</th><th>Função</th></tr></thead><tbody>
+        <tr><td>7</td><td>Aplicação</td><td>Serviços de rede às aplicações.</td></tr>
+        <tr><td>6</td><td>Apresentação</td><td>Representação, codificação, compressão e cifragem.</td></tr>
+        <tr><td>5</td><td>Sessão</td><td>Estabelecimento e gestão de sessões.</td></tr>
+        <tr><td>4</td><td>Transporte</td><td>Comunicação fim a fim; TCP e UDP.</td></tr>
+        <tr><td>3</td><td>Rede</td><td>Endereçamento lógico e encaminhamento IP.</td></tr>
+        <tr><td>2</td><td>Ligação de Dados</td><td>Quadros, MAC e acesso ao meio.</td></tr>
+        <tr><td>1</td><td>Física</td><td>Transmissão de bits pelo meio físico.</td></tr>
+      </tbody></table>`}
+  ]},
+  { id:'info_hardware_rede', title:'3. Elementos de Rede Activos', color:'#0891b2', sections:[
+    { h:'Equipamentos', type:'table', headers:['Equipamento','Camada OSI','Função'], rows:[
+      ['Hub','1','Repete o sinal para as restantes portas; não aprende MAC.'],
+      ['Switch','Normalmente 2','Encaminha quadros pela tabela MAC; switches multicamada podem encaminhar na camada 3.'],
+      ['Router','3','Encaminha pacotes entre redes com base em IP e tabelas de encaminhamento.'],
+      ['Repetidor','1','Regenera ou repete o sinal para ampliar o alcance físico.'],
+      ['Bridge/Ponte','2','Interliga segmentos e filtra quadros por MAC.']
+    ]}
+  ]},
+  { id:'info_dados', title:'4. Conceitos de Informação e Dados', color:'#7c3aed', sections:[
+    { h:'Conceitos Fundamentais', type:'list', items:[
+      ['Dado','Facto ou valor em estado bruto, sem interpretação suficiente.'],
+      ['Informação','Dados processados, organizados e contextualizados para produzir significado.'],
+      ['Conhecimento','Compreensão e aplicação da informação, associada à experiência e ao raciocínio.'],
+      ['Sabedoria','Capacidade de aplicar conhecimento e julgamento para decidir.'],
+      ['Entidade','Pessoa, objecto, lugar, organização ou conceito sobre o qual se guardam dados.'],
+      ['Atributo','Propriedade que descreve uma entidade.'],
+      ['Evento','Ocorrência ou acontecimento relevante registado pelo sistema.'],
+      ['Relacionamento','Associação entre duas ou mais entidades.'],
+      ['Informação registada','Informação fixada num suporte físico ou digital.'],
+      ['Ficheiro','Unidade identificável de informação armazenada num sistema de ficheiros.'],
+      ['Base de dados','Colecção organizada de dados relacionados.'],
+      ['SGBD','Software que cria, administra e manipula bases de dados.']
+    ]},
+    { h:'Qualidade da Informação', type:'pills', items:['Precisão','Relevância','Actualidade','Completude','Fiabilidade','Acessibilidade autorizada','Clareza','Consistência'] },
+    { h:'Modelos de Bases de Dados', type:'table', headers:['Tipo','Descrição'], rows:[
+      ['Relacional','Tabelas relacionadas.'], ['Hierárquica','Estrutura em árvore.'],
+      ['Em rede','Relações complexas entre registos.'], ['Documental','Documentos estruturados (JSON/BSON).'],
+      ['Chave-valor','Pares chave/valor.'], ['Grafos','Nós e arestas.']
+    ]},
+    { h:'Elementos Relacionais', type:'list', items:[
+      ['Tabela','Organiza dados em linhas e colunas.'],
+      ['Registo/linha','Conjunto de valores que representa uma ocorrência.'],
+      ['Campo/coluna','Propriedade ou atributo armazenado na tabela.'],
+      ['Chave primária','Identifica unicamente cada registo.'],
+      ['Chave estrangeira','Referencia uma chave candidata noutra tabela (ou na mesma).'],
+      ['Normalização','Reduz redundâncias e anomalias de inserção, actualização e eliminação.']
+    ]},
+    { h:'Comandos SQL', type:'table', headers:['Comando','Categoria','Função'], rows:[
+      ['SELECT','DQL','Consultar dados.'], ['INSERT','DML','Inserir registos.'], ['UPDATE','DML','Actualizar registos.'],
+      ['DELETE','DML','Eliminar registos.'], ['CREATE','DDL','Criar objectos.'], ['ALTER','DDL','Alterar estruturas.'],
+      ['DROP','DDL','Eliminar objectos.'], ['GRANT','DCL','Conceder privilégios.'], ['REVOKE','DCL','Retirar privilégios.'],
+      ['COMMIT','TCL','Confirmar transacção.'], ['ROLLBACK','TCL','Reverter transacção.']
+    ]},
+    { h:'Propriedades ACID', type:'list', items:[
+      ['Atomicidade','Tudo ou nada.'], ['Consistência','Preserva regras e restrições.'],
+      ['Isolamento','Transacções concorrentes não interferem indevidamente.'], ['Durabilidade','Resultados confirmados persistem após falhas.']
+    ]},
+    { h:'Protecção de Dados — Tríade CIA', type:'list', items:[
+      ['Confidencialidade','Apenas autorizados acedem.'], ['Integridade','Informação correcta e protegida contra alterações indevidas.'],
+      ['Disponibilidade','Acessível quando necessário a autorizados.']
+    ]},
+    { h:'Medidas de Protecção', type:'list', items:[
+      ['Autenticação','Verificação da identidade.'], ['Autorização','Permissões de acesso.'],
+      ['Encriptação','Transformação criptográfica dos dados.'], ['Backup','Cópia de segurança.'],
+      ['Auditoria','Registo e análise de actividades.'], ['MFA','Autenticação multifactor.'],
+      ['Menor privilégio','Apenas permissões necessárias.']
+    ]}
+  ]},
+  { id:'info_si', title:'5. Características dos Sistemas de Informação', color:'#ea580c', sections:[
+    { h:'Sistemas e Organização', type:'list', items:[
+      ['Sistema','Elementos inter-relacionados que trabalham para um objectivo.'],
+      ['Entrada (input)','Dados ou recursos introduzidos.'], ['Processamento','Transformação das entradas.'],
+      ['Saída (output)','Resultados produzidos.'], ['Feedback','Informação sobre resultados para ajuste e controlo.'],
+      ['Sistema aberto','Interage com o ambiente externo.'], ['Sistema fechado','Pouca ou nenhuma interacção com o ambiente.']
+    ]},
+    { h:'Componentes de um SI', type:'pills', items:['Pessoas','Processos e procedimentos','Dados','Hardware','Software','Redes e telecomunicações'] },
+    { h:'Níveis de Gestão', type:'table', headers:['Nível','Decisões','Foco'], rows:[
+      ['Operacional','Estruturadas','Operações diárias.'],
+      ['Táctico','Semiestruturadas','Coordenação e controlo.'],
+      ['Estratégico','Não estruturadas','Direcção e planeamento de longo prazo.']
+    ]},
+    { h:'Tipos de Sistemas', type:'table', headers:['Sigla','Nome','Função'], rows:[
+      ['TPS','Transaction Processing System','Registar e processar transacções operacionais.'],
+      ['MIS/SIG','Management Information System','Relatórios e informação periódica para a gestão.'],
+      ['DSS/SAD','Decision Support System','Apoiar decisões com análise de dados, modelos e cenários.'],
+      ['ESS/EIS','Executive Support/Information System','Indicadores e informação estratégica para a gestão de topo.'],
+      ['ERP','Enterprise Resource Planning','Integrar processos e dados de várias áreas.'],
+      ['CRM','Customer Relationship Management','Gerir relacionamento com clientes.'],
+      ['SCM','Supply Chain Management','Gerir a cadeia de abastecimento.']
+    ]},
+    { h:'Ciclo de Desenvolvimento', type:'table', headers:['Fase','Descrição'], rows:[
+      ['Planeamento e viabilidade','Problema, objectivos, recursos, riscos e viabilidade.'],
+      ['Levantamento e análise de requisitos','Necessidades e requisitos dos utilizadores e da organização.'],
+      ['Desenho e arquitectura','Arquitectura, dados, interfaces e componentes.'],
+      ['Implementação','Desenvolver e integrar componentes.'],
+      ['Testes','Funcionamento, segurança, desempenho e conformidade.'],
+      ['Implantação e manutenção','Produção, correcção de falhas e evolução.']
+    ]},
+    { h:'Tipos de Testes', type:'table', headers:['Tipo','Objectivo'], rows:[
+      ['Unitários','Componentes individuais.'], ['Integração','Comunicação entre componentes.'],
+      ['Sistema','Sistema completo.'], ['Aceitação','Satisfação das necessidades do utilizador.'],
+      ['Desempenho','Velocidade, capacidade e comportamento sob carga.'], ['Segurança','Vulnerabilidades e controlos.']
+    ]},
+    { h:'Metodologias', type:'table', headers:['Nome','Descrição'], rows:[
+      ['Cascata','Sequencial, por fases.'], ['Ágil','Iterativa e incremental, com colaboração e adaptação.'],
+      ['Scrum','Framework ágil com Sprints.'], ['Prototipagem','Versões preliminares para validar requisitos e interfaces.']
+    ]},
+    { h:'Segurança Informática — Ameaças', type:'table', headers:['Ameaça','Descrição'], rows:[
+      ['Vírus','Associa-se a ficheiros/programas e replica-se quando executado.'],
+      ['Worm','Propaga-se automaticamente entre sistemas.'],
+      ['Trojan','Disfarça-se de software legítimo.'], ['Ransomware','Cifra/bloqueia dados para exigir resgate.'],
+      ['Spyware','Recolhe informação sem conhecimento adequado.'], ['Phishing','Fraude para obter credenciais ou induzir acções.'],
+      ['Brute force','Tentativa sistemática de descobrir credenciais.'], ['DoS','Torna um serviço indisponível.'],
+      ['DDoS','Negação de serviço distribuída por múltiplas origens.'], ['Spoofing','Falsificação de identidade, endereço ou origem.'],
+      ['Sniffing','Captura e análise de tráfego de rede.']
+    ]},
+    { h:'Algoritmos e Lógica', type:'list', items:[
+      ['Algoritmo','Sequência finita, ordenada e não ambígua de instruções.'],
+      ['Sequencial','Instruções pela ordem definida.'], ['Condicional','Escolha de caminhos por condição.'],
+      ['Repetição','Execução repetida de instruções.'], ['FOR','Repetição com contador.'],
+      ['WHILE','Repete enquanto a condição for verdadeira; pode executar zero vezes.'],
+      ['REPEAT/UNTIL','Executa primeiro e testa depois; pelo menos uma vez.']
+    ]},
+    { h:'Operadores', type:'table', headers:['Operador','Significado'], rows:[
+      ['+','Adição'], ['-','Subtracção'], ['*','Multiplicação'], ['/','Divisão'],
+      ['MOD','Resto da divisão inteira'], ['DIV','Quociente da divisão inteira'],
+      ['AND','Verdadeiro só se ambas as condições forem verdadeiras.'],
+      ['OR','Verdadeiro se pelo menos uma condição for verdadeira.'],
+      ['NOT','Inverte o valor lógico.']
+    ]},
+    { h:'Tipos de Dados', type:'table', headers:['Tipo','Exemplo'], rows:[
+      ['Inteiro','10'], ['Real','3.14'], ['Carácter','"A"'], ['Cadeia','"Angola"'], ['Lógico/Booleano','Verdadeiro/Falso']
+    ]},
+    { h:'Gestão de Dados e Governança', type:'html', html:`
+      <p><strong>Definição:</strong> Práticas e processos que asseguram recolha, validação, armazenamento, organização, protecção, utilização, partilha, arquivo e eliminação adequada dos dados.</p>
+      <p><strong>Qualidade:</strong> Exactidão, Completude, Consistência, Actualidade, Validade, Unicidade quando aplicável.</p>
+      <p><strong>Governança:</strong> Políticas, responsabilidades, regras e normas para gestão adequada dos dados.</p>
+      <p><strong>Ciclo de vida:</strong> Criação/recolha → Armazenamento → Utilização → Partilha → Arquivo → Eliminação.</p>
+      <p><strong>ETL:</strong> Extract — Transform — Load.</p>`},
+    { h:'Contabilidade e Informática Aplicada', type:'list', items:[
+      ['Contabilidade','Regista, classifica, resume e interpreta factos patrimoniais e operações económicas.'],
+      ['Património','Bens, direitos e obrigações de uma entidade.'],
+      ['Activo','Recursos económicos controlados pela entidade.'],
+      ['Passivo','Obrigações perante terceiros.'],
+      ['Capital próprio','Interesse residual nos activos após deduzir passivos.'],
+      ['Balanço','Posição financeira numa data.'], ['Demonstração de resultados','Rendimentos, gastos e resultado do período.'],
+      ['Demonstração de fluxos de caixa','Entradas e saídas de caixa e equivalentes.']
+    ]},
+    { h:'Equação Fundamental e Aplicações', type:'html', html:`
+      <p><strong>Equação fundamental:</strong> <code>Activo = Passivo + Capital Próprio</code></p>
+      <p><strong>Partidas dobradas:</strong> Débitos = Créditos em cada transacção.</p>
+      <p><strong>Aplicações:</strong> Facturação, salários, controlo de despesas, contas a pagar/receber, gestão de stock, reconciliação bancária, relatórios financeiros, orçamentação, controlo de activos, análise de custos.</p>`}
+  ]},
+  { id:'info_ficheiros', title:'6. Ficheiros e Extensões', color:'#db2777', sections:[
+    { h:'Texto e Documentos', type:'table', headers:['Extensão','Nome','Uso'], rows:[
+      ['.txt','Texto simples','Notas e registos.'], ['.rtf','Rich Text Format','Texto formatado.'],
+      ['.doc','Word antigo','Documentos editáveis.'], ['.docx','Word moderno','Relatórios, cartas e trabalhos.'],
+      ['.odt','OpenDocument Text','Documentos editáveis (LibreOffice).'], ['.pdf','Portable Document Format','Documentos finais e publicação.'],
+      ['.md','Markdown','Documentação e apontamentos.'], ['.html/.htm','HTML','Páginas Web.'],
+      ['.xml','XML','Configuração e intercâmbio.'], ['.json','JSON','APIs, configurações e intercâmbio.'],
+      ['.csv','CSV','Exportação/importação de tabelas.']
+    ]},
+    { h:'Folhas de Cálculo e Apresentações', type:'table', headers:['Extensão','Nome','Uso'], rows:[
+      ['.xls','Excel antigo','Livros de cálculo.'], ['.xlsx','Excel moderno','Tabelas, fórmulas e gráficos.'],
+      ['.ods','OpenDocument Spreadsheet','Folhas de cálculo.'], ['.ppt','PowerPoint antigo','Apresentações.'],
+      ['.pptx','PowerPoint moderno','Apresentações multimédia.'], ['.odp','OpenDocument Presentation','Apresentações.']
+    ]},
+    { h:'Imagem', type:'table', headers:['Extensão','Nome','Uso'], rows:[
+      ['.jpg/.jpeg','JPEG','Fotografias (compressão com perdas).'], ['.png','PNG','Logótipos, capturas e gráficos (sem perdas, transparência).'],
+      ['.gif','GIF','Animações simples.'], ['.bmp','Bitmap','Imagens raster.'], ['.tif/.tiff','TIFF','Digitalização e arquivo gráfico.'],
+      ['.svg','SVG','Ícones e gráficos vectoriais.'], ['.webp','WebP','Imagens optimizadas para Web.'], ['.ico','Icon','Ícones.']
+    ]},
+    { h:'Áudio e Vídeo', type:'table', headers:['Extensão','Nome','Uso'], rows:[
+      ['.mp3','MP3','Música e áudio.'], ['.wav','WAV','Gravação e edição.'], ['.aac','AAC','Streaming e dispositivos móveis.'],
+      ['.flac','FLAC','Áudio sem perdas.'], ['.mp4','MP4','Vídeos.'], ['.avi','AVI','Vídeo.'], ['.mkv','MKV','Vídeo com múltiplas faixas.'],
+      ['.mov','QuickTime','Vídeo.'], ['.wmv','Windows Media Video','Vídeo Windows.'], ['.webm','WebM','Vídeo para navegadores.']
+    ]},
+    { h:'Compactação e Arquivo', type:'table', headers:['Extensão','Nome','Uso'], rows:[
+      ['.zip','ZIP','Distribuição e organização.'], ['.rar','RAR','Compactação e arquivo.'], ['.7z','7-Zip','Alta compressão.'],
+      ['.tar','TAR','Arquivo Unix/Linux.'], ['.gz','Gzip','Compressão.'], ['.tar.gz/.tgz','TAR+Gzip','Distribuição de software.']
+    ]},
+    { h:'Executáveis e Instalação', type:'table', headers:['Extensão','Nome','Uso'], rows:[
+      ['.exe','Executable','Execução de programas.'], ['.msi','Microsoft Installer','Instalação de aplicações.'],
+      ['.bat','Batch','Automatização de tarefas.'], ['.cmd','Command Script','Automatização.'], ['.sh','Shell Script','Automatização Unix/Linux.'],
+      ['.dll','Dynamic Link Library','Funções partilhadas.'], ['.so','Shared Object','Bibliotecas Unix/Linux.'], ['.sys','System File','Componentes do sistema.'],
+      ['.apk','Android Package','Instalação Android.'], ['.deb','Debian Package','Instalação Linux.'], ['.rpm','RPM Package','Instalação Linux RPM.']
+    ]},
+    { h:'Código-Fonte', type:'table', headers:['Extensão','Nome','Uso'], rows:[
+      ['.c','C','Programação.'], ['.cpp','C++','Programação.'], ['.java','Java','Programação.'], ['.py','Python','Scripts e aplicações.'],
+      ['.js','JavaScript','Web e servidores.'], ['.ts','TypeScript','Desenvolvimento de software.'], ['.php','PHP','Desenvolvimento Web.'],
+      ['.css','CSS','Estilização Web.'], ['.sql','SQL','Bases de dados.'], ['.class','Java Bytecode','Aplicações Java.'], ['.jar','Java Archive','Distribuição Java.']
+    ]},
+    { h:'Bases de Dados e Correio', type:'table', headers:['Extensão','Nome','Uso'], rows:[
+      ['.db','Database','Formato depende da aplicação.'], ['.sqlite/.sqlite3','SQLite','Bases locais/incorporadas.'],
+      ['.mdb','Access antigo','Bases Access.'], ['.accdb','Access moderno','Bases Access.'], ['.pst','Outlook PST','Arquivo local de correio.'],
+      ['.eml','Email Message','Mensagens individuais.'], ['.msg','Outlook Message','Mensagens Outlook.']
+    ]},
+    { h:'Alertas de Segurança', type:'html', html:`
+      <div class="alert-box">
+        <strong>Atenção:</strong>
+        <ul style="margin:8px 0 0 18px">
+          <li>A extensão pode ser alterada manualmente e não prova o verdadeiro formato do conteúdo.</li>
+          <li>Não executar ficheiros .exe, .bat, .cmd, .msi ou scripts de origem desconhecida.</li>
+          <li>Um ficheiro .pdf ou .docx também pode conter conteúdo malicioso ou ligações perigosas.</li>
+          <li>Um ficheiro .zip ou .rar pode conter executáveis maliciosos.</li>
+          <li>A extensão .tmp costuma indicar ficheiro temporário.</li>
+        </ul>
+      </div>`}
+  ]}
 ];
 
 /* =========================================================
-   ESTADO GLOBAL
+   ESTADO
    ========================================================= */
 const state = {
   name: '',
   globalScore: 0,
-  view: 'home', // home | quiz | materia | extensoes
-  selectedTopic: null,
+  view: 'home',
+  selectedTopics: new Set(), // vazio = todos
+  questionCount: 20,         // 0 = todas
+  sessionQuestions: [],
   qIndex: 0,
-  answers: {}, // id -> {selected, correct}
-  history: {}
+  answers: {},
+  started: false
 };
 
-/* =========================================================
-   HELPERS
-   ========================================================= */
-function $(sel){return document.querySelector(sel)}
-function $all(sel){return document.querySelectorAll(sel)}
+function $ (sel){return document.querySelector(sel)}
+function $$(sel){return document.querySelectorAll(sel)}
 function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
 function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 
-function getFilteredQuestions(){
-  if(!state.selectedTopic || state.selectedTopic==='all') return ALL_QUESTIONS;
-  return ALL_QUESTIONS.filter(q=>q.t===state.selectedTopic);
-}
 function updateGlobalScore(delta){
   state.globalScore = Math.max(0, state.globalScore + delta);
   const el = $('#global-score-value');
   el.textContent = state.globalScore;
   el.classList.add('score-bump');
   setTimeout(()=>el.classList.remove('score-bump'), 500);
+}
+
+function filterPool(){
+  const pool = state.selectedTopics.size===0
+    ? ALL_QUESTIONS.slice()
+    : ALL_QUESTIONS.filter(q=>state.selectedTopics.has(q.t));
+  return pool;
+}
+
+function buildSession(){
+  let pool = shuffle(filterPool());
+  const n = state.questionCount===0 ? pool.length : Math.min(state.questionCount, pool.length);
+  state.sessionQuestions = pool.slice(0, n);
+  state.qIndex = 0;
+  state.answers = {};
+  state.started = true;
 }
 
 /* =========================================================
@@ -845,23 +1097,20 @@ function render(){
 }
 
 function renderHome(){
-  const totalQ = ALL_QUESTIONS.length;
+  const pool = filterPool();
+  const topicsSelected = state.selectedTopics.size===0;
+  const countOptions = [10,20,30,50,0];
   return `
     <div class="stack-5 anim">
       <div class="hero">
         <div class="hero-inner">
           <div class="eyebrow" style="color:rgba(255,255,255,0.9)">Concurso MINSA · 2026</div>
           <h1 class="display display-xl mt-2">Preparação para<br>a Prova de Informática</h1>
-          <p class="lead mt-3" style="max-width:520px">Domina os tópicos do programa: introdução à informática, protocolos, redes, bases de dados, sistemas de informação e muito mais.</p>
+          <p class="lead mt-3" style="max-width:520px">Escolhe os tópicos, define o número de perguntas e testa os teus conhecimentos com feedback imediato.</p>
           <div class="hero-badges mt-4">
-            <span class="hero-badge">✦ ${totalQ} questões</span>
-            <span class="hero-badge">◫ 6 tópicos</span>
+            <span class="hero-badge">✦ ${ALL_QUESTIONS.length} questões no banco</span>
+            <span class="hero-badge">◫ ${pool.length} disponíveis</span>
             <span class="hero-badge">◈ Matéria completa</span>
-          </div>
-          <div class="row-wrap mt-5" style="gap:10px">
-            <button class="btn btn-lg" data-action="start-all" style="background:#fff;color:#dc2626;font-weight:700">Começar Quiz →</button>
-            <button class="btn btn-lg" data-action="view-materia" style="background:rgba(255,255,255,0.18);color:#fff;border:1px solid rgba(255,255,255,0.3);backdrop-filter:blur(8px)">Estudar Matéria</button>
-            <button class="btn btn-lg" data-action="view-extensoes" style="background:rgba(255,255,255,0.18);color:#fff;border:1px solid rgba(255,255,255,0.3);backdrop-filter:blur(8px)">Extensões</button>
           </div>
         </div>
       </div>
@@ -869,7 +1118,7 @@ function renderHome(){
       <div class="name-card">
         <div class="name-card-inner">
           <div class="name-card-title">✍ Como te chamas?</div>
-          <div class="name-card-sub">O teu nome aparece no cabeçalho e no certificado final.</div>
+          <div class="name-card-sub">O teu nome aparece no cabeçalho.</div>
           <div class="row gap-3 mt-3" style="flex-wrap:wrap">
             <input class="input input-lg" id="name-input" placeholder="O teu nome…" value="${esc(state.name)}" style="flex:1;min-width:200px" maxlength="40" autocomplete="off">
             <button class="btn btn-accent btn-lg" data-action="save-name">Guardar</button>
@@ -877,36 +1126,52 @@ function renderHome(){
         </div>
       </div>
 
-      <div>
-        <div class="eyebrow mb-2">Escolhe um tópico</div>
-        <div class="row-wrap" style="gap:8px">
-          <button class="chip" data-topic="all" data-selected="${state.selectedTopic==null||state.selectedTopic==='all'?'true':'false'}">
+      <div class="setup-box">
+        <div class="row-between mb-2">
+          <div class="eyebrow">1 · Escolhe os tópicos</div>
+          <button class="btn btn-ghost btn-sm" data-action="clear-topics">Limpar selecção</button>
+        </div>
+        <div class="row-wrap" style="gap:8px;margin-bottom:16px">
+          <button class="chip" data-topic="all" data-selected="${topicsSelected?'true':'false'}">
             <span class="dot" style="background:#dc2626"></span> Todos
           </button>
-          ${TOPICS.map(t=>`
-            <button class="chip" data-topic="${t.id}" data-selected="${state.selectedTopic===t.id?'true':'false'}">
+          ${TOPICS.map(t=>{
+            const has = ALL_QUESTIONS.some(q=>q.t===t.id);
+            return `<button class="chip" data-topic="${t.id}" data-selected="${state.selectedTopics.has(t.id)?'true':'false'}" ${has?'':'disabled style="opacity:.4"'}>
               <span class="dot" style="background:${t.color}"></span> ${t.name}
-            </button>`).join('')}
+            </button>`;
+          }).join('')}
         </div>
+
+        <div class="eyebrow mb-2">2 · Número de perguntas</div>
+        <div class="count-grid">
+          ${countOptions.map(n=>{
+            const label = n===0?'Todas':n;
+            const sub = n===0?`${pool.length} disponíveis`:'perguntas';
+            const active = state.questionCount===n?'true':'false';
+            return `<button class="count-btn" data-count="${n}" data-active="${active}">${label}<small>${sub}</small></button>`;
+          }).join('')}
+        </div>
+        ${pool.length < state.questionCount && state.questionCount!==0 ? `<p class="small muted mt-2">Só existem ${pool.length} perguntas nos tópicos seleccionados; serão usadas todas.</p>`:''}
       </div>
 
       <div class="stat-grid">
-        <div class="stat stat-red"><div class="label">Questões</div><div class="stat-value">${totalQ}</div></div>
-        <div class="stat stat-amber"><div class="label">Tópicos</div><div class="stat-value">${TOPICS.length}</div></div>
+        <div class="stat stat-red"><div class="label">Seleccionadas</div><div class="stat-value">${state.questionCount===0?pool.length:Math.min(state.questionCount,pool.length)}</div></div>
+        <div class="stat stat-amber"><div class="label">Tópicos</div><div class="stat-value">${state.selectedTopics.size===0?'Todos':state.selectedTopics.size}</div></div>
         <div class="stat stat-teal"><div class="label">Pontos</div><div class="stat-value stat-value-sm">${state.globalScore}</div></div>
       </div>
 
       <div class="row-wrap" style="gap:12px">
-        <button class="btn btn-accent btn-lg" data-action="start-selected" style="flex:1;min-width:200px">Começar Quiz ${state.selectedTopic&&state.selectedTopic!=='all'?'— '+topicName(state.selectedTopic):'— Todos'}</button>
-        <button class="btn btn-outline btn-lg" data-action="view-materia" style="flex:1;min-width:160px">📖 Matéria</button>
-        <button class="btn btn-outline btn-lg" data-action="view-extensoes" style="flex:1;min-width:160px">🗂 Extensões</button>
+        <button class="btn btn-accent btn-lg" data-action="start" style="flex:1;min-width:200px" ${pool.length===0?'disabled':''}>Começar Quiz →</button>
+        <button class="btn btn-outline btn-lg" data-action="view-materia" style="flex:1;min-width:140px">📖 Matéria</button>
+        <button class="btn btn-outline btn-lg" data-action="view-extensoes" style="flex:1;min-width:140px">🗂 Extensões</button>
       </div>
     </div>`;
 }
 
 function renderQuiz(){
-  const qs = getFilteredQuestions();
-  if(!qs.length) return `<div class="card card-pad text-c"><p class="lead">Nenhuma questão disponível para este tópico.</p><button class="btn btn-primary mt-4" data-action="home">Voltar</button></div>`;
+  const qs = state.sessionQuestions;
+  if(!qs.length) return `<div class="card card-pad text-c"><p class="lead">Nenhuma questão disponível.</p><button class="btn btn-primary mt-4" data-action="home">Voltar</button></div>`;
   if(state.qIndex>=qs.length) return renderResults(qs);
   const q = qs[state.qIndex];
   const answered = state.answers[q.id];
@@ -920,7 +1185,7 @@ function renderQuiz(){
       </div>
       <div class="progress"><span style="width:${pct}%"></span></div>
       <div class="card card-pad">
-        <div class="row-between mb-2" style="margin-bottom:4px">
+        <div class="row-between" style="margin-bottom:6px">
           <span class="badge" style="background:${topicColor(q.t)}1a;color:${topicColor(q.t)}">${topicIcon(q.t)} ${topicName(q.t)}</span>
           <span class="badge ${DIFFICULTY_BADGE[q.d]}">${DIFFICULTY_LABEL[q.d]}</span>
         </div>
@@ -1015,37 +1280,29 @@ function renderMateria(){
             <span class="acc-chevron">▸</span>
           </button>
           <div class="acc-body hidden" id="body-${sec.id}">
-            ${sec.sections.map(s=>renderSection(s)).join('')}
+            ${sec.sections.map(renderSection).join('')}
           </div>
         </div>`).join('')}
     </div>`;
 }
 
 function renderSection(s){
-  if(s.type==='list'){
-    return `<h4>${s.h}</h4><ul>${s.items.map(it=>`<li><span class="term">${esc(it[0])}:</span> <span class="def">${esc(it[1])}</span></li>`).join('')}</ul>`;
-  }
-  if(s.type==='table'){
-    return `<h4>${s.h}</h4><table><thead><tr>${s.headers.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${s.rows.map(r=>`<tr>${r.map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
-  }
-  if(s.type==='kv'){
-    return `<h4>${s.h}</h4><ul>${s.items.map(it=>`<li><span class="term">${esc(it[0])}:</span> <span class="def">${esc(it[1])}</span></li>`).join('')}</ul>`;
-  }
-  if(s.type==='pills'){
-    return `<h4>${s.h}</h4><div class="row-wrap" style="margin:6px 0 10px">${s.items.map(p=>`<span class="badge">${esc(p)}</span>`).join('')}</div>`;
-  }
-  if(s.type==='html'){ return `<h4>${s.h}</h4>${s.html}` }
+  if(s.type==='list') return `<h4>${s.h}</h4><ul>${s.items.map(it=>`<li><span class="term">${esc(it[0])}:</span> <span class="def">${esc(it[1])}</span></li>`).join('')}</ul>`;
+  if(s.type==='table') return `<h4>${s.h}</h4><table><thead><tr>${s.headers.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${s.rows.map(r=>`<tr>${r.map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+  if(s.type==='kv') return `<h4>${s.h}</h4><ul>${s.items.map(it=>`<li><span class="term">${esc(it[0])}:</span> <span class="def">${esc(it[1])}</span></li>`).join('')}</ul>`;
+  if(s.type==='pills') return `<h4>${s.h}</h4><div class="row-wrap" style="margin:6px 0 10px">${s.items.map(p=>`<span class="badge">${esc(p)}</span>`).join('')}</div>`;
+  if(s.type==='html') return `<h4>${s.h}</h4>${s.html}`;
   return '';
 }
 
 function renderExtensoes(){
   const cats = [
-    {title:'Texto e Documentos', items:[['.txt','Texto simples'],['.rtf','Rich Text Format'],['.doc','Word antigo'],['.docx','Word moderno'],['.odt','OpenDocument Text'],['.pdf','Portable Document Format'],['.md','Markdown'],['.html/.htm','HTML'],['.xml','XML'],['.json','JSON'],['.csv','CSV']]},
+    {title:'Texto e Documentos', items:[['.txt','Texto simples'],['.rtf','Rich Text Format'],['.doc','Word antigo'],['.docx','Word moderno'],['.odt','OpenDocument Text'],['.pdf','PDF'],['.md','Markdown'],['.html/.htm','HTML'],['.xml','XML'],['.json','JSON'],['.csv','CSV']]},
     {title:'Folhas de Cálculo e Apresentações', items:[['.xls','Excel antigo'],['.xlsx','Excel moderno'],['.ods','OpenDocument Spreadsheet'],['.ppt','PowerPoint antigo'],['.pptx','PowerPoint moderno'],['.odp','OpenDocument Presentation']]},
     {title:'Imagem', items:[['.jpg/.jpeg','JPEG'],['.png','PNG'],['.gif','GIF'],['.bmp','Bitmap'],['.tif/.tiff','TIFF'],['.svg','SVG'],['.webp','WebP'],['.ico','Icon']]},
-    {title:'Áudio e Vídeo', items:[['.mp3','MP3'],['.wav','WAV'],['.aac','AAC'],['.flac','FLAC'],['.mp4','MP4'],['.avi','AVI'],['.mkv','MKV'],['.mov','QuickTime'],['.wmv','Windows Media Video'],['.webm','WebM']]},
+    {title:'Áudio e Vídeo', items:[['.mp3','MP3'],['.wav','WAV'],['.aac','AAC'],['.flac','FLAC'],['.mp4','MP4'],['.avi','AVI'],['.mkv','MKV'],['.mov','QuickTime'],['.wmv','WMV'],['.webm','WebM']]},
     {title:'Compactação e Arquivo', items:[['.zip','ZIP'],['.rar','RAR'],['.7z','7-Zip'],['.tar','TAR'],['.gz','Gzip'],['.tar.gz/.tgz','TAR+Gzip']]},
-    {title:'Executáveis e Instalação', items:[['.exe','Executable'],['.msi','Microsoft Installer'],['.bat','Batch'],['.cmd','Command Script'],['.sh','Shell Script'],['.dll','Dynamic Link Library'],['.so','Shared Object'],['.sys','System File'],['.apk','Android Package'],['.deb','Debian Package'],['.rpm','RPM Package']]},
+    {title:'Executáveis e Instalação', items:[['.exe','Executable'],['.msi','Microsoft Installer'],['.bat','Batch'],['.cmd','Command Script'],['.sh','Shell Script'],['.dll','DLL'],['.so','Shared Object'],['.sys','System File'],['.apk','Android Package'],['.deb','Debian Package'],['.rpm','RPM Package']]},
     {title:'Código-Fonte', items:[['.c','C'],['.cpp','C++'],['.java','Java'],['.py','Python'],['.js','JavaScript'],['.ts','TypeScript'],['.php','PHP'],['.css','CSS'],['.sql','SQL'],['.class','Java Bytecode'],['.jar','Java Archive']]},
     {title:'Bases de Dados e Correio', items:[['.db','Database'],['.sqlite/.sqlite3','SQLite'],['.mdb','Access antigo'],['.accdb','Access moderno'],['.pst','Outlook PST'],['.eml','Email Message'],['.msg','Outlook Message']]}
   ];
@@ -1081,19 +1338,17 @@ function renderExtensoes(){
    EVENTOS
    ========================================================= */
 function bindEvents(){
-  $all('[data-action]').forEach(el=>{
+  $$('[data-action]').forEach(el=>{
     el.onclick = ()=>{
       const a = el.dataset.action;
-      if(a==='home'){state.view='home';state.qIndex=0;state.answers={};render()}
-      else if(a==='start-all'){state.selectedTopic='all';state.view='quiz';state.qIndex=0;state.answers={};render()}
-      else if(a==='start-selected'){state.view='quiz';state.qIndex=0;state.answers={};render()}
+      if(a==='home'){state.view='home';state.started=false;render()}
+      else if(a==='start'){buildSession();state.view='quiz';render();window.scrollTo({top:0,behavior:'smooth'})}
       else if(a==='view-materia'){state.view='materia';render()}
       else if(a==='view-extensoes'){state.view='extensoes';render()}
       else if(a==='save-name'){
-        const v = $('#name-input').value.trim();
-        state.name = v;
-        $('#header-user').style.display = v?'block':'none';
-        $('#header-greeting').textContent = v?'Olá, '+v:'';
+        state.name = $('#name-input').value.trim();
+        $('#header-user').style.display = state.name?'block':'none';
+        $('#header-greeting').textContent = state.name?'Olá, '+state.name:'';
         render();
       }
       else if(a==='next'){
@@ -1101,22 +1356,30 @@ function bindEvents(){
         render();
         window.scrollTo({top:0,behavior:'smooth'});
       }
-      else if(a==='restart'){
-        state.qIndex=0;state.answers={};render();
-      }
+      else if(a==='restart'){buildSession();render()}
+      else if(a==='clear-topics'){state.selectedTopics.clear();render()}
     };
   });
 
-  $all('[data-topic]').forEach(el=>{
+  $$('[data-topic]').forEach(el=>{
     el.onclick = ()=>{
-      state.selectedTopic = el.dataset.topic;
+      const id = el.dataset.topic;
+      if(id==='all'){ state.selectedTopics.clear(); }
+      else {
+        if(state.selectedTopics.has(id)) state.selectedTopics.delete(id);
+        else state.selectedTopics.add(id);
+      }
       render();
     };
   });
 
-  $all('[data-opt]').forEach(el=>{
+  $$('[data-count]').forEach(el=>{
+    el.onclick = ()=>{ state.questionCount = parseInt(el.dataset.count,10); render(); };
+  });
+
+  $$('[data-opt]').forEach(el=>{
     el.onclick = ()=>{
-      const qs = getFilteredQuestions();
+      const qs = state.sessionQuestions;
       const q = qs[state.qIndex];
       if(state.answers[q.id]) return;
       const letter = el.dataset.opt;
@@ -1124,10 +1387,18 @@ function bindEvents(){
       state.answers[q.id] = {selected:letter, correct};
       if(correct) updateGlobalScore(DIFFICULTY_POINTS[q.d]);
       render();
+      // auto-avança após 1.2s para dar tempo de ler o feedback
+      setTimeout(()=>{
+        if(state.view==='quiz' && state.answers[q.id] && state.qIndex<state.sessionQuestions.length){
+          state.qIndex++;
+          render();
+          window.scrollTo({top:0,behavior:'smooth'});
+        }
+      }, 1400);
     };
   });
 
-  $all('[data-acc]').forEach(el=>{
+  $$('[data-acc]').forEach(el=>{
     el.onclick = ()=>{
       const item = el.closest('.acc-item');
       const body = document.getElementById('body-'+el.dataset.acc);
